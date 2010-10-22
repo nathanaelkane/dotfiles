@@ -1,7 +1,7 @@
 *bundles.txt*                    Bundles                      Version 0.1
 
 These are the bundles installed on your system, along with their
-versions and release dates.  Downloaded on 2010-10-22 22:02:11 +1000.
+versions and release dates.  Downloaded on 2010-10-22 22:13:14 +1000.
 
 A version number of 'n/a' means upstream hasn't tagged any releases.
   - |nerdtree|                     4.1.0-4-ge1abd4d       2010-09-18
@@ -23,6 +23,7 @@ A version number of 'n/a' means upstream hasn't tagged any releases.
   - |align|                        n/a                    2010-04-01
   - |fugitive|                     v1.1-26-g119fd9e       2010-09-15
   - |markdown|                     n/a                    2010-05-02
+  - |markdown-preview|             1.0.1-9-g4f596b2       2010-09-21
   - |textile|                      0.2-3-g2c3d4d7         2010-10-22
   - |ruby|                         vim7.3-22-g9c8401d     2010-10-22
   - |rails|                        v4.3                   2010-09-10

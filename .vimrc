@@ -38,6 +38,7 @@ call pathogen#runtime_append_all_bundles() " Load all plugins in the ~/.vim/bund
 " BUNDLE: git://github.com/tsaleh/vim-align.git
 " BUNDLE: git://github.com/tpope/vim-fugitive.git
 " BUNDLE: git://github.com/tpope/vim-markdown.git
+" BUNDLE: git://github.com/robgleeson/vim-markdown-preview.git
 " BUNDLE: git://github.com/timcharper/textile.vim.git
 " # BUNDLE: git://github.com/tpope/vim-surround.git
 " # BUNDLE: git://github.com/vim-scripts/taglist.vim
