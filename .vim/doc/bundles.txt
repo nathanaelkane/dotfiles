@@ -1,30 +1,30 @@
 *bundles.txt*                    Bundles                      Version 0.1
 
 These are the bundles installed on your system, along with their
-versions and release dates.  Downloaded on 2010-10-22 21:47:21 +1000.
+versions and release dates.  Downloaded on 2010-10-22 22:02:11 +1000.
 
 A version number of 'n/a' means upstream hasn't tagged any releases.
   - |nerdtree|                     4.1.0-4-ge1abd4d       2010-09-18
-  - |bufexplorer|                  7.2.7-1-g943ebdd       2010-08-14
+  - |bufexplorer|                  7.2.7-2-gbb013cb       2010-10-22
   - |trailing-whitespace|          1.0-2-g6bfea00         2010-09-25
   - |Command-T|                    0.8b-35-g8008fa3       2010-08-15
   - |peepopen|                     n/a                    2010-07-23
   - |upAndDown|                    0.0.2                  2009-03-18
   - |ack|                          n/a                    2010-07-29
-  - |vimwiki|                      1.1.1                  2010-09-03
-  - |scrollcolors|                 20060719-1-gaef1727    2010-08-16
+  - |vimwiki|                      1.1.1-1-g1857719       2010-10-22
+  - |scrollcolors|                 20060719-2-gb072743    2010-10-22
   - |css-color|                    n/a                    2010-10-13
   - |vilight|                      1.4                    2010-10-21
   - |Zephyr-Color-Scheme|          1.01                   2010-10-20
   - |Color-Sampler-Pack|           8.03                   2010-01-25
   - |nerdcommenter|                2.2.2-15-g930be32      2010-09-03
-  - |snipmate|                     n/a                    2010-04-08
+  - |snipmate|                     n/a                    2010-10-22
   - |snipmate-snippets|            n/a                    2010-06-12
   - |align|                        n/a                    2010-04-01
   - |fugitive|                     v1.1-26-g119fd9e       2010-09-15
   - |markdown|                     n/a                    2010-05-02
-  - |textile|                      0.2-2-g8fc6ddb         2008-11-03
-  - |ruby|                         vim7.3-21-g5560a2f     2010-09-12
+  - |textile|                      0.2-3-g2c3d4d7         2010-10-22
+  - |ruby|                         vim7.3-22-g9c8401d     2010-10-22
   - |rails|                        v4.3                   2010-09-10
   - |cucumber|                     n/a                    2010-08-09
   - |haml|                         vim7.2-52-g47c4dff     2010-08-09
