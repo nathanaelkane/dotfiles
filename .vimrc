@@ -2,14 +2,19 @@
 "-------------------------------------------------
 filetype off                               " Turn filetype detection off because it interferes with pathogen (Debian turns ft on by default)
 call pathogen#runtime_append_all_bundles() " Load all plugins in the ~/.vim/bundle directory
-call pathogen#helptags()                   " Generate helptags for everything in 'runtimepath'
+"call pathogen#helptags()                  " Generate helptags for everything in 'runtimepath' - no longer needed
 
-" GENERAL PLUGINS 
+" GENERAL PLUGINS
 "-------------------------------------------------
 " BUNDLE: git://github.com/scrooloose/nerdtree.git
 " BUNDLE: git://github.com/bronson/vim-bufexplorer.git
 " BUNDLE: git://github.com/bronson/vim-trailing-whitespace.git
 " BUNDLE: git://github.com/bronson/Command-T.git
+" BUNDLE-COMMAND: rake make
+" BUNDLE: git://github.com/shemerey/vim-peepopen.git
+" BUNDLE: git://github.com/vim-scripts/upAndDown.git
+" BUNDLE: git://github.com/mileszs/ack.vim.git
+" BUNDLE: git://github.com/vim-scripts/vimwiki.git
 " # BUNDLE: git://github.com/bronson/vim-closebuffer.git
 " # BUNDLE: git://github.com/bronson/vim-indexedsearch.git
 " # BUNDLE: git://github.com/bronson/vim-visual-star-search.git
@@ -19,9 +24,13 @@ call pathogen#helptags()                   " Generate helptags for everything in
 " COLORSCHEMES (AND RELATED)
 "-------------------------------------------------
 " BUNDLE: git://github.com/bronson/vim-scrollcolors.git
+" BUNDLE: git://github.com/skammer/vim-css-color.git
+" BUNDLE: git://github.com/vim-scripts/vilight.vim.git
+" BUNDLE: git://github.com/vim-scripts/Zephyr-Color-Scheme.git
+" BUNDLE: git://github.com/vim-scripts/Color-Sampler-Pack.git
 " # BUNDLE: git://github.com/tpope/vim-vividchalk.git
 
-" PROGRAMMING PLUGINS 
+" PROGRAMMING PLUGINS
 "-------------------------------------------------
 " BUNDLE: git://github.com/scrooloose/nerdcommenter.git
 " BUNDLE: git://github.com/msanders/snipmate.vim.git
@@ -39,16 +48,16 @@ call pathogen#helptags()                   " Generate helptags for everything in
 " # BUNDLE: git://github.com/tpope/vim-git.git
 " # BUNDLE: git://github.com/kchmck/vim-coffee-script.git
 
-" RUBY ON RAILS PLUGINS 
+" RUBY ON RAILS PLUGINS
 "-------------------------------------------------
 " BUNDLE: git://github.com/vim-ruby/vim-ruby.git
 " BUNDLE: git://github.com/tpope/vim-rails.git
+" BUNDLE: git://github.com/tpope/vim-cucumber.git
+" BUNDLE: git://github.com/tpope/vim-haml.git
 " # BUNDLE: git://github.com/tpope/vim-rake.git
 " # BUNDLE: git://github.com/bronson/vim-ruby-block-conv.git
 " # BUNDLE: git://github.com/janx/vim-rubytest.git
 " # BUNDLE: git://github.com/tsaleh/vim-shoulda.git
-" BUNDLE: git://github.com/tpope/vim-cucumber.git
-" BUNDLE: git://github.com/tpope/vim-haml.git
 " # BUNDLE: git://github.com/astashov/vim-ruby-debugger.git
 
 
