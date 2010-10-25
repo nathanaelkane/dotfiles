@@ -1,7 +1,7 @@
 *bundles.txt*                    Bundles                      Version 0.1
 
 These are the bundles installed on your system, along with their
-versions and release dates.  Downloaded on 2010-10-22 22:13:14 +1000.
+versions and release dates.  Downloaded on Mon Oct 25 14:31:48 +1000 2010.
 
 A version number of 'n/a' means upstream hasn't tagged any releases.
   - |nerdtree|                     4.1.0-4-ge1abd4d       2010-09-18
@@ -12,13 +12,16 @@ A version number of 'n/a' means upstream hasn't tagged any releases.
   - |upAndDown|                    0.0.2                  2009-03-18
   - |ack|                          n/a                    2010-07-29
   - |vimwiki|                      1.1.1-1-g1857719       2010-10-22
+  - |wokmarks|                     0.3.1                  2010-08-17
+  - |tlib_vim|                     v040-1-gb468cf1        2010-10-10
+  - |quickfixsigns_vim|            v009-2-g2d6a977        2010-10-03
   - |scrollcolors|                 20060719-2-gb072743    2010-10-22
   - |css-color|                    n/a                    2010-10-13
   - |vilight|                      1.4                    2010-10-21
   - |Zephyr-Color-Scheme|          1.01                   2010-10-20
   - |Color-Sampler-Pack|           8.03                   2010-01-25
   - |nerdcommenter|                2.2.2-15-g930be32      2010-09-03
-  - |snipmate|                     n/a                    2010-10-22
+  - |snipmate|                     n/a                    2010-04-08
   - |snipmate-snippets|            n/a                    2010-06-12
   - |align|                        n/a                    2010-04-01
   - |fugitive|                     v1.1-26-g119fd9e       2010-09-15

@@ -15,6 +15,9 @@ call pathogen#runtime_append_all_bundles() " Load all plugins in the ~/.vim/bund
 " BUNDLE: git://github.com/vim-scripts/upAndDown.git
 " BUNDLE: git://github.com/mileszs/ack.vim.git
 " BUNDLE: git://github.com/vim-scripts/vimwiki.git
+" BUNDLE: git://github.com/vim-scripts/wokmarks.vim.git
+" BUNDLE: git://github.com/tomtom/tlib_vim.git
+" BUNDLE: git://github.com/tomtom/quickfixsigns_vim.git
 " # BUNDLE: git://github.com/bronson/vim-closebuffer.git
 " # BUNDLE: git://github.com/bronson/vim-indexedsearch.git
 " # BUNDLE: git://github.com/bronson/vim-visual-star-search.git
@@ -34,7 +37,9 @@ call pathogen#runtime_append_all_bundles() " Load all plugins in the ~/.vim/bund
 "-------------------------------------------------
 " BUNDLE: git://github.com/scrooloose/nerdcommenter.git
 " BUNDLE: git://github.com/msanders/snipmate.vim.git
+" BUNDLE-COMMAND: rm -rf snippets/
 " BUNDLE: git://github.com/scrooloose/snipmate-snippets.git
+" # BUNDLE-COMMAND: rm -rf snippets && ln -s . snippets
 " BUNDLE: git://github.com/tsaleh/vim-align.git
 " BUNDLE: git://github.com/tpope/vim-fugitive.git
 " BUNDLE: git://github.com/tpope/vim-markdown.git
@@ -142,8 +147,8 @@ let g:CommandTMaxHeight = 30
 
 " CLEAR HIGHLIGHTS (Ctrl-L)
 "-------------------------------------------------
-nnoremap <C-L> :nohls<CR><C-L>
-inoremap <C-L> <C-O>:nohls<CR>
+"nnoremap <C-L> :nohls<CR><C-L>
+"inoremap <C-L> <C-O>:nohls<CR>
 
 " GO BETWEEN WINDOWS
 "-------------------------------------------------
@@ -167,14 +172,13 @@ map <leader>ls :buffers<CR>
 
 " QUICKLY OPEN/SOURCE (.vimrc/.gvimrc)
 "-------------------------------------------------
-nmap .s :source $HOME/.vimrc<CR>
-nmap .g :source $HOME/.gvimrc<CR>
 nmap .v :e $HOME/.vimrc<CR>
-nmap .gv :e $HOME/.gvimrc<CR>
+nmap .g :e $HOME/.gvimrc<CR>
+nmap .s :source $HOME/.vimrc<Bar>:source $HOME/.gvimrc<CR>
 
 " TOGGLE SHOW INVISIBLES
 "-------------------------------------------------
-:noremap ,i :set list!<CR>
+noremap ,i :set list!<CR>
 
 " BOOKMARKING
 "-------------------------------------------------
@@ -222,3 +226,9 @@ au FocusLost * :up
 "-------------------------------------------------
 "nnoremap <F5> :GundoToggle<CR>
 "set undoreload=10000
+
+" QUICKFIXSIGNS SETTINGS
+" - Only want to show marks at this point
+"-------------------------------------------------
+let g:quickfixsigns_classes = ['marks'] " default: ['cursor', 'qfl', 'loc', 'marks', 'vcsdiff']
+nmap <C-Space> <Plug>ToggleMarkWok
