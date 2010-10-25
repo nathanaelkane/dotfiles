@@ -232,3 +232,6 @@ au FocusLost * :up
 "-------------------------------------------------
 let g:quickfixsigns_classes = ['marks'] " default: ['cursor', 'qfl', 'loc', 'marks', 'vcsdiff']
 nmap <C-Space> <Plug>ToggleMarkWok
+map <C-Left> <Plug>PrevMarkWok
+map <C-Right> <Plug>NextMarkWok
+
