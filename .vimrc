@@ -7,17 +7,20 @@ call pathogen#runtime_append_all_bundles() " Load all plugins in the ~/.vim/bund
 " GENERAL PLUGINS
 "-------------------------------------------------
 " BUNDLE: git://github.com/scrooloose/nerdtree.git
-" BUNDLE: git://github.com/bronson/vim-bufexplorer.git
+" BUNDLE: git://github.com/vim-scripts/bufexplorer.zip.git
 " BUNDLE: git://github.com/bronson/vim-trailing-whitespace.git
-" BUNDLE: git://github.com/bronson/Command-T.git
-" BUNDLE-COMMAND: rake make
+" BUNDLE: git://git.wincent.com/command-t.git
+" BUNDLE-COMMAND: rvm 1.8.7 && cd ruby/command-t && ruby extconf.rb && make
 " BUNDLE: git://github.com/shemerey/vim-peepopen.git
 " BUNDLE: git://github.com/vim-scripts/upAndDown.git
 " BUNDLE: git://github.com/mileszs/ack.vim.git
 " BUNDLE: git://github.com/vim-scripts/vimwiki.git
-" BUNDLE: git://github.com/vim-scripts/wokmarks.vim.git
-" BUNDLE: git://github.com/tomtom/tlib_vim.git
-" BUNDLE: git://github.com/tomtom/quickfixsigns_vim.git
+" BUNDLE: git://github.com/dterei/VimBookmarking.git
+" # BUNDLE: git://github.com/vim-scripts/YankRing.vim.git
+" # BUNDLE: git://github.com/vim-scripts/minibufexpl.vim.git
+" # BUNDLE: git://github.com/vim-scripts/wokmarks.vim.git
+" # BUNDLE: git://github.com/tomtom/tlib_vim.git
+" # BUNDLE: git://github.com/tomtom/quickfixsigns_vim.git
 " # BUNDLE: git://github.com/bronson/vim-closebuffer.git
 " # BUNDLE: git://github.com/bronson/vim-indexedsearch.git
 " # BUNDLE: git://github.com/bronson/vim-visual-star-search.git
@@ -26,11 +29,12 @@ call pathogen#runtime_append_all_bundles() " Load all plugins in the ~/.vim/bund
 
 " COLORSCHEMES (AND RELATED)
 "-------------------------------------------------
-" BUNDLE: git://github.com/bronson/vim-scrollcolors.git
+" # BUNDLE: git://github.com/bronson/vim-scrollcolors.git
 " BUNDLE: git://github.com/skammer/vim-css-color.git
 " BUNDLE: git://github.com/vim-scripts/vilight.vim.git
-" BUNDLE: git://github.com/vim-scripts/Zephyr-Color-Scheme.git
+" # BUNDLE: git://github.com/vim-scripts/Zephyr-Color-Scheme.git
 " BUNDLE: git://github.com/vim-scripts/Color-Sampler-Pack.git
+" # BUNDLE: git://github.com/kossnocorp/up.vim.git
 " # BUNDLE: git://github.com/tpope/vim-vividchalk.git
 
 " PROGRAMMING PLUGINS
@@ -38,13 +42,13 @@ call pathogen#runtime_append_all_bundles() " Load all plugins in the ~/.vim/bund
 " BUNDLE: git://github.com/scrooloose/nerdcommenter.git
 " BUNDLE: git://github.com/msanders/snipmate.vim.git
 " BUNDLE-COMMAND: rm -rf snippets/
-" BUNDLE: git://github.com/scrooloose/snipmate-snippets.git
-" # BUNDLE-COMMAND: rm -rf snippets && ln -s . snippets
+" BUNDLE: git@github.com:nathanaelkane/snipmate-snippets.git
+" BUNDLE-COMMAND: rm -rf snippets && ln -s . snippets
 " BUNDLE: git://github.com/tsaleh/vim-align.git
 " BUNDLE: git://github.com/tpope/vim-fugitive.git
 " BUNDLE: git://github.com/tpope/vim-markdown.git
-" BUNDLE: git://github.com/robgleeson/vim-markdown-preview.git
 " BUNDLE: git://github.com/timcharper/textile.vim.git
+" # BUNDLE: git://github.com/robgleeson/vim-markdown-preview.git
 " # BUNDLE: git://github.com/tpope/vim-surround.git
 " # BUNDLE: git://github.com/vim-scripts/taglist.vim
 " # BUNDLE: git://github.com/tpope/vim-endwise.git
@@ -65,7 +69,6 @@ call pathogen#runtime_append_all_bundles() " Load all plugins in the ~/.vim/bund
 " # BUNDLE: git://github.com/janx/vim-rubytest.git
 " # BUNDLE: git://github.com/tsaleh/vim-shoulda.git
 " # BUNDLE: git://github.com/astashov/vim-ruby-debugger.git
-
 
 " MISC
 "-------------------------------------------------
@@ -127,7 +130,7 @@ augroup MyFileTypes
   autocmd!
 
   " Autoindent with two spaces, always expand tabs
-  autocmd FileType ruby,rails,haml,eruby,yaml,ru,cucumber set ai sw=2 sts=2 et
+  "autocmd FileType ruby,rails,haml,eruby,yaml,ru,cucumber set ai sw=2 sts=2 et
 augroup END
 
 " CUSTOM STATUS LINE - see: http://vimdoc.sourceforge.net/htmldoc/options.html#'statusline'
@@ -144,15 +147,6 @@ set directory=$HOME/.vim/backup
 "-------------------------------------------------
 let g:CommandTMatchWindowAtTop = 0
 let g:CommandTMaxHeight = 30
-
-" CLEAR HIGHLIGHTS (Ctrl-L)
-"-------------------------------------------------
-"nnoremap <C-L> :nohls<CR><C-L>
-"inoremap <C-L> <C-O>:nohls<CR>
-
-" GO BETWEEN WINDOWS
-"-------------------------------------------------
-map <Tab> <C-W><C-W>
 
 " MAKE TABS WORK LIKE WE'RE USED TO
 "-------------------------------------------------
@@ -182,9 +176,9 @@ noremap ,i :set list!<CR>
 
 " BOOKMARKING
 "-------------------------------------------------
-"map <leader>bb :ToggleBookmark<CR>
-"map <leader>bn :NextBookmark<CR>
-"map <leader>bp :PreviousBookmark<CR>
+map <leader>bb :ToggleBookmark<CR>
+map <leader>bn :NextBookmark<CR>
+map <leader>bp :PreviousBookmark<CR>
 
 " COLORSCHEME SCROLL
 "-------------------------------------------------
@@ -218,20 +212,12 @@ vnoremap <F1> <ESC>
 "-------------------------------------------------
 au FocusLost * :up
 
-" AUTOCOMPLPOP SETTINGS
+" RESELECT VISUAL BLOCK AFTER IN/DEDENT
 "-------------------------------------------------
-"let g:acp_behaviorKeywordLength = 5
+vnoremap < <gv
+vnoremap > >gv
 
-" GUNDO SETTINGS
+" RAILS SETTINGS
 "-------------------------------------------------
-"nnoremap <F5> :GundoToggle<CR>
-"set undoreload=10000
-
-" QUICKFIXSIGNS SETTINGS
-" - Only want to show marks at this point
-"-------------------------------------------------
-let g:quickfixsigns_classes = ['marks'] " default: ['cursor', 'qfl', 'loc', 'marks', 'vcsdiff']
-nmap <C-Space> <Plug>ToggleMarkWok
-map <C-Left> <Plug>PrevMarkWok
-map <C-Right> <Plug>NextMarkWok
+let g:rails_menu=0
 

@@ -3,7 +3,6 @@
 if has("gui_running")
   colorscheme vilight " Awesome theme, was: rdark
   set guioptions-=T   " Hide the tool bar
-
 end
 
 " GNOME GUI
@@ -36,8 +35,8 @@ endif
 
 " CUSTOMISE THE COLORSCHEME
 "-------------------------------------------------
-hi Cursor guifg=white guibg=red
-hi iCursor guifg=white guibg=red
+hi Cursor guifg=black guibg=green
+hi iCursor guifg=black guibg=green
 set guicursor=a:blinkon0 " turn off cursor blink
 hi StatusLine guifg=white guibg=#a3190c gui=none
 hi LineNr guifg=#424242 guibg=#111111
