@@ -16,6 +16,7 @@ call pathogen#runtime_append_all_bundles() " Load all plugins in the ~/.vim/bund
 " BUNDLE: git://github.com/mileszs/ack.vim.git
 " BUNDLE: git://github.com/vim-scripts/vimwiki.git
 " BUNDLE: git://github.com/dterei/VimBookmarking.git
+" BUNDLE: git://github.com/vim-scripts/bufkill.vim.git
 " # BUNDLE: git://github.com/vim-scripts/YankRing.vim.git
 " # BUNDLE: git://github.com/vim-scripts/minibufexpl.vim.git
 " # BUNDLE: git://github.com/vim-scripts/wokmarks.vim.git
@@ -90,6 +91,7 @@ set ruler                                  " Show ruler
 set number                                 " Show line numbers
 set vb t_vb=                               " Turn off bell
 set mouse=a                                " Enable the mouse
+set linespace=3                            " Spacing between lines
 
 " INDENTATION
 "-------------------------------------------------
@@ -108,11 +110,6 @@ set nowrap                                 " Dont wrap lines
 set wildmenu                               " Make tab completion act more like bash
 set wildmode=list:longest                  " Tab complete to longest common string, like bash
 set switchbuf=useopen                      " Don't re-open already opened buffers
-
-" CURSOR
-"-------------------------------------------------
-highlight Cursor guifg=white guibg=red
-highlight iCursor guifg=white guibg=red
 
 " MOVING AROUND / EDITING
 "-------------------------------------------------
@@ -166,19 +163,19 @@ map <leader>ls :buffers<CR>
 
 " QUICKLY OPEN/SOURCE (.vimrc/.gvimrc)
 "-------------------------------------------------
-nmap .v :e $HOME/.vimrc<CR>
-nmap .g :e $HOME/.gvimrc<CR>
-nmap .s :source $HOME/.vimrc<Bar>:source $HOME/.gvimrc<CR>
+nmap <leader>vv :e $HOME/.vimrc<CR>
+nmap <leader>gg :e $HOME/.gvimrc<CR>
+nmap <leader>ss :source $HOME/.vimrc<Bar>:source $HOME/.gvimrc<CR>
 
 " TOGGLE SHOW INVISIBLES
 "-------------------------------------------------
-noremap ,i :set list!<CR>
+noremap <leader>i :set list!<CR>
 
 " BOOKMARKING
 "-------------------------------------------------
-map <leader>bb :ToggleBookmark<CR>
-map <leader>bn :NextBookmark<CR>
-map <leader>bp :PreviousBookmark<CR>
+map <C-Space> :ToggleBookmark<CR>
+map <C-Up>    :NextBookmark<CR>
+map <C-Down>  :PreviousBookmark<CR>
 
 " COLORSCHEME SCROLL
 "-------------------------------------------------
