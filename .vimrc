@@ -17,6 +17,7 @@ call pathogen#runtime_append_all_bundles() " Load all plugins in the ~/.vim/bund
 " BUNDLE: git://github.com/vim-scripts/vimwiki.git
 " BUNDLE: git://github.com/dterei/VimBookmarking.git
 " BUNDLE: git://github.com/vim-scripts/bufkill.vim.git
+" BUNDLE: git://github.com/greyblake/vim-preview.git
 " # BUNDLE: git://github.com/vim-scripts/YankRing.vim.git
 " # BUNDLE: git://github.com/vim-scripts/minibufexpl.vim.git
 " # BUNDLE: git://github.com/vim-scripts/wokmarks.vim.git
@@ -152,7 +153,8 @@ map <C-S-Tab> :tabprev<CR>
 
 " SHOW NERDTREE WITH LINE NUMBERS FOR EASIER NAVIGATION
 "-------------------------------------------------
-map <leader>n :NERDTreeToggle<CR> :set number<CR>
+map <leader>n :NERDTreeToggle<CR>
+let g:NERDTreeShowLineNumbers=1
 
 " BUFFER NAVIGATION
 "-------------------------------------------------
@@ -217,4 +219,9 @@ vnoremap > >gv
 " RAILS SETTINGS
 "-------------------------------------------------
 let g:rails_menu=0
+
+" PREVIEW SETTINGS
+"-------------------------------------------------
+let g:PreviewBrowsers='chrome,firefox,safari'
+nmap <leader>mm :Preview<CR>
 
