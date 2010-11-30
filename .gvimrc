@@ -22,11 +22,16 @@ end
 if has("gui_macvim")
   set guifont=Menlo:h13
 
-  " Stop Cmd-T from opening a new tab
+  " PeepOpen - stop Cmd-T from opening a new tab
   macmenu &File.New\ Tab key=<nop>
-
-  " Peep Open
   map <unique> <silent> <D-t> <Plug>PeepOpen
+
+  " Stop Cmd+W from closing window
+  macmenu &File.Close key=<nop>
+  map <unique> <silent> <D-w> :BD<CR>
+
+  " Stop Cmd+Shift+W from closing vim
+  macmenu &File.Close\ Window key=<nop>
 
   " Fullscreen
   set fuoptions=maxvert,maxhorz
