@@ -56,3 +56,20 @@ hi LineNr guifg=#424242 guibg=#111111
 au GUIEnter * :bd             " Close the NERDTree buffer which comes up by default when using 'mvim .'
 au GUIEnter * :NERDTreeToggle " Open a new NERDTree to the left
 
+" INDENT GUIDES
+" TODO: Create a plugin which generates the code below to a certain number or indents.
+"-------------------------------------------------
+highlight IndentLevel1 guibg=#212121
+highlight IndentLevel2 guibg=#262626
+highlight IndentLevel3 guibg=#212121
+highlight IndentLevel4 guibg=#262626
+highlight IndentLevel5 guibg=#212121
+highlight IndentLevel6 guibg=#262626
+
+call matchadd ('IndentLevel1',  '^  '    )
+call matchadd ('IndentLevel2',  '\%3c  ' )
+call matchadd ('IndentLevel3',  '\%5c  ' )
+call matchadd ('IndentLevel4',  '\%7c  ' )
+call matchadd ('IndentLevel5',  '\%9c  ' )
+call matchadd ('IndentLevel6',  '\%11c  ')
+
