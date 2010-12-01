@@ -34,8 +34,13 @@ if has("gui_macvim")
   macmenu &File.Close\ Window key=<nop>
 
   " Fullscreen
-  set fuoptions=maxvert,maxhorz
+  set lines=999
+  set columns=999
   au GUIEnter * set fullscreen
+
+  " Using set lines= & set columns= instead of set fuoptions=
+  " This is because maxvert and maxhorz don't always calculate correctly
+  " set fuoptions=maxvert,maxhorz
 endif
 
 " CUSTOMISE THE COLORSCHEME
@@ -45,4 +50,9 @@ hi iCursor guifg=black guibg=green
 set guicursor=a:blinkon0 " turn off cursor blink
 hi StatusLine guifg=white guibg=#a3190c gui=none
 hi LineNr guifg=#424242 guibg=#111111
+
+" PERFORM SOME ACTIONS WHEN ENTERING VIM
+"-------------------------------------------------
+au GUIEnter * :bd             " Close the NERDTree buffer which comes up by default when using 'mvim .'
+au GUIEnter * :NERDTreeToggle " Open a new NERDTree to the left
 
