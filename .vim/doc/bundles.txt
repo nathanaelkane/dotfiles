@@ -1,13 +1,13 @@
 *bundles.txt*                    Bundles                      Version 0.1
 
 These are the bundles installed on your system, along with their
-versions and release dates.  Downloaded on Mon Nov 29 14:52:48 +1000 2010.
+versions and release dates.  Downloaded on Thu Dec 02 12:31:34 +1000 2010.
 
 A version number of 'n/a' means upstream hasn't tagged any releases.
   - |nerdtree|                     4.1.0-4-ge1abd4d       2010-09-18
   - |bufexplorer.zip|              7.2.8                  2010-11-04
   - |trailing-whitespace|          1.0-2-g6bfea00         2010-09-25
-  - |command-t|                    1.0b                   2010-11-05
+  - |Command-T|                    1.0-5-g40ba35c         2010-11-27
   - |peepopen|                     n/a                    2010-07-23
   - |upAndDown|                    0.0.2                  2009-03-18
   - |ack|                          n/a                    2010-07-29

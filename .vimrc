@@ -9,8 +9,8 @@ call pathogen#runtime_append_all_bundles() " Load all plugins in the ~/.vim/bund
 " BUNDLE: git://github.com/scrooloose/nerdtree.git
 " BUNDLE: git://github.com/vim-scripts/bufexplorer.zip.git
 " BUNDLE: git://github.com/bronson/vim-trailing-whitespace.git
-" BUNDLE: git://git.wincent.com/command-t.git
-" BUNDLE-COMMAND: rvm 1.8.7 && cd ruby/command-t && ruby extconf.rb && make
+" BUNDLE: git://github.com/wincent/Command-T.git
+" BUNDLE-COMMAND: cd ruby/command-t && ruby extconf.rb && make
 " BUNDLE: git://github.com/shemerey/vim-peepopen.git
 " BUNDLE: git://github.com/vim-scripts/upAndDown.git
 " BUNDLE: git://github.com/mileszs/ack.vim.git
@@ -154,7 +154,10 @@ map <C-S-Tab> :tabprev<CR>
 " SHOW NERDTREE WITH LINE NUMBERS FOR EASIER NAVIGATION
 "-------------------------------------------------
 map <leader>n :NERDTreeToggle<CR>
-let g:NERDTreeShowLineNumbers=1
+let g:NERDTreeShowLineNumbers = 1
+let g:NERDTreeHijackNetrw = 0
+let g:loaded_netrw = 1       " Disable netrw
+let g:loaded_netrwPlugin = 1 " Disable netrw
 
 " BUFFER NAVIGATION
 "-------------------------------------------------

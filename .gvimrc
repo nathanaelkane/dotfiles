@@ -53,11 +53,11 @@ hi LineNr guifg=#424242 guibg=#111111
 
 " PERFORM SOME ACTIONS WHEN ENTERING VIM
 "-------------------------------------------------
-au GUIEnter * :bd             " Close the NERDTree buffer which comes up by default when using 'mvim .'
-au GUIEnter * :NERDTreeToggle " Open a new NERDTree to the left
+au VimEnter * :NERDTreeToggle
+au VimEnter * :wincmd p
 
 " INDENT GUIDES
-" TODO: Create a plugin which generates the code below to a certain number or indents.
+" TODO: Create a plugin which generates the code below to a certain number of indents.
 "-------------------------------------------------
 highlight IndentLevel1 guibg=#212121
 highlight IndentLevel2 guibg=#262626
