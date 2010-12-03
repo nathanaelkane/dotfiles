@@ -59,12 +59,12 @@ au VimEnter * :wincmd p
 " INDENT GUIDES
 " TODO: Create a plugin which generates the code below to a certain number of indents.
 "-------------------------------------------------
-highlight IndentLevel1 guibg=#212121
-highlight IndentLevel2 guibg=#262626
-highlight IndentLevel3 guibg=#212121
-highlight IndentLevel4 guibg=#262626
-highlight IndentLevel5 guibg=#212121
-highlight IndentLevel6 guibg=#262626
+hi IndentLevel1 guibg=#212121
+hi IndentLevel2 guibg=#262626
+hi IndentLevel3 guibg=#212121
+hi IndentLevel4 guibg=#262626
+hi IndentLevel5 guibg=#212121
+hi IndentLevel6 guibg=#262626
 
 call matchadd ('IndentLevel1',  '^  '    )
 call matchadd ('IndentLevel2',  '\%3c  ' )

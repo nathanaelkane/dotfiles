@@ -18,6 +18,7 @@ call pathogen#runtime_append_all_bundles() " Load all plugins in the ~/.vim/bund
 " BUNDLE: git://github.com/dterei/VimBookmarking.git
 " BUNDLE: git://github.com/vim-scripts/bufkill.vim.git
 " BUNDLE: git://github.com/greyblake/vim-preview.git
+" BUNDLE: git://github.com/scrooloose/syntastic.git
 " # BUNDLE: git://github.com/vim-scripts/YankRing.vim.git
 " # BUNDLE: git://github.com/vim-scripts/minibufexpl.vim.git
 " # BUNDLE: git://github.com/vim-scripts/wokmarks.vim.git
@@ -128,12 +129,13 @@ augroup MyFileTypes
   autocmd!
 
   " Autoindent with two spaces, always expand tabs
-  "autocmd FileType ruby,rails,haml,eruby,yaml,ru,cucumber set ai sw=2 sts=2 et
+  autocmd FileType ruby,rails,haml,eruby,yaml,ru,cucumber set ai sw=2 sts=2 et
+  autocmd FileType ruby,rails,haml,eruby,yaml,ru,cucumber :SyntasticEnable
 augroup END
 
 " CUSTOM STATUS LINE - see: http://vimdoc.sourceforge.net/htmldoc/options.html#'statusline'
 "-------------------------------------------------
-set statusline=%F%m%r%h%w\ [TYPE=%Y]\ \ \ \ \ \ \ \ \ \ \ \ [POS=%2l,%2v][%p%%]\ \ \ \ \ \ \ \ \ \ \ \ [LEN=%L]
+set statusline=%F%m%r%h%w\ [TYPE=%Y]\ \ \ \ \ \ [POS=%2l,%2v][%p%%]\ \ \ \ \ \ [LEN=%L]\ \ \ \ \ \ [%{SyntasticStatuslineFlag()}]
 set laststatus=2
 
 " BACKUPS
@@ -227,4 +229,9 @@ let g:rails_menu=0
 "-------------------------------------------------
 let g:PreviewBrowsers='chrome,firefox,safari'
 nmap <leader>mm :Preview<CR>
+
+" SYNTASTIC SETTINGS
+"-------------------------------------------------
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=0
 
