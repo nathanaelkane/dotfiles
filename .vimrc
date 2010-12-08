@@ -6,11 +6,13 @@ call pathogen#runtime_append_all_bundles() " Load all plugins in the ~/.vim/bund
 
 " GENERAL PLUGINS
 "-------------------------------------------------
+" BUNDLE: git@github.com:nathanaelkane/vim-indent-guides.git
+" # BUNDLE: git@github.com:nathanaelkane/vim-indent-guides.git development
 " BUNDLE: git://github.com/scrooloose/nerdtree.git
-" BUNDLE: git://github.com/vim-scripts/bufexplorer.zip.git
-" BUNDLE: git://github.com/bronson/vim-trailing-whitespace.git
 " BUNDLE: git://github.com/wincent/Command-T.git
 " BUNDLE-COMMAND: cd ruby/command-t && ruby extconf.rb && make
+" BUNDLE: git://github.com/vim-scripts/bufexplorer.zip.git
+" BUNDLE: git://github.com/bronson/vim-trailing-whitespace.git
 " BUNDLE: git://github.com/shemerey/vim-peepopen.git
 " BUNDLE: git://github.com/vim-scripts/upAndDown.git
 " BUNDLE: git://github.com/mileszs/ack.vim.git
@@ -79,7 +81,6 @@ syntax on                                  " Turn on syntax highlighting
 let mapleader = ","                        " Remap leader to ',' which is much easier than '\'
 filetype plugin indent on                  " Enable automatic filetype detection, filetype-specific plugins/indentation
 set nocompatible                           " Don't need to keep compatibility with Vi
-set background=dark                        " Make vim use colors that look good on a dark background
 set hidden                                 " Allow hiding buffers with unsaved changes
 set listchars=trail:.,tab:>-,eol:$         " Change the invisible characters
 set nolist                                 " Hide invisibles by default
@@ -94,6 +95,7 @@ set number                                 " Show line numbers
 set vb t_vb=                               " Turn off bell
 set mouse=a                                " Enable the mouse
 set linespace=3                            " Spacing between lines
+set noswapfile                             " Disable creation of *.swp files
 
 " INDENTATION
 "-------------------------------------------------
@@ -234,4 +236,10 @@ nmap <leader>mm :Preview<CR>
 "-------------------------------------------------
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=0
+
+" INDENT GUIDES SETTINGS
+"-------------------------------------------------
+let g:indent_guides_indent_levels = 30
+let g:indent_guides_auto_colors   = 1
+let g:indent_guides_auto_colors_change_percent = 0.02
 

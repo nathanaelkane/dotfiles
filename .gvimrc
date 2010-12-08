@@ -1,8 +1,9 @@
 " GUI
 "-------------------------------------------------
 if has("gui_running")
-  colorscheme vilight " Awesome theme, was: rdark
-  set guioptions-=T   " Hide the tool bar
+  colorscheme bclear
+  set background=light
+  set guioptions-=T " Hide the tool bar
 end
 
 " GNOME GUI
@@ -34,8 +35,8 @@ if has("gui_macvim")
   macmenu &File.Close\ Window key=<nop>
 
   " Fullscreen
-  set lines=999
-  set columns=999
+  set lines=100
+  set columns=300
   au GUIEnter * set fullscreen
 
   " Using set lines= & set columns= instead of set fuoptions=
@@ -48,28 +49,15 @@ endif
 hi Cursor guifg=black guibg=green
 hi iCursor guifg=black guibg=green
 set guicursor=a:blinkon0 " turn off cursor blink
-hi StatusLine guifg=white guibg=#a3190c gui=none
-hi LineNr guifg=#424242 guibg=#111111
 
 " PERFORM SOME ACTIONS WHEN ENTERING VIM
 "-------------------------------------------------
 au VimEnter * :NERDTreeToggle
 au VimEnter * :wincmd p
 
-" INDENT GUIDES
-" TODO: Create a plugin which generates the code below to a certain number of indents.
+" INDENT GUIDES COLORS
 "-------------------------------------------------
-hi IndentLevel1 guibg=#212121
-hi IndentLevel2 guibg=#262626
-hi IndentLevel3 guibg=#212121
-hi IndentLevel4 guibg=#262626
-hi IndentLevel5 guibg=#212121
-hi IndentLevel6 guibg=#262626
-
-call matchadd ('IndentLevel1',  '^  '    )
-call matchadd ('IndentLevel2',  '\%3c  ' )
-call matchadd ('IndentLevel3',  '\%5c  ' )
-call matchadd ('IndentLevel4',  '\%7c  ' )
-call matchadd ('IndentLevel5',  '\%9c  ' )
-call matchadd ('IndentLevel6',  '\%11c  ')
+" These highlight groups will be overwritten if g:indent_guides_auto_colors == 0
+hi IndentGuidesOdd  guibg=#212121
+hi IndentGuidesEven guibg=#404040
 
