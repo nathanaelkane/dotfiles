@@ -55,8 +55,15 @@ set guicursor=a:blinkon0 " turn off cursor blink
 au VimEnter * :NERDTreeToggle
 au VimEnter * :wincmd p
 
+" COLOR COLUMNS
+"-------------------------------------------------
+set colorcolumn=80,120
+hi ColorColumn guibg=#FAFAFA
+
 " INDENT GUIDES COLORS
 "-------------------------------------------------
+"au BufEnter,BufWinEnter * :IndentGuidesEnable
+
 " These highlight groups will be overwritten if g:indent_guides_auto_colors == 0
 hi IndentGuidesOdd  guibg=#212121
 hi IndentGuidesEven guibg=#404040

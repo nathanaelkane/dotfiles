@@ -21,6 +21,7 @@ call pathogen#runtime_append_all_bundles() " Load all plugins in the ~/.vim/bund
 " BUNDLE: git://github.com/vim-scripts/bufkill.vim.git
 " BUNDLE: git://github.com/greyblake/vim-preview.git
 " BUNDLE: git://github.com/scrooloose/syntastic.git
+" # BUNDLE: git://github.com/vim-scripts/dbext.vim.git
 " # BUNDLE: git://github.com/vim-scripts/YankRing.vim.git
 " # BUNDLE: git://github.com/vim-scripts/minibufexpl.vim.git
 " # BUNDLE: git://github.com/vim-scripts/wokmarks.vim.git
@@ -243,3 +244,14 @@ let g:indent_guides_indent_levels = 30
 let g:indent_guides_auto_colors   = 1
 let g:indent_guides_auto_colors_change_percent = 0.02
 
+" DBEXT PROFILES
+"-------------------------------------------------
+" Defaults
+"let g:dbext_default_type         = 'mysql'
+"let g:dbext_default_user         = 'root'
+"let g:dbext_default_passwd       = ''
+"let g:dbext_default_host         = '127.0.0.1'
+"let g:dbext_default_buffer_lines = 10
+
+" Profiles
+"let g:dbext_default_profile_lms = 'type=mysql:user=root:passwd=:dbname=fms:host=127.0.0.1'
