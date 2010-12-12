@@ -35,7 +35,7 @@ call pathogen#runtime_append_all_bundles() " Load all plugins in the ~/.vim/bund
 
 " COLORSCHEMES (AND RELATED)
 "-------------------------------------------------
-" # BUNDLE: git://github.com/bronson/vim-scrollcolors.git
+" BUNDLE: git://github.com/vim-scripts/ScrollColors.git
 " BUNDLE: git://github.com/skammer/vim-css-color.git
 " BUNDLE: git://github.com/vim-scripts/vilight.vim.git
 " # BUNDLE: git://github.com/vim-scripts/Zephyr-Color-Scheme.git
@@ -189,8 +189,9 @@ map <C-Down>  :PreviousBookmark<CR>
 
 " COLORSCHEME SCROLL
 "-------------------------------------------------
-map <silent><F3> :NEXTCOLOR<cr>
-map <silent><F2> :PREVCOLOR<cr>
+map <silent><F2> :PREVCOLOR<CR>
+map <silent><F3> :NEXTCOLOR<CR>
+map <silent><F5> :NEXTCOLOR<CR><Bar>:IndentGuidesEnable<CR>
 
 " TRIM AND SAVE
 "-------------------------------------------------
@@ -235,14 +236,8 @@ nmap <leader>mm :Preview<CR>
 
 " SYNTASTIC SETTINGS
 "-------------------------------------------------
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=0
-
-" INDENT GUIDES SETTINGS
-"-------------------------------------------------
-let g:indent_guides_indent_levels = 30
-let g:indent_guides_auto_colors   = 1
-let g:indent_guides_auto_colors_change_percent = 0.02
+let g:syntastic_enable_signs = 1
+let g:syntastic_auto_loc_list = 0
 
 " DBEXT PROFILES
 "-------------------------------------------------
@@ -255,3 +250,4 @@ let g:indent_guides_auto_colors_change_percent = 0.02
 
 " Profiles
 "let g:dbext_default_profile_lms = 'type=mysql:user=root:passwd=:dbname=fms:host=127.0.0.1'
+

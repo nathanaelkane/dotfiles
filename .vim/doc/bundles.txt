@@ -1,10 +1,10 @@
 *bundles.txt*                    Bundles                      Version 0.1
 
 These are the bundles installed on your system, along with their
-versions and release dates.  Downloaded on Thu Dec 09 13:28:07 +1000 2010.
+versions and release dates.  Downloaded on Mon Dec 13 08:53:35 +1000 2010.
 
 A version number of 'n/a' means upstream hasn't tagged any releases.
-  - |indent-guides|                n/a                    2010-12-08
+  - |indent-guides|                1.0-1-g0c0ac44         2010-12-12
   - |nerdtree|                     4.1.0-4-ge1abd4d       2010-09-18
   - |Command-T|                    1.0-6-ga338c4c         2010-12-03
   - |bufexplorer.zip|              7.2.8                  2010-11-04
@@ -17,6 +17,7 @@ A version number of 'n/a' means upstream hasn't tagged any releases.
   - |bufkill|                      1.7                    2010-06-12
   - |preview|                      v0.2                   2010-11-29
   - |syntastic|                    1.2.0                  2010-10-28
+  - |ScrollColors|                 20060719               2006-07-18
   - |css-color|                    n/a                    2010-11-05
   - |vilight|                      1.4                    2010-10-21
   - |Color-Sampler-Pack|           8.03                   2010-01-25
