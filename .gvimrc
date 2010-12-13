@@ -21,7 +21,7 @@ end
 " MAC OSX GUI
 "-------------------------------------------------
 if has("gui_macvim")
-  set guifont=Menlo:h13
+  set guifont=DejaVu\ Sans\ Mono:h13
 
   " PeepOpen - stop Cmd-T from opening a new tab
   macmenu &File.New\ Tab key=<nop>
