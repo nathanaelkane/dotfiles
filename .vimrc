@@ -184,8 +184,8 @@ noremap <leader>i :set list!<CR>
 " BOOKMARKING
 "-------------------------------------------------
 map <C-Space> :ToggleBookmark<CR>
-map <C-Up>    :NextBookmark<CR>
-map <C-Down>  :PreviousBookmark<CR>
+map <C-Up>    :PreviousBookmark<CR>
+map <C-Down>  :NextBookmark<CR>
 
 " COLORSCHEME SCROLL
 "-------------------------------------------------
@@ -250,4 +250,10 @@ let g:syntastic_auto_loc_list = 0
 
 " Profiles
 "let g:dbext_default_profile_lms = 'type=mysql:user=root:passwd=:dbname=fms:host=127.0.0.1'
+
+" COMMAND-T SETTINGS
+"-------------------------------------------------
+if has("gui_macvim")
+  let g:command_t_loaded = 0 " Disable Command-T on MacVim (I use PeepOpen)
+endif
 
