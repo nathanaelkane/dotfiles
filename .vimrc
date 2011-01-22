@@ -7,7 +7,6 @@ call pathogen#runtime_append_all_bundles() " Load all plugins in the ~/.vim/bund
 " GENERAL PLUGINS
 "-------------------------------------------------
 " BUNDLE: git@github.com:nathanaelkane/vim-indent-guides.git
-" # BUNDLE: git@github.com:nathanaelkane/vim-indent-guides.git development
 " BUNDLE: git://github.com/scrooloose/nerdtree.git
 " BUNDLE: git://github.com/wincent/Command-T.git
 " BUNDLE-COMMAND: cd ruby/command-t && ruby extconf.rb && make
@@ -19,29 +18,16 @@ call pathogen#runtime_append_all_bundles() " Load all plugins in the ~/.vim/bund
 " BUNDLE: git://github.com/vim-scripts/vimwiki.git
 " BUNDLE: git://github.com/dterei/VimBookmarking.git
 " BUNDLE: git://github.com/vim-scripts/bufkill.vim.git
-" BUNDLE: git://github.com/greyblake/vim-preview.git
 " BUNDLE: git://github.com/scrooloose/syntastic.git
-" # BUNDLE: git://github.com/vim-scripts/dbext.vim.git
-" # BUNDLE: git://github.com/vim-scripts/YankRing.vim.git
-" # BUNDLE: git://github.com/vim-scripts/minibufexpl.vim.git
-" # BUNDLE: git://github.com/vim-scripts/wokmarks.vim.git
-" # BUNDLE: git://github.com/tomtom/tlib_vim.git
-" # BUNDLE: git://github.com/tomtom/quickfixsigns_vim.git
-" # BUNDLE: git://github.com/bronson/vim-closebuffer.git
-" # BUNDLE: git://github.com/bronson/vim-indexedsearch.git
-" # BUNDLE: git://github.com/bronson/vim-visual-star-search.git
-" # BUNDLE: git://github.com/bronson/vim-toggle-wrap.git
-" # BUNDLE: git://github.com/Raimondi/YAIFA.git
+" BUNDLE: git://github.com/robgleeson/vim-markdown-preview.git
+" BUNDLE: git://github.com/aklt/vim-substitute.git
 
 " COLORSCHEMES (AND RELATED)
 "-------------------------------------------------
 " BUNDLE: git://github.com/vim-scripts/ScrollColors.git
 " BUNDLE: git://github.com/skammer/vim-css-color.git
 " BUNDLE: git://github.com/vim-scripts/vilight.vim.git
-" # BUNDLE: git://github.com/vim-scripts/Zephyr-Color-Scheme.git
 " BUNDLE: git://github.com/vim-scripts/Color-Sampler-Pack.git
-" # BUNDLE: git://github.com/kossnocorp/up.vim.git
-" # BUNDLE: git://github.com/tpope/vim-vividchalk.git
 
 " PROGRAMMING PLUGINS
 "-------------------------------------------------
@@ -54,14 +40,12 @@ call pathogen#runtime_append_all_bundles() " Load all plugins in the ~/.vim/bund
 " BUNDLE: git://github.com/tpope/vim-fugitive.git
 " BUNDLE: git://github.com/tpope/vim-markdown.git
 " BUNDLE: git://github.com/timcharper/textile.vim.git
-" # BUNDLE: git://github.com/robgleeson/vim-markdown-preview.git
+" BUNDLE: git://github.com/tsaleh/vim-supertab.git
 " # BUNDLE: git://github.com/tpope/vim-surround.git
 " # BUNDLE: git://github.com/vim-scripts/taglist.vim
 " # BUNDLE: git://github.com/tpope/vim-endwise.git
 " # BUNDLE: git://github.com/tpope/vim-repeat.git
-" # BUNDLE: git://github.com/tsaleh/vim-supertab.git
 " # BUNDLE: git://github.com/bronson/vim-jquery.git
-" # BUNDLE: git://github.com/tpope/vim-git.git
 " # BUNDLE: git://github.com/kchmck/vim-coffee-script.git
 
 " RUBY ON RAILS PLUGINS
@@ -97,6 +81,7 @@ set vb t_vb=                               " Turn off bell
 set mouse=a                                " Enable the mouse
 set linespace=3                            " Spacing between lines
 set noswapfile                             " Disable creation of *.swp files
+set t_Co=256                               " Support for xterm with 256 colors (gets overriden in .gvimrc)
 
 " INDENTATION
 "-------------------------------------------------
@@ -133,23 +118,23 @@ augroup MyFileTypes
 
   " Autoindent with two spaces, always expand tabs
   autocmd FileType ruby,rails,haml,eruby,yaml,ru,cucumber set ai sw=2 sts=2 et
-  autocmd FileType ruby,rails,haml,eruby,yaml,ru,cucumber :SyntasticEnable
+  if has("gui_running")
+    autocmd FileType ruby,rails,haml,eruby,yaml,ru,cucumber :SyntasticEnable
+  endif
 augroup END
 
 " CUSTOM STATUS LINE - see: http://vimdoc.sourceforge.net/htmldoc/options.html#'statusline'
 "-------------------------------------------------
-set statusline=%F%m%r%h%w\ [TYPE=%Y]\ \ \ \ \ \ [POS=%2l,%2v][%p%%]\ \ \ \ \ \ [LEN=%L]\ \ \ \ \ \ [%{SyntasticStatuslineFlag()}]
+set statusline=%F%m%r%h%w\ [TYPE=%Y]\ \ \ \ \ \ [POS=%2l,%2v][%p%%]\ \ \ \ \ \ [LEN=%L]
+if has("gui_running")
+  set statusline+=\ \ \ \ \ \ [%{SyntasticStatuslineFlag()}]
+endif
 set laststatus=2
 
 " BACKUPS
 "-------------------------------------------------
 set backupdir=$HOME/.vim/backup
 set directory=$HOME/.vim/backup
-
-" COMMAND-T SETTINGS
-"-------------------------------------------------
-let g:CommandTMatchWindowAtTop = 0
-let g:CommandTMaxHeight = 30
 
 " MAKE TABS WORK LIKE WE'RE USED TO
 "-------------------------------------------------
@@ -160,9 +145,9 @@ map <C-S-Tab> :tabprev<CR>
 "-------------------------------------------------
 map <leader>n :NERDTreeToggle<CR>
 let g:NERDTreeShowLineNumbers = 1
-let g:NERDTreeHijackNetrw = 0
-let g:loaded_netrw = 1       " Disable netrw
-let g:loaded_netrwPlugin = 1 " Disable netrw
+let g:NERDTreeHijackNetrw     = 0
+let g:loaded_netrw            = 1 " Disable netrw
+let g:loaded_netrwPlugin      = 1 " Disable netrw
 
 " BUFFER NAVIGATION
 "-------------------------------------------------
@@ -227,7 +212,7 @@ vnoremap > >gv
 
 " RAILS SETTINGS
 "-------------------------------------------------
-let g:rails_menu=0
+let g:rails_menu = 0
 
 " PREVIEW SETTINGS
 "-------------------------------------------------
@@ -236,24 +221,22 @@ nmap <leader>mm :Preview<CR>
 
 " SYNTASTIC SETTINGS
 "-------------------------------------------------
-let g:syntastic_enable_signs = 1
+let g:syntastic_enable_signs  = 1
 let g:syntastic_auto_loc_list = 0
-
-" DBEXT PROFILES
-"-------------------------------------------------
-" Defaults
-"let g:dbext_default_type         = 'mysql'
-"let g:dbext_default_user         = 'root'
-"let g:dbext_default_passwd       = ''
-"let g:dbext_default_host         = '127.0.0.1'
-"let g:dbext_default_buffer_lines = 10
-
-" Profiles
-"let g:dbext_default_profile_lms = 'type=mysql:user=root:passwd=:dbname=fms:host=127.0.0.1'
 
 " COMMAND-T SETTINGS
 "-------------------------------------------------
 if has("gui_macvim")
   let g:command_t_loaded = 0 " Disable Command-T on MacVim (I use PeepOpen)
 endif
+let g:CommandTMaxFiles  = 20000
+let g:CommandTMaxHeight = 10
+
+" INDENT GUIDES SETTINGS
+"-------------------------------------------------
+let g:indent_guides_color_change_percent = 3
+"let g:indent_guides_guide_size = 1
+"let g:indent_guides_start_level = 2
+"let g:indent_guides_debug = 1
+"autocmd VimEnter * :IndentGuidesEnable
 

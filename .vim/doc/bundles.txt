@@ -1,10 +1,10 @@
 *bundles.txt*                    Bundles                      Version 0.1
 
 These are the bundles installed on your system, along with their
-versions and release dates.  Downloaded on Mon Dec 13 08:53:35 +1000 2010.
+versions and release dates.  Downloaded on Sat Jan 22 22:10:31 +1000 2011.
 
 A version number of 'n/a' means upstream hasn't tagged any releases.
-  - |indent-guides|                1.0-1-g0c0ac44         2010-12-12
+  - |indent-guides|                1.3                    2011-01-17
   - |nerdtree|                     4.1.0-4-ge1abd4d       2010-09-18
   - |Command-T|                    1.0-6-ga338c4c         2010-12-03
   - |bufexplorer.zip|              7.2.8                  2010-11-04
@@ -14,9 +14,10 @@ A version number of 'n/a' means upstream hasn't tagged any releases.
   - |ack|                          n/a                    2010-07-29
   - |vimwiki|                      1.1.1                  2010-09-03
   - |VimBookmarking|               n/a                    2010-07-07
-  - |bufkill|                      1.7                    2010-06-12
-  - |preview|                      v0.2                   2010-11-29
+  - |bufkill|                      1.9                    2010-12-30
   - |syntastic|                    1.2.0                  2010-10-28
+  - |markdown-preview|             2.1.1-3-gb0842f8       2010-12-21
+  - |substitute|                   n/a                    2010-12-29
   - |ScrollColors|                 20060719               2006-07-18
   - |css-color|                    n/a                    2010-11-05
   - |vilight|                      1.4                    2010-10-21
@@ -28,6 +29,7 @@ A version number of 'n/a' means upstream hasn't tagged any releases.
   - |fugitive|                     v1.1-32-ge954d36       2010-11-05
   - |markdown|                     n/a                    2010-10-24
   - |textile|                      0.2-2-g8fc6ddb         2008-11-03
+  - |supertab|                     n/a                    2010-04-01
   - |ruby|                         vim7.3-21-g5560a2f     2010-09-12
   - |rails|                        v4.3-4-g26dade8        2010-11-20
   - |cucumber|                     n/a                    2010-11-07

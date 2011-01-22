@@ -60,11 +60,3 @@ au VimEnter * :wincmd p
 set colorcolumn=80,120
 hi ColorColumn guibg=#FAFAFA
 
-" INDENT GUIDES SETTINGS
-"-------------------------------------------------
-let g:indent_guides_color_change_percent = 0.02
-
-" These highlight groups will be overwritten if g:indent_guides_auto_colors == 0
-hi IndentGuidesOdd  guibg=#212121
-hi IndentGuidesEven guibg=#404040
-
