@@ -57,6 +57,6 @@ au VimEnter * :wincmd p
 
 " COLOR COLUMNS
 "-------------------------------------------------
-set colorcolumn=80,120
+"set colorcolumn=80,120
 hi ColorColumn guibg=#FAFAFA
 
