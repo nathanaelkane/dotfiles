@@ -121,6 +121,10 @@ augroup MyFileTypes
   if has("gui_running")
     autocmd FileType ruby,rails,haml,eruby,yaml,ru,cucumber :SyntasticEnable
   endif
+
+  " Set Color Column for features
+  autocmd BufWinEnter *.feature set cc=11
+  autocmd BufWinLeave *.feature set cc=
 augroup END
 
 " CUSTOM STATUS LINE - see: http://vimdoc.sourceforge.net/htmldoc/options.html#'statusline'
