@@ -189,7 +189,7 @@ let g:indent_guides_enable_on_vim_startup = 1
 
 " BUNDLES
 "-------------------------------------------------
-Bundle 'Indent-Guides'
+Bundle 'git@github.com:nathanaelkane/vim-indent-guides.git'
 Bundle 'rails.vim'
 Bundle 'ack.vim'
 Bundle 'Command-T'
