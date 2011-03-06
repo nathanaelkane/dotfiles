@@ -1,7 +1,5 @@
-" PATHOGEN
-"-------------------------------------------------
-filetype off                               " Turn filetype detection off because it interferes with pathogen (Debian turns ft on by default)
-call pathogen#runtime_append_all_bundles() " Load all plugins in the ~/.vim/bundle directory
+set rtp+=~/.vim/vundle/
+call vundle#rc()
 
 " MISC
 "-------------------------------------------------
@@ -188,4 +186,29 @@ let g:CommandTMaxHeight = 10
 "-------------------------------------------------
 let g:indent_guides_color_change_percent = 3
 let g:indent_guides_enable_on_vim_startup = 1
-"let g:indent_guides_auto_colors = 0
+
+" BUNDLES
+"-------------------------------------------------
+Bundle 'Indent-Guides'
+Bundle 'rails.vim'
+Bundle 'ack.vim'
+Bundle 'Command-T'
+Bundle 'Color-Sampler-Pack'
+Bundle 'The-NERD-tree'
+Bundle 'The-NERD-Commenter'
+Bundle 'snipMate'
+Bundle 'cucumber.zip'
+Bundle 'bufexplorer.zip'
+Bundle 'trailing-whitespace'
+Bundle 'upAndDown'
+Bundle 'vimwiki'
+Bundle 'Syntastic'
+Bundle 'Bookmarking'
+Bundle 'bufkill.vim'
+Bundle 'ScrollColors'
+Bundle 'css_color.vim'
+Bundle 'Align'
+Bundle 'fugitive.vim'
+Bundle 'haml.zip'
+Bundle 'git://github.com/shemerey/vim-peepopen.git'
+Bundle 'git://github.com/robgleeson/vim-markdown-preview.git'
