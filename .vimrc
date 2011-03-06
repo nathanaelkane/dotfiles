@@ -2,63 +2,6 @@
 "-------------------------------------------------
 filetype off                               " Turn filetype detection off because it interferes with pathogen (Debian turns ft on by default)
 call pathogen#runtime_append_all_bundles() " Load all plugins in the ~/.vim/bundle directory
-"call pathogen#helptags()                  " Generate helptags for everything in 'runtimepath' - no longer needed
-
-" GENERAL PLUGINS
-"-------------------------------------------------
-" BUNDLE: git@github.com:nathanaelkane/vim-indent-guides.git
-" BUNDLE: git://github.com/scrooloose/nerdtree.git
-" BUNDLE: git://github.com/wincent/Command-T.git
-" BUNDLE-COMMAND: cd ruby/command-t && ruby extconf.rb && make
-" BUNDLE: git://github.com/vim-scripts/bufexplorer.zip.git
-" BUNDLE: git://github.com/bronson/vim-trailing-whitespace.git
-" BUNDLE: git://github.com/shemerey/vim-peepopen.git
-" BUNDLE: git://github.com/vim-scripts/upAndDown.git
-" BUNDLE: git://github.com/mileszs/ack.vim.git
-" BUNDLE: git://github.com/vim-scripts/vimwiki.git
-" BUNDLE: git://github.com/dterei/VimBookmarking.git
-" BUNDLE: git://github.com/vim-scripts/bufkill.vim.git
-" BUNDLE: git://github.com/scrooloose/syntastic.git
-" BUNDLE: git://github.com/robgleeson/vim-markdown-preview.git
-" BUNDLE: git://github.com/aklt/vim-substitute.git
-
-" COLORSCHEMES (AND RELATED)
-"-------------------------------------------------
-" BUNDLE: git://github.com/vim-scripts/ScrollColors.git
-" BUNDLE: git://github.com/skammer/vim-css-color.git
-" BUNDLE: git://github.com/vim-scripts/vilight.vim.git
-" BUNDLE: git://github.com/vim-scripts/Color-Sampler-Pack.git
-
-" PROGRAMMING PLUGINS
-"-------------------------------------------------
-" BUNDLE: git://github.com/scrooloose/nerdcommenter.git
-" BUNDLE: git://github.com/msanders/snipmate.vim.git
-" BUNDLE-COMMAND: rm -rf snippets/
-" BUNDLE: git@github.com:nathanaelkane/snipmate-snippets.git
-" BUNDLE-COMMAND: rm -rf snippets && ln -s . snippets
-" BUNDLE: git://github.com/tsaleh/vim-align.git
-" BUNDLE: git://github.com/tpope/vim-fugitive.git
-" BUNDLE: git://github.com/tpope/vim-markdown.git
-" BUNDLE: git://github.com/timcharper/textile.vim.git
-" # BUNDLE: git://github.com/tsaleh/vim-supertab.git
-" # BUNDLE: git://github.com/tpope/vim-surround.git
-" # BUNDLE: git://github.com/vim-scripts/taglist.vim
-" # BUNDLE: git://github.com/tpope/vim-endwise.git
-" # BUNDLE: git://github.com/tpope/vim-repeat.git
-" # BUNDLE: git://github.com/bronson/vim-jquery.git
-" # BUNDLE: git://github.com/kchmck/vim-coffee-script.git
-
-" RUBY ON RAILS PLUGINS
-"-------------------------------------------------
-" BUNDLE: git://github.com/vim-ruby/vim-ruby.git
-" BUNDLE: git://github.com/tpope/vim-rails.git
-" BUNDLE: git://github.com/tpope/vim-cucumber.git
-" BUNDLE: git://github.com/tpope/vim-haml.git
-" # BUNDLE: git://github.com/tpope/vim-rake.git
-" # BUNDLE: git://github.com/bronson/vim-ruby-block-conv.git
-" # BUNDLE: git://github.com/janx/vim-rubytest.git
-" # BUNDLE: git://github.com/tsaleh/vim-shoulda.git
-" # BUNDLE: git://github.com/astashov/vim-ruby-debugger.git
 
 " MISC
 "-------------------------------------------------
