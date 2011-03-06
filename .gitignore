@@ -1,7 +1,6 @@
 .netrwhist
 .vim/backup
-vim-update-bundles
 Icon?
 .DS_Store
 .dropbox
-.vim/Trashed-Bundles
+.vim/bundle
