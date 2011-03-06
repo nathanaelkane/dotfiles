@@ -40,7 +40,7 @@ call pathogen#runtime_append_all_bundles() " Load all plugins in the ~/.vim/bund
 " BUNDLE: git://github.com/tpope/vim-fugitive.git
 " BUNDLE: git://github.com/tpope/vim-markdown.git
 " BUNDLE: git://github.com/timcharper/textile.vim.git
-" BUNDLE: git://github.com/tsaleh/vim-supertab.git
+" # BUNDLE: git://github.com/tsaleh/vim-supertab.git
 " # BUNDLE: git://github.com/tpope/vim-surround.git
 " # BUNDLE: git://github.com/vim-scripts/taglist.vim
 " # BUNDLE: git://github.com/tpope/vim-endwise.git
@@ -245,4 +245,4 @@ let g:CommandTMaxHeight = 10
 "-------------------------------------------------
 let g:indent_guides_color_change_percent = 3
 let g:indent_guides_enable_on_vim_startup = 1
-
+"let g:indent_guides_auto_colors = 0

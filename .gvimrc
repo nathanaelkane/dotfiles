@@ -1,10 +1,12 @@
 " GUI
 "-------------------------------------------------
-if has("gui_running")
-  colorscheme bclear
-  set background=light
+"if has("gui_running")
+  "colorscheme bclear
+  "set background=light
+  colorscheme rdark
+  set background=dark
   set guioptions-=T " Hide the tool bar
-end
+"end
 
 " GNOME GUI
 "-------------------------------------------------
@@ -37,7 +39,7 @@ if has("gui_macvim")
   " Fullscreen
   set lines=100
   set columns=300
-  au GUIEnter * set fullscreen
+  "au GUIEnter * set fullscreen
 
   " Using set lines= & set columns= instead of set fuoptions=
   " This is because maxvert and maxhorz don't always calculate correctly
@@ -57,6 +59,4 @@ au VimEnter * :wincmd p
 
 " COLOR COLUMNS
 "-------------------------------------------------
-"set colorcolumn=80,120
-hi ColorColumn guibg=#FAFAFA
-
+hi ColorColumn guibg=#333333
