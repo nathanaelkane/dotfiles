@@ -15,7 +15,7 @@ if has("gui_macvim")
 endif
 
 " VimEnter
-if isdirectory(argv(0))
+if argv(0) == '.'
   au VimEnter * :NERDTreeToggle
   au VimEnter * :wincmd p
 endif
