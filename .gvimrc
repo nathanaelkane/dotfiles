@@ -1,62 +1,29 @@
-" GUI
-"-------------------------------------------------
-"if has("gui_running")
-  "colorscheme bclear
-  "set background=light
-  colorscheme rdark
-  set background=dark
-  set guioptions-=T " Hide the tool bar
-"end
+" GVIMRC
 
-" GNOME GUI
-"-------------------------------------------------
+colorscheme rdark_nk
+set background=dark
+set guioptions-=T " Hide the tool bar
+
+" gVim
 if has("gui_gtk")
-  set guifont=DejaVu\ Sans\ Mono\ 9
-
-  " Ack Plugin Settings
-  let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-
-  " Command-T
-  nmap <silent> <leader>t :CommandT<CR>
+  source $HOME/.vim/gui_gtk.vim
 end
 
-" MAC OSX GUI
-"-------------------------------------------------
+" MacVim
 if has("gui_macvim")
-  set guifont=Menlo:h15
-
-  " PeepOpen - stop Cmd-T from opening a new tab
-  macmenu &File.New\ Tab key=<nop>
-  map <unique> <silent> <D-t> <Plug>PeepOpen
-
-  " Stop Cmd+W from closing window
-  macmenu &File.Close key=<nop>
-  map <unique> <silent> <D-w> :BD<CR>
-
-  " Stop Cmd+Shift+W from closing vim
-  macmenu &File.Close\ Window key=<nop>
-
-  " Fullscreen
-  set lines=100
-  set columns=300
-  "au GUIEnter * set fullscreen
-
-  " Using set lines= & set columns= instead of set fuoptions=
-  " This is because maxvert and maxhorz don't always calculate correctly
-  " set fuoptions=maxvert,maxhorz
+  source $HOME/.vim/gui_macvim.vim
 endif
 
-" CUSTOMISE THE COLORSCHEME
-"-------------------------------------------------
+" VimEnter
+if isdirectory(argv(0))
+  au VimEnter * :NERDTreeToggle
+  au VimEnter * :wincmd p
+endif
+
+" Cursor
 hi Cursor guifg=black guibg=green
 hi iCursor guifg=black guibg=green
 set guicursor=a:blinkon0 " turn off cursor blink
 
-" PERFORM SOME ACTIONS WHEN ENTERING VIM
-"-------------------------------------------------
-au VimEnter * :NERDTreeToggle
-au VimEnter * :wincmd p
-
-" COLOR COLUMNS
-"-------------------------------------------------
+" Color columns
 hi ColorColumn guibg=#333333
