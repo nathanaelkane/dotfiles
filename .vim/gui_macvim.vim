@@ -28,3 +28,6 @@ macmenu &File.Close\ Window key=<nop>
 " Cmd+R to flush Command-T cache
 nmap <D-r> :CommandTFlush<CR>
 imap <D-r> <Esc>:CommandTFlush<CR>
+
+" Hide MacVim when the window closes
+au VimLeave * maca hide:
