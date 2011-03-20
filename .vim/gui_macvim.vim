@@ -17,6 +17,11 @@ macmenu &File.Close key=<nop>
 nmap <D-w> :BD<CR>
 imap <D-w> <Esc>:BD<CR>
 
+" Cmd+L for BufExplorer
+macmenu &Tools.List\ Errors key=<nop>
+nmap <D-l> :BufExplorer<CR>
+imap <D-l> <Esc>:BufExplorer<CR>
+
 " Stop Cmd+Shift+W from closing Vim
 macmenu &File.Close\ Window key=<nop>
 
