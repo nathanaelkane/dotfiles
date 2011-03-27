@@ -31,3 +31,8 @@ imap <D-r> <Esc>:CommandTFlush<CR>
 
 " Hide MacVim when the window closes
 au VimLeave * maca hide:
+
+" Create new menu item 'Close Instance'
+" In OS X you can create an application specific keyboard shortcut to use with this new menu item.
+menu File.Close\ Instance :qa<CR>
+inoremenu File.Close\ Instance <C-O>:qa<CR>

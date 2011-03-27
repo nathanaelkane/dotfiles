@@ -27,8 +27,3 @@ set guicursor=a:blinkon0 " turn off cursor blink
 
 " Color columns
 hi ColorColumn guibg=#333333
-
-" Create new menu item 'Close Instance'
-" In OS X you can create an application specific keyboard shortcut to use with this new menu item.
-menu File.Close\ Instance :qa<CR>
-inoremenu File.Close\ Instance <C-O>:qa<CR>
