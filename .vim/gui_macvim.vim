@@ -7,6 +7,10 @@ macmenu &File.New\ Tab key=<nop>
 nmap <D-t> :CommandT<CR>
 imap <D-t> <Esc>:CommandT<CR>
 
+" Cmd+R for Command-T Cache Flush
+nmap <D-r> :CommandTFlush<CR>
+imap <D-r> <Esc>:CommandTFlush<CR>
+
 " Cmd+F for Ack
 macmenu &Edit.Find.Find\.\.\. key=<nop>
 nmap <D-f> :Ack<Space>
@@ -24,10 +28,6 @@ imap <D-l> <Esc>:BufExplorer<CR>
 
 " Stop Cmd+Shift+W from closing Vim
 macmenu &File.Close\ Window key=<nop>
-
-" Cmd+R to flush Command-T cache
-nmap <D-r> :CommandTFlush<CR>
-imap <D-r> <Esc>:CommandTFlush<CR>
 
 " Hide MacVim when the window closes
 au VimLeave * maca hide:
