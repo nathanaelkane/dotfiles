@@ -36,3 +36,8 @@ au VimLeave * maca hide:
 " In OS X you can create an application specific keyboard shortcut to use with this new menu item.
 menu File.Close\ Instance :qa<CR>
 inoremenu File.Close\ Instance <C-O>:qa<CR>
+
+" Cmd-Y to toggle Solarized background
+nnoremap <D-y> :call ToggleBackground()<CR>
+inoremap <D-y> <ESC>:call ToggleBackground()<CR>a
+vnoremap <D-y> <ESC>:call ToggleBackground()<CR>

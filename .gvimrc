@@ -1,7 +1,7 @@
 " GVIMRC
 
-colorscheme rdark_nk
-set background=dark
+set background=light
+colorscheme solarized
 set guioptions-=T " Hide the tool bar
 
 " gVim
