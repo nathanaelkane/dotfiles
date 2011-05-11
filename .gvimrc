@@ -1,7 +1,7 @@
 " GVIMRC
 
 set background=light
-colorscheme solarized
+colorscheme bclear
 set guioptions-=T " Hide the tool bar
 
 " gVim
@@ -26,4 +26,4 @@ hi iCursor guifg=black guibg=green
 set guicursor=a:blinkon0 " turn off cursor blink
 
 " Color columns
-"hi ColorColumn guibg=#333333
+hi ColorColumn guibg=#F0F0F0
