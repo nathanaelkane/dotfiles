@@ -27,6 +27,8 @@ Bundle 'cheat.vim'
 Bundle 'git://github.com/altercation/vim-colors-solarized.git'
 Bundle 'git://github.com/shemerey/vim-peepopen.git'
 Bundle 'git://github.com/robgleeson/vim-markdown-preview.git'
+Bundle 'git://github.com/jkramer/vim-checkbox.git'
+
 Bundle 'git@github.com:nathanaelkane/snipmate-snippets.git'
 Bundle 'git@github.com:nathanaelkane/vim-indent-guides.git'
 Bundle 'git@github.com:nathanaelkane/vim-closer.git'
