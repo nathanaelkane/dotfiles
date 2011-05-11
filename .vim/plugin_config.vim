@@ -22,6 +22,7 @@ endif
 " Command-T
 let g:CommandTMaxFiles  = 20000
 let g:CommandTMaxHeight = 10
+let g:CommandTMatchWindowAtTop = 1
 
 " Indent Guides
 let g:indent_guides_color_change_percent = 3
