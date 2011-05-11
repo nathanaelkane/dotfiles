@@ -7,8 +7,8 @@ if has("gui_running")
 endif
 
 " Set color column for features
-autocmd BufWinEnter *.feature set cc=11
-autocmd BufWinLeave *.feature set cc=
+autocmd BufWinEnter *.feature set cc+=11
+autocmd BufWinLeave *.feature set cc-=11
 
 " Markdown files
 autocmd BufRead,BufNewFile {*.md,*.mkd,*.markdown} set ft=markdown
