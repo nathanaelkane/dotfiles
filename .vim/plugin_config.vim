@@ -10,7 +10,7 @@ let g:loaded_netrwPlugin      = 1 " Disable netrw
 let g:rails_menu = 0
 
 " Preview
-let g:PreviewBrowsers='chrome,firefox,safari'
+let g:PreviewBrowsers='firefox,chrome,safari'
 
 " Syntastic
 let g:syntastic_enable_signs  = 1
