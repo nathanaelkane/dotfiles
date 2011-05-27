@@ -70,3 +70,6 @@ map <Leader>vw<Leader>t <Plug>VimwikiTabMakeDiaryNote<CR>
 
 " Align Maps (mapping overrides)
 map <Leader>am <Plug>AM_w=
+
+" TComment
+let g:tcommentMapLeaderOp1 = '<Leader>c'
