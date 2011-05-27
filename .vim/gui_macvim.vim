@@ -30,8 +30,3 @@ macmenu &File.Close\ Window key=<nop>
 
 " Hide MacVim when the window closes
 au VimLeave * maca hide:
-
-" Cmd-Y to toggle Solarized background
-nnoremap <D-y> :call ToggleBackground()<CR>
-inoremap <D-y> <ESC>:call ToggleBackground()<CR>a
-vnoremap <D-y> <ESC>:call ToggleBackground()<CR>
