@@ -29,6 +29,7 @@ Bundle 'git://github.com/shemerey/vim-peepopen.git'
 Bundle 'git://github.com/robgleeson/vim-markdown-preview.git'
 Bundle 'git://github.com/jkramer/vim-checkbox.git'
 Bundle 'git://github.com/Lokaltog/vim-easymotion.git'
+Bundle 'git://github.com/airblade/vim-rooter.git'
 Bundle 'git://github.com/tomtom/tcomment_vim.git'
 
 Bundle 'git@github.com:nathanaelkane/snipmate-snippets.git'
