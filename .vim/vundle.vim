@@ -34,4 +34,4 @@ Bundle 'git://github.com/tomtom/tcomment_vim.git'
 
 Bundle 'git@github.com:nathanaelkane/snipmate-snippets.git'
 Bundle 'git@github.com:nathanaelkane/vim-indent-guides.git'
-Bundle 'git@github.com:nathanaelkane/vim-closer.git'
+" Bundle 'git@github.com:nathanaelkane/vim-closer.git'
