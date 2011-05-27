@@ -71,5 +71,8 @@ map <Leader>vw<Leader>t <Plug>VimwikiTabMakeDiaryNote<CR>
 " Align Maps (mapping overrides)
 map <Leader>am <Plug>AM_w=
 
+" Rooter (mapping overrides)
+map <Leader>ro <Plug>RooterChangeToRootDirectory
+
 " TComment
 let g:tcommentMapLeaderOp1 = '<Leader>c'
