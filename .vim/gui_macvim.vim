@@ -16,9 +16,10 @@ macmenu &Edit.Find.Find\.\.\. key=<nop>
 nmap <D-f> :Ack<Space>
 imap <D-f> <Esc>:Ack<Space>
 
-" Cmd+K to close buffer (keeps window open)
-nmap <D-k> :BD<CR>
-imap <D-k> <Esc>:BD<CR>
+" Cmd+W for Closer
+macmenu &File.Close key=<nop>
+nmap <D-w> :Closer<CR>
+imap <D-w> <Esc>:Closer<CR>
 
 " Cmd+L for BufExplorer
 macmenu &Tools.List\ Errors key=<nop>
