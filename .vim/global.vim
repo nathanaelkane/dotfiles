@@ -50,6 +50,12 @@ set matchtime=2                            " (for only .2 seconds).
 set backupdir=$HOME/.vim/backup
 set directory=$HOME/.vim/backup
 
+" Persistent Undo
+set undodir=$HOME/.vim/undodir
+set undofile
+set undolevels=1000
+set undoreload=10000
+
 " Custom status line
 set statusline=%F%m%r%h%w\ [TYPE=%Y]\ \ \ \ \ \ [POS=%2l,%2v][%p%%]\ \ \ \ \ \ [LEN=%L]
 set laststatus=2
