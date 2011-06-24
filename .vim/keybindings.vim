@@ -78,3 +78,6 @@ map <Leader>ro <Plug>RooterChangeToRootDirectory
 
 " TComment
 let g:tcommentMapLeaderOp1 = '<Leader>c'
+
+" Clear search
+map <silent><Leader>/ :nohls<CR>
