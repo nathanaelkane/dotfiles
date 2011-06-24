@@ -31,4 +31,6 @@ nmap <D-l> :BufExplorer<CR>
 imap <D-l> <Esc>:BufExplorer<CR>
 
 " Stop Cmd+Shift+W from closing Vim
-macmenu &File.Close\ Window key=<nop>
+" macmenu &File.Close\ Window key=<nop>
+" nmap <D-W> :qall<CR>
+" imap <D-W> <Esc>:qall<CR>
