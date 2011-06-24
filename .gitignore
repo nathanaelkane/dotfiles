@@ -1,5 +1,6 @@
 .netrwhist
 .vim/backup
+.vim/undodir
 Icon?
 .DS_Store
 .dropbox
