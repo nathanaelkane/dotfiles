@@ -63,13 +63,11 @@ nmap <Leader>mm :Preview<CR>
 " Vimwiki
 map <Leader>vw <Plug>VimwikiIndex<CR>
 
-" Vimwiki (mapping overrides)
+" Override keys I rebind elsewhere
 map <Leader>vw1 <Plug>VimwikiTabIndex<CR>
 map <Leader>vs2 <Plug>VimwikiUISelect<CR>
 map <Leader>vw<Leader>w <Plug>VimwikiMakeDiaryNote<CR>
 map <Leader>vw<Leader>t <Plug>VimwikiTabMakeDiaryNote<CR>
-
-" Align Maps (mapping overrides)
 map <Leader>am <Plug>AM_w=
 
 " Rooter (mapping overrides)
