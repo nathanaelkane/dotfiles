@@ -35,4 +35,4 @@ Bundle 'kchmck/vim-coffee-script'
 
 Bundle 'git@github.com:nathanaelkane/snipmate-snippets.git'
 Bundle 'git@github.com:nathanaelkane/vim-indent-guides.git'
-Bundle 'git@github.com:nathanaelkane/vim-closer.git'
+Bundle 'git@github.com:nathanaelkane/vim-command-w.git'

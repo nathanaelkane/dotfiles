@@ -16,10 +16,10 @@ macmenu &Edit.Find.Find\.\.\. key=<nop>
 nmap <D-f> :Ack<Space>
 imap <D-f> <Esc>:Ack<Space>
 
-" Cmd+W for Closer
+" Cmd+W for Command-W
 macmenu &File.Close key=<nop>
-nmap <D-w> :Closer<CR>
-imap <D-w> <Esc>:Closer<CR>
+nmap <D-w> :CommandW<CR>
+imap <D-w> <Esc>:CommandW<CR>
 
 " Cmd+K for bufkill
 nmap <D-k> :BD<CR>
