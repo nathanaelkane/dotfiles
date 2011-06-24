@@ -5,6 +5,7 @@ let g:NERDTreeShowLineNumbers = 1
 let g:NERDTreeHijackNetrw     = 0
 let g:loaded_netrw            = 1 " Disable netrw
 let g:loaded_netrwPlugin      = 1 " Disable netrw
+let g:NERDTreeIgnore          = ['Icon$']
 
 " Rails
 let g:rails_menu = 0
