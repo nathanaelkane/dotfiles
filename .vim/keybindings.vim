@@ -70,6 +70,9 @@ map <Leader>vw<Leader>w <Plug>VimwikiMakeDiaryNote<CR>
 map <Leader>vw<Leader>t <Plug>VimwikiTabMakeDiaryNote<CR>
 map <Leader>am <Plug>AM_w=
 
+" Align Maps - align selected Cucumber table with <Bar>
+vmap <silent><Bar> :Align <Bar><CR>gv:S/\s\+$//e<CR>gv:S/^\s//e<CR>gv<Esc>
+
 " Rooter (mapping overrides)
 map <Leader>ro <Plug>RooterChangeToRootDirectory
 
