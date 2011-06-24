@@ -1,8 +1,9 @@
 " VUNDLE
 
-set rtp+=~/.vim/vundle/
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'gmarik/vundle'
 Bundle 'rails.vim'
 Bundle 'ack.vim'
 Bundle 'Command-T'
