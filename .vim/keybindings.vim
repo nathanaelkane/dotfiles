@@ -8,6 +8,7 @@ nnoremap Y y$
 
 " NERDTree
 map <Leader>n :NERDTreeToggle<CR>
+map <Leader>N :NERDTreeFind<CR>
 
 " Trim & save
 map <Leader>sd :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<Bar>:w<CR>
