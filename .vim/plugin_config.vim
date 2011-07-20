@@ -38,3 +38,6 @@ let g:NERDSpaceDelims = 1
 " Solarized
 let g:solarized_bold = 0
 let g:solarized_italic = 0
+
+" Surround
+let g:surround_no_mappings = 1

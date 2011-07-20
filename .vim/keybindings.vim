@@ -75,6 +75,9 @@ map <silent><Leader>/ :nohls<CR>
 " EasyMotion
 let g:EasyMotion_leader_key = '<Leader>e'
 
+" Surround
+nmap cs <Plug>Csurround
+
 " Close quickfix window
 " Handy for getting rid of Ack results
 nmap <silent><Leader>q :cclose<CR>
