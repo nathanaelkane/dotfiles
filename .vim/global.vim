@@ -68,4 +68,4 @@ if !has("gui")
 endif
 
 " Save on FocusLost
-au FocusLost * :silent! up
+au FocusLost * :silent! wall
