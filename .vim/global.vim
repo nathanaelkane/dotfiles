@@ -68,3 +68,6 @@ endif
 
 " Save on FocusLost
 au FocusLost * :silent! wall
+
+" Tag files
+set tags=tmp/tags,tmp/bundle.tags;
