@@ -60,16 +60,6 @@ vnoremap > >gv
 " Preview (markdown)
 nmap <Leader>mm :Preview<CR>
 
-" Vimwiki
-map <Leader>vw <Plug>VimwikiIndex<CR>
-
-" Override keys I rebind elsewhere
-map <Leader>vw1 <Plug>VimwikiTabIndex<CR>
-map <Leader>vs2 <Plug>VimwikiUISelect<CR>
-map <Leader>vw<Leader>w <Plug>VimwikiMakeDiaryNote<CR>
-map <Leader>vw<Leader>t <Plug>VimwikiTabMakeDiaryNote<CR>
-map <Leader>am <Plug>AM_w=
-
 " Align Maps - align selected Cucumber table with <Bar>
 vmap <silent><Bar> :Align <Bar><CR>gv:S/\s\+$//e<CR>gv:S/^\s//e<CR>gv<Esc>
 
@@ -81,3 +71,6 @@ let g:tcommentMapLeaderOp1 = '<Leader>c'
 
 " Clear search
 map <silent><Leader>/ :nohls<CR>
+
+" EasyMotion
+let g:EasyMotion_leader_key = '<Leader>e'
