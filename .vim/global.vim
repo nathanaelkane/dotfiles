@@ -71,3 +71,10 @@ au FocusLost * :silent! wall
 
 " Tag files
 set tags=tmp/tags,tmp/bundle.tags;
+
+" Fold settings
+set foldmethod=indent
+set foldnestmax=5
+set nofoldenable
+set foldlevel=1
+set foldminlines=0
