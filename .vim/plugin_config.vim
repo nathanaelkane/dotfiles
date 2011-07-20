@@ -34,3 +34,7 @@ let g:indent_guides_enable_on_vim_startup = 1
 
 " NERDCommenter
 let g:NERDSpaceDelims = 1
+
+" Solarized
+let g:solarized_bold = 0
+let g:solarized_italic = 0
