@@ -2,7 +2,8 @@
 
 set background=light
 colorscheme bclear
-set guioptions-=T " Hide the tool bar
+set guioptions-=T  " Hide the tool bar
+set guioptions-=rL " Hide scrollbars
 
 " gVim
 if has("gui_gtk")
