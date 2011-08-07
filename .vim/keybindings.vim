@@ -48,6 +48,12 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" Move around in insert mode
+inoremap <C-h> <left>
+inoremap <C-k> <up>
+inoremap <C-j> <down>
+inoremap <C-l> <right>
+
 " Remove annoying F1 help
 inoremap <F1> <Esc>
 nnoremap <F1> <Esc>
