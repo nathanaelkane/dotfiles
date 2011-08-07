@@ -28,4 +28,4 @@ hi iCursor guifg=black guibg=green
 set guicursor=a:blinkon0 " turn off cursor blink
 
 " Color columns
-hi ColorColumn guibg=#F9F9F9
+hi ColorColumn guibg=#EEEEEE
