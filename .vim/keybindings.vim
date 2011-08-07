@@ -87,3 +87,6 @@ nmap cs <Plug>Csurround
 " Close quickfix window
 " Handy for getting rid of Ack results
 nmap <silent><Leader>q :cclose<CR>
+
+" Substitute
+nnoremap <Leader>sr :%s///g<left><left>
