@@ -23,6 +23,7 @@ Bundle 'fugitive.vim'
 Bundle 'haml.zip'
 Bundle 'cheat.vim'
 
+Bundle 'chrisbra/NrrwRgn'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-surround'
 Bundle 'robgleeson/vim-markdown-preview'
