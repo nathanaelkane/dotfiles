@@ -20,6 +20,8 @@ set mouse=a                                " Enable the mouse
 set linespace=3                            " Spacing between lines
 set noswapfile                             " Disable creation of *.swp files
 set t_Co=256                               " Support for xterm with 256 colors (gets overriden in .gvimrc)
+set ignorecase                             " Ignore case by default when searching
+set smartcase                              " Switch to case sensitive mode if needle contains uppercase characters
 set modelines=1
 
 " Indentation
