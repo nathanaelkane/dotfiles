@@ -90,3 +90,7 @@ nmap <silent><Leader>q :cclose<CR>
 
 " Substitute
 nnoremap <Leader>sr :%s///g<left><left>
+
+" Open Browser
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
