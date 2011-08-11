@@ -34,6 +34,7 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'msanders/snipmate.vim'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'tyru/open-browser.vim'
 
 Bundle 'git@github.com:nathanaelkane/vim-indent-guides.git'
 Bundle 'git@github.com:nathanaelkane/vim-command-w.git'

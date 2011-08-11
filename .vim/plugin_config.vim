@@ -41,3 +41,8 @@ let g:solarized_italic = 0
 
 " Surround
 let g:surround_no_mappings = 1
+
+" Open Browser
+let g:netrw_nogx = 1 " disable netrw's gx mapping
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
