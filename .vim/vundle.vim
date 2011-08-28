@@ -37,4 +37,5 @@ Bundle 'tpope/vim-fugitive'
 
 Bundle 'git@github.com:nathanaelkane/vim-indent-guides.git'
 Bundle 'git@github.com:nathanaelkane/vim-command-w.git'
+Bundle 'git@github.com:nathanaelkane/Ambient-Color-Scheme.git'
 Bundle 'git@github.com:nathanaelkane/Command-T.git'

@@ -1,7 +1,7 @@
 " GVIMRC
 
-set background=light
-colorscheme bclear
+set background=dark
+colorscheme ambient
 set guioptions-=T  " Hide the tool bar
 set guioptions-=rL " Hide scrollbars
 
@@ -28,4 +28,4 @@ hi iCursor guifg=black guibg=green
 set guicursor=a:blinkon0 " turn off cursor blink
 
 " Color columns
-hi ColorColumn guibg=#EEEEEE
+hi ColorColumn guibg=#222222
