@@ -28,8 +28,8 @@ imap <D-k> <Esc>:BD<CR>
 
 " Cmd+L for BufExplorer
 macmenu &Tools.List\ Errors key=<nop>
-nmap <D-l> :BufExplorer<CR>
-imap <D-l> <Esc>:BufExplorer<CR>
+nmap <D-l> :CommandTBuffer<CR>
+imap <D-l> <Esc>:CommandTBuffer<CR>
 
 " Cmd+Shift+W for closing Vim instance
 macmenu &File.Close\ Window key=<nop>
