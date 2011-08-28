@@ -6,7 +6,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'rails.vim'
 Bundle 'ack.vim'
-Bundle 'Command-T'
 Bundle 'Color-Sampler-Pack'
 Bundle 'cucumber.zip'
 Bundle 'bufexplorer.zip'
@@ -38,3 +37,4 @@ Bundle 'tyru/open-browser.vim'
 
 Bundle 'git@github.com:nathanaelkane/vim-indent-guides.git'
 Bundle 'git@github.com:nathanaelkane/vim-command-w.git'
+Bundle 'git@github.com:nathanaelkane/Command-T.git'
