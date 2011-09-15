@@ -94,3 +94,6 @@ nnoremap <Leader>sr :%s///g<left><left>
 " Open Browser
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
+
+" Highlight word at cursor without changing position
+nnoremap <Leader>h *<C-O>
