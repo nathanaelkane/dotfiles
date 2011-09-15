@@ -4,7 +4,6 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'ack.vim'
 Bundle 'Color-Sampler-Pack'
 Bundle 'cucumber.zip'
 Bundle 'bufexplorer.zip'
@@ -34,6 +33,7 @@ Bundle 'tyru/open-browser.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-fugitive'
+Bundle 'AndrewRadev/ack.vim'
 
 Bundle 'git@github.com:nathanaelkane/vim-indent-guides.git'
 Bundle 'git@github.com:nathanaelkane/vim-command-w.git'
