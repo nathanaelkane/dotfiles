@@ -14,8 +14,8 @@ imap <D-T> <Esc>:call CommandTWithFlush()<CR>
 
 " Cmd+F for Ack
 macmenu &Edit.Find.Find\.\.\. key=<nop>
-nmap <D-f> :Ack<Space>
-imap <D-f> <Esc>:Ack<Space>
+nmap <D-f> :Ack!<Space>
+imap <D-f> <Esc>:Ack!<Space>
 
 " Cmd+W for Command-W
 macmenu &File.Close key=<nop>
