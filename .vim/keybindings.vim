@@ -97,3 +97,6 @@ vmap gx <Plug>(openbrowser-smart-search)
 
 " Highlight word at cursor without changing position
 nnoremap <Leader>h *<C-O>
+
+" Use `=` to indent the current line
+nnoremap = v=
