@@ -1,7 +1,7 @@
 " GVIMRC
 
 set background=dark
-colorscheme ambient
+colorscheme jellybeans
 set guioptions-=T  " Hide the tool bar
 set guioptions-=rL " Hide scrollbars
 
@@ -29,3 +29,6 @@ set guicursor=a:blinkon0 " turn off cursor blink
 
 " Color columns
 hi ColorColumn guibg=#222222
+
+" Line numbers
+hi LineNr guibg=#222222

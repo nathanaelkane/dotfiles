@@ -17,7 +17,7 @@ set ruler                                  " Show ruler
 set number                                 " Show line numbers
 set vb t_vb=                               " Turn off bell
 set mouse=a                                " Enable the mouse
-set linespace=3                            " Spacing between lines
+set linespace=2                            " Spacing between lines
 set noswapfile                             " Disable creation of *.swp files
 set t_Co=256                               " Support for xterm with 256 colors (gets overriden in .gvimrc)
 set ignorecase                             " Ignore case by default when searching

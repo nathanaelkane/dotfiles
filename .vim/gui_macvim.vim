@@ -1,6 +1,6 @@
 " MACVIM SETTINGS
 
-set guifont=Menlo:h15
+set guifont=DejaVu\ Sans\ Mono:h15
 
 " Cmd+T for Command-T
 macmenu &File.New\ Tab key=<nop>
