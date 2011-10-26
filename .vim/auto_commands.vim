@@ -15,3 +15,6 @@ autocmd BufRead,BufNewFile {*.md,*.mkd,*.markdown} set ft=markdown
 
 " Add dashes to the list of 'word characters' for CSS/SCSS files:
 autocmd Filetype css,scss setlocal iskeyword+=-
+
+" Save on FocusLost
+au FocusLost * :silent! wall
