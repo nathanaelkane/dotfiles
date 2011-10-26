@@ -100,3 +100,6 @@ nnoremap <Leader>h *<C-O>
 
 " Use `=` to indent the current line
 nnoremap = v=
+
+" Replace until end of line with yanked text. Uses blackhole register.
+nmap <silent><Leader>p "_DP
