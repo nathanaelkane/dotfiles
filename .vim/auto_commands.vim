@@ -17,4 +17,4 @@ autocmd BufRead,BufNewFile {*.md,*.mkd,*.markdown} set ft=markdown
 autocmd Filetype css,scss setlocal iskeyword+=-
 
 " Save on FocusLost
-au FocusLost * :silent! wall
+autocmd FocusLost * nested :silent! wall
