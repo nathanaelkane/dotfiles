@@ -33,7 +33,7 @@ Bundle 'tyru/open-browser.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-fugitive'
-Bundle 'AndrewRadev/ack.vim'
+Bundle 'mileszs/ack.vim'
 Bundle 'nanotech/jellybeans.vim'
 
 Bundle 'git@github.com:nathanaelkane/vim-indent-guides.git'
