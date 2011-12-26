@@ -40,3 +40,9 @@ imap <D-l> <Esc>:CommandTBuffer<CR>
 macmenu &File.Close\ Window key=<nop>
 nmap <D-W> :qall<CR>
 imap <D-W> <Esc>:qall<CR>
+
+" Cmd+P for Marked (markdown preview)
+macmenu &File.Print key=<nop>
+command! Marked silent !open -a "Marked.app" "%:p"
+nmap <D-p> :Marked<CR>
+imap <D-p> <Esc>:Marked<CR>
