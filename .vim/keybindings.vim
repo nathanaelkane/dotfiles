@@ -110,3 +110,6 @@ nnoremap <Leader>S ^vg_y:execute @@<CR>
 " Jump to start and end of line using the home row keys
 map H ^
 map L $
+
+" Copy relative path and line number to the system pasteboard
+nmap <silent><Leader>cf :let @*=expand('%').':'.line('.')<CR>
