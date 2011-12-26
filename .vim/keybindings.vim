@@ -103,3 +103,6 @@ nnoremap = v=
 
 " Replace until end of line with yanked text. Uses blackhole register.
 nmap <silent><Leader>p "_DP
+
+" Source a single line of Vimscript
+nnoremap <Leader>S ^vg_y:execute @@<CR>
