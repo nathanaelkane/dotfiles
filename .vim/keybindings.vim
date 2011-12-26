@@ -106,3 +106,7 @@ nmap <silent><Leader>p "_DP
 
 " Source a single line of Vimscript
 nnoremap <Leader>S ^vg_y:execute @@<CR>
+
+" Jump to start and end of line using the home row keys
+map H ^
+map L $
