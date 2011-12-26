@@ -13,8 +13,8 @@ autocmd BufWinLeave *.feature set cc-=11
 " Markdown files
 autocmd BufRead,BufNewFile {*.md,*.mkd,*.markdown} set ft=markdown
 
-" Add dashes to the list of 'word characters' for CSS/SCSS files:
-autocmd Filetype css,scss setlocal iskeyword+=-
+" Add dashes to the list of 'word characters'
+autocmd Filetype * setlocal iskeyword+=-
 
 " Save on FocusLost
 autocmd FocusLost * nested :silent! wall
