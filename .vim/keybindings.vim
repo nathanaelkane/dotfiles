@@ -110,3 +110,7 @@ nnoremap <silent><Leader>cf :let @*=expand('%').':'.line('.')<CR>
 " Use sane regexes
 nnoremap / /\v
 vnoremap / /\v
+
+" Wrap word under cursor in quotes
+nnoremap <Leader>' viw<Esc>a'<Esc>hbi'<Esc>lel
+nnoremap <Leader>" viw<Esc>a"<Esc>hbi"<Esc>lel
