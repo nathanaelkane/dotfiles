@@ -7,35 +7,35 @@ let mapleader = ","
 nnoremap Y y$
 
 " NERDTree
-map <Leader>n :NERDTreeToggle<CR>
-map <Leader>N :NERDTreeFind<CR>
+noremap <Leader>n :NERDTreeToggle<CR>
+noremap <Leader>N :NERDTreeFind<CR>
 
 " Trim & save
-map <Leader>sd :FixWhitespace<CR>:w<CR>
+noremap <Leader>sd :FixWhitespace<CR>:w<CR>
 
 " Buffer navigation
-map <Leader>, <C-^>
+noremap <Leader>, <C-^>
 
 " Tab navigation
 map <C-Tab>   :tabnext<CR>
 map <C-S-Tab> :tabprev<CR>
 
 " Quickly open/source .vimrc/.gvimrc
-nmap <Leader>vv :e $HOME/.vimrc<CR>
-nmap <Leader>gg :e $HOME/.gvimrc<CR>
-nmap <Leader>ss :source $HOME/.vimrc<Bar>:source $HOME/.gvimrc<CR>
+nnoremap <Leader>vv :e $HOME/.vimrc<CR>
+nnoremap <Leader>gg :e $HOME/.gvimrc<CR>
+nnoremap <Leader>ss :source $HOME/.vimrc<Bar>:source $HOME/.gvimrc<CR>
 
 " Toggle invisibles
 noremap <Leader>i :set list!<CR>
 
 " Bookmarking
-map <C-Space> :ToggleBookmark<CR>
-map <C-Up>    :PreviousBookmark<CR>
-map <C-Down>  :NextBookmark<CR>
+noremap <C-Space> :ToggleBookmark<CR>
+noremap <C-Up>    :PreviousBookmark<CR>
+noremap <C-Down>  :NextBookmark<CR>
 
 " Colorscheme scroll
-map <C-Left>  :PREVCOLOR<CR>
-map <C-Right> :NEXTCOLOR<CR>
+noremap <C-Left>  :PREVCOLOR<CR>
+noremap <C-Right> :NEXTCOLOR<CR>
 
 " Movement & wrapped long lines
 " This solves the problem that pressing down jumps your cursor 'over' the current line to the next line
@@ -43,10 +43,10 @@ nnoremap j gj
 nnoremap k gk
 
 " Easy window navigation
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
 
 " Move around in insert mode
 inoremap <C-h> <left>
@@ -67,16 +67,16 @@ vnoremap > >gv
 nmap <Leader>mm :Preview<CR>
 
 " Align Maps - align selected Cucumber table with <Bar>
-vmap <silent><Bar> :Align <Bar><CR>gv:S/\s\+$//e<CR>gv:S/^\s//e<CR>gv<Esc>
+vnoremap <silent><Bar> :Align <Bar><CR>gv:S/\s\+$//e<CR>gv:S/^\s//e<CR>gv<Esc>
 
 " Rooter (mapping overrides)
-map <Leader>ro <Plug>RooterChangeToRootDirectory
+noremap <Leader>ro <Plug>RooterChangeToRootDirectory
 
 " TComment
 let g:tcommentMapLeaderOp1 = '<Leader>c'
 
 " Clear search
-map <silent><Leader>/ :nohls<CR>
+noremap <silent><Leader>/ :nohls<CR>
 
 " EasyMotion
 let g:EasyMotion_leader_key = '<Leader>e'
@@ -86,14 +86,14 @@ nmap cs <Plug>Csurround
 
 " Close quickfix window
 " Handy for getting rid of Ack results
-nmap <silent><Leader>q :cclose<CR>
+nnoremap <silent><Leader>q :cclose<CR>
 
 " Substitute
 nnoremap <Leader>sr :%s///g<left><left>
 
 " Open Browser
-nmap gx <Plug>(openbrowser-smart-search)
-vmap gx <Plug>(openbrowser-smart-search)
+nnoremap gx <Plug>(openbrowser-smart-search)
+vnoremap gx <Plug>(openbrowser-smart-search)
 
 " Highlight word at cursor without changing position
 nnoremap <Leader>h *<C-O>
@@ -102,14 +102,14 @@ nnoremap <Leader>h *<C-O>
 nnoremap = v=
 
 " Replace until end of line with yanked text. Uses blackhole register.
-nmap <silent><Leader>p "_DP
+nnoremap <silent><Leader>p "_DP
 
 " Source a single line of Vimscript
 nnoremap <Leader>S ^vg_y:execute @@<CR>
 
 " Jump to start and end of line using the home row keys
-map H ^
-map L $
+noremap H ^
+noremap L $
 
 " Copy relative path and line number to the system pasteboard
-nmap <silent><Leader>cf :let @*=expand('%').':'.line('.')<CR>
+nnoremap <silent><Leader>cf :let @*=expand('%').':'.line('.')<CR>
