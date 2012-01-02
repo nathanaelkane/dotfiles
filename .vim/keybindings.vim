@@ -59,9 +59,6 @@ vnoremap <F1> <Esc>
 vnoremap < <gv
 vnoremap > >gv
 
-" Preview (markdown)
-nmap <Leader>mm :Preview<CR>
-
 " Align Maps - align selected Cucumber table with <Bar>
 vnoremap <silent><Bar> :Align <Bar><CR>gv:S/\s\+$//e<CR>gv:S/^\s//e<CR>gv<Esc>
 
