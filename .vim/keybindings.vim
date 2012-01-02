@@ -106,3 +106,7 @@ noremap L $
 
 " Copy relative path and line number to the system pasteboard
 nnoremap <silent><Leader>cf :let @*=expand('%').':'.line('.')<CR>
+
+" Use sane regexes
+nnoremap / /\v
+vnoremap / /\v
