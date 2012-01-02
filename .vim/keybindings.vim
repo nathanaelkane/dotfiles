@@ -16,10 +16,6 @@ noremap <Leader>sd :FixWhitespace<CR>:w<CR>
 " Buffer navigation
 noremap <Leader>, <C-^>
 
-" Tab navigation
-map <C-Tab>   :tabnext<CR>
-map <C-S-Tab> :tabprev<CR>
-
 " Quickly open/source .vimrc/.gvimrc
 nnoremap <Leader>vv :e $HOME/.vimrc<CR>
 nnoremap <Leader>gg :e $HOME/.gvimrc<CR>
