@@ -1,3 +1,5 @@
+" FUNCTIONS
+
 function! CommandTWithFlush()
   CommandTFlush
   CommandT
