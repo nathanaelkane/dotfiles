@@ -6,3 +6,4 @@ source $HOME/.vim/functions.vim
 source $HOME/.vim/keybindings.vim
 source $HOME/.vim/plugin_config.vim
 source $HOME/.vim/auto_commands.vim
+source $HOME/.vim/commands.vim
