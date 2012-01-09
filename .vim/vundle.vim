@@ -33,6 +33,7 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'dterei/VimBookmarking'
 Bundle 'tomtom/quickfixsigns_vim'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'sickill/vim-pasta'
 
 Bundle 'git@github.com:nathanaelkane/vim-indent-guides.git'
 Bundle 'git@github.com:nathanaelkane/vim-command-w.git'
