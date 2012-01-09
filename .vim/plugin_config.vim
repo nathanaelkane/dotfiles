@@ -44,3 +44,6 @@ let g:surround_no_mappings = 1
 
 " Open Browser
 let g:netrw_nogx = 1 " disable netrw's gx mapping
+
+" Quickfixsigns
+let g:quickfixsigns_classes = ['vcsdiff']

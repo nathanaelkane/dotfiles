@@ -31,6 +31,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'mileszs/ack.vim'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'dterei/VimBookmarking'
+Bundle 'tomtom/quickfixsigns_vim'
 
 Bundle 'git@github.com:nathanaelkane/vim-indent-guides.git'
 Bundle 'git@github.com:nathanaelkane/vim-command-w.git'
