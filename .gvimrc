@@ -2,6 +2,7 @@
 
 set background=dark
 colorscheme jellybeans
+let g:indent_guides_auto_colors = 0
 set guioptions-=T  " Hide the tool bar
 set guioptions-=rL " Hide scrollbars
 
