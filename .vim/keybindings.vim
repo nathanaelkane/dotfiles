@@ -75,7 +75,9 @@ noremap <silent><Leader>/ :nohls<CR>
 let g:EasyMotion_leader_key = '<Leader>e'
 
 " Surround
+let g:surround_no_mappings = 1
 nmap cs <Plug>Csurround
+xmap S  <Plug>VSurround
 
 " Close quickfix window
 " Handy for getting rid of Ack results
