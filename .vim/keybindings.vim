@@ -93,6 +93,9 @@ vnoremap gx <Plug>(openbrowser-smart-search)
 " Highlight word at cursor without changing position
 nnoremap <Leader>h *<C-O>
 
+" Highlight and ack for word at cursor without changing position
+nnoremap <Leader>H *<C-O>:AckFromSearch!<CR>
+
 " Use `=` to indent the current line
 nnoremap = v=
 
