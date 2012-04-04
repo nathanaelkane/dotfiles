@@ -17,9 +17,9 @@ noremap <Leader>sd :FixWhitespace<CR>:w<CR>
 noremap <Leader><Leader> <C-^>
 
 " Quickly open/source .vimrc/.gvimrc
-nnoremap <Leader>vv :e $HOME/.vimrc<CR>
-nnoremap <Leader>gg :e $HOME/.gvimrc<CR>
-nnoremap <Leader>ss :source $HOME/.vimrc<Bar>:source $HOME/.gvimrc<CR>
+nnoremap <Leader>vv :e $MYVIMRC<CR>
+nnoremap <Leader>gg :e $MYGVIMRC<CR>
+nnoremap <Leader>ss :source $MYVIMRC<Bar>:source $MYGVIMRC<CR>
 
 " Toggle invisibles
 noremap <Leader>i :set list!<CR>
