@@ -2,7 +2,6 @@
 
 set background=dark
 colorscheme jellybeans
-let g:indent_guides_auto_colors = 0
 set guioptions-=T  " Hide the tool bar
 set guioptions-=rL " Hide scrollbars
 
@@ -28,8 +27,9 @@ hi Cursor guifg=black guibg=green
 hi iCursor guifg=black guibg=green
 set guicursor=a:blinkon0 " turn off cursor blink
 
-" Color columns
-hi ColorColumn guibg=#222222
-
-" Line numbers
-hi LineNr guibg=#222222
+" Jellybeans
+if g:colors_name == 'jellybeans'
+  let g:indent_guides_auto_colors = 0
+  hi ColorColumn guibg=#222222
+  hi LineNr guibg=#222222
+endif
