@@ -5,6 +5,9 @@ colorscheme jellybeans
 set guioptions-=T  " Hide the tool bar
 set guioptions-=rL " Hide scrollbars
 
+" Forcefully disable balloon tooltips
+autocmd BufEnter * set noballooneval
+
 " gVim
 if has("gui_gtk")
   source $HOME/.vim/gui_gtk.vim
