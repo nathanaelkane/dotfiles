@@ -51,9 +51,9 @@ inoremap <C-j> <down>
 inoremap <C-l> <right>
 
 " Remove annoying F1 help
-inoremap <F1> <Esc>
-nnoremap <F1> <Esc>
-vnoremap <F1> <Esc>
+inoremap <F1> <nop>
+nnoremap <F1> <nop>
+vnoremap <F1> <nop>
 
 " Reselect visual block after indent
 vnoremap < <gv
