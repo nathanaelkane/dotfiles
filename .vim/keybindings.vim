@@ -119,9 +119,5 @@ nnoremap <silent><Leader>cF :let @*=expand('%').':'.line('.')<CR>
 nnoremap / /\v
 vnoremap / /\v
 
-" Wrap word under cursor in quotes
-nnoremap <Leader>' viw<Esc>a'<Esc>hbi'<Esc>lel
-nnoremap <Leader>" viw<Esc>a"<Esc>hbi"<Esc>lel
-
 " Use jk as <Esc> alternative
 inoremap jk <Esc>
