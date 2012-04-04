@@ -2,15 +2,10 @@
 
 set guifont=DejaVu\ Sans\ Mono:h16
 
-" Cmd+T for Command-T
+" Cmd+T for PeepOpen
 macmenu &File.New\ Tab key=<nop>
-nmap <D-t> :CommandT<CR>
-imap <D-t> <Esc>:CommandT<CR>
-
-" Cmd+Shift+T for Command-T with cache flush
-macmenu &File.Open\ Tab\.\.\. key=<nop>
-nmap <D-T> :call CommandTWithFlush()<CR>
-imap <D-T> <Esc>:call CommandTWithFlush()<CR>
+nmap <D-t> <Plug>PeepOpen<CR>
+imap <D-t> <Esc><Plug>PeepOpen<CR>
 
 " Cmd+F for Ack
 macmenu &Edit.Find.Find\.\.\. key=<nop>
@@ -30,11 +25,6 @@ imap <D-w> <Esc>:CommandW<CR>
 " Cmd+K for bufkill
 nmap <D-k> :BD<CR>
 imap <D-k> <Esc>:BD<CR>
-
-" Cmd+L for BufExplorer
-macmenu &Tools.List\ Errors key=<nop>
-nmap <D-l> :CommandTBuffer<CR>
-imap <D-l> <Esc>:CommandTBuffer<CR>
 
 " Cmd+Shift+W for closing Vim instance
 macmenu &File.Close\ Window key=<nop>

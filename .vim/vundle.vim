@@ -32,7 +32,7 @@ Bundle 'tomtom/quickfixsigns_vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'sickill/vim-pasta'
 Bundle 'AD7six/vim-activity-log'
+Bundle 'shemerey/vim-peepopen'
 
 Bundle 'git@github.com:nathanaelkane/vim-indent-guides.git'
 Bundle 'git@github.com:nathanaelkane/vim-command-w.git'
-Bundle 'git@github.com:nathanaelkane/Command-T.git'
