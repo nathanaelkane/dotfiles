@@ -16,9 +16,5 @@ autocmd Filetype * setlocal iskeyword+=-
 " Save on FocusLost
 autocmd FocusLost * nested :silent! wall
 
-" Prevent vim-surround's `ds` from conflicting with bufexplorer
-autocmd BufWinEnter \[BufExplorer\] unmap ds
-autocmd BufWinLeave \[BufExplorer\] nmap ds <Plug>Dsurround
-
 " Set colorcolumn to the current textwidth or fallback to 80
 autocmd BufWinEnter * call ColorColumnAtTextWidth(80)
