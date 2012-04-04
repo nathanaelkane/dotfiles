@@ -14,7 +14,7 @@ noremap <Leader>N :NERDTreeFind<CR>
 noremap <Leader>sd :FixWhitespace<CR>:w<CR>
 
 " Buffer navigation
-noremap <Leader>, <C-^>
+noremap <Leader><Leader> <C-^>
 
 " Quickly open/source .vimrc/.gvimrc
 nnoremap <Leader>vv :e $HOME/.vimrc<CR>
