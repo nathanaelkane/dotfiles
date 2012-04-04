@@ -26,3 +26,12 @@ endfunction
 command! -range -nargs=+ SS call SafeSearchCommand(<line1>, <line2>, <q-args>)
 " A nicer version of :s that doesn't clobber the search register
 command! -range -nargs=* S call SafeSearchCommand(<line1>, <line2>, 's' . <q-args>)
+
+" Set colorcolumn to the current textwidth or fallback to the specified column.
+function! ColorColumnAtTextWidth(column)
+  if exists('&textwidth') && &textwidth > 0
+    execute ':set cc=' . &textwidth
+  else
+    execute ':set cc=' . a:column
+  endif
+endfunction
