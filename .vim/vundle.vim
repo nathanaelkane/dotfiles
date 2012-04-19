@@ -15,7 +15,6 @@ Bundle 'Align'
 Bundle 'haml.zip'
 
 Bundle 'scrooloose/nerdtree'
-Bundle 'jkramer/vim-checkbox'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'kchmck/vim-coffee-script'
