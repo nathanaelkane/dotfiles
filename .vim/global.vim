@@ -74,7 +74,7 @@ set tags=tmp/tags,tmp/bundle.tags;
 
 " Fold settings
 set foldmethod=indent
-set foldnestmax=5
+set foldnestmax=10
 set nofoldenable
-set foldlevel=1
+set foldlevel=99
 set foldminlines=0
