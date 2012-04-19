@@ -45,3 +45,14 @@ let g:netrw_nogx = 1 " disable netrw's gx mapping
 
 " Quickfixsigns
 let g:quickfixsigns_classes = ['vcsdiff']
+
+" CtrlP
+let g:ctrlp_map                 = '<Leader>t'
+let g:ctrlp_clear_cache_on_exit = 1
+let g:ctrlp_working_path_mode   = 0 " Handle working path manually
+let g:ctrlp_dotfiles            = 0 " Ignore all dot/hidden files
+let g:ctrlp_custom_ignore       = {
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\backups$\|\logs$\|\tmp$',
+  \ 'file': '',
+  \ 'link': '',
+  \ }

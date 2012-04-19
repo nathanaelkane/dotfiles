@@ -2,11 +2,6 @@
 
 set guifont=DejaVu\ Sans\ Mono:h16
 
-" Cmd+T for PeepOpen
-macmenu &File.New\ Tab key=<nop>
-nmap <D-t> <Plug>PeepOpen<CR>
-imap <D-t> <Esc><Plug>PeepOpen<CR>
-
 " Cmd+F for Ack
 macmenu &Edit.Find.Find\.\.\. key=<nop>
 nmap <D-f> :Ack!<Space>
