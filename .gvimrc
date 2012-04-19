@@ -20,7 +20,6 @@ endif
 
 " VimEnter
 if isdirectory(argv(0))
-  Rooter
   au VimEnter * :NERDTreeToggle
   au VimEnter * :wincmd p
 endif

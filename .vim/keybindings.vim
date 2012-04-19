@@ -62,9 +62,6 @@ vnoremap > >gv
 " Align Maps - align selected Cucumber table with <Bar>
 vnoremap <silent><Bar> :Align <Bar><CR>gv:S/\s\+$//e<CR>gv:S/^\s//e<CR>gv<Esc>
 
-" Rooter (mapping overrides)
-noremap <Leader>ro <Plug>RooterChangeToRootDirectory
-
 " TComment
 let g:tcommentMapLeaderOp1 = '<Leader>c'
 
