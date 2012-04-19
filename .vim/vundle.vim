@@ -11,7 +11,6 @@ Bundle 'upAndDown'
 Bundle 'vimwiki'
 Bundle 'Syntastic'
 Bundle 'bufkill.vim'
-Bundle 'css_color.vim'
 Bundle 'Align'
 Bundle 'haml.zip'
 
