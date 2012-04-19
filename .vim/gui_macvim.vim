@@ -2,6 +2,9 @@
 
 set guifont=DejaVu\ Sans\ Mono:h16
 
+" Unmap annoying Cmd+T, I don't use tabs.
+macmenu &File.New\ Tab key=<nop>
+
 " Cmd+F for Ack
 macmenu &Edit.Find.Find\.\.\. key=<nop>
 nmap <D-f> :Ack!<Space>
