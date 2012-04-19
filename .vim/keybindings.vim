@@ -146,3 +146,8 @@ inoremap jk <Esc>
 " Space to toggle folds
 nnoremap <Space> za
 vnoremap <Space> za
+
+" CtrlP
+let g:ctrlp_map = '<Leader>t'
+map <Leader>l :CtrlPBuffer<CR>
+map <Leader>m :CtrlPMRUFiles<CR>
