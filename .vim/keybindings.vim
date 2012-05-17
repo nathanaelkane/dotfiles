@@ -127,3 +127,30 @@ map <Leader>m :CtrlPMRUFiles<CR>
 
 " Tabular
 nnoremap <Leader>= :Tabularize /\(=>\|=\)<CR>
+
+" Ack
+nmap <Leader>f :Ack!<Space>
+nmap <Leader>F :AckFromSearch!<CR>
+
+" Command-W
+nmap <Leader>w :CommandW<CR>
+nmap <Leader>sw :FixWhitespace<CR>:w<CR>:CommandW<CR>
+" nmap <Leader>sw :CommandW<CR>
+
+" Close Vim instance
+nmap <Leader>W :qall<CR>
+
+" Cmd+K for bufkill
+nmap <Leader>k :BD<CR>
+
+" Marked (markdown preview)
+command! Marked silent !open -a "Marked.app" "%:p"
+nmap <C-p> :Marked<CR>
+
+" Override Vimwiki mappings to avoid conflicts
+nmap <silent> <Leader>vw <Plug>VimwikiIndex
+nmap <silent> <Leader>Zwt <Plug>VimwikiTabIndex
+nmap <silent> <Leader>Zws <Plug>VimwikiUISelect
+nmap <silent> <Leader>Zwi <Plug>VimwikiDiaryIndex
+nmap <silent> <Leader>Zw<Leader>w <Plug>VimwikiMakeDiaryNote
+nmap <silent> <Leader>Zw<Leader>t <Plug>VimwikiTabMakeDiaryNote
