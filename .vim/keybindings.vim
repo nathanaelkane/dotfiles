@@ -59,33 +59,6 @@ vnoremap <F1> <nop>
 vnoremap < <gv
 vnoremap > >gv
 
-" Align Maps - align selected Cucumber table with <Bar>
-vnoremap <silent><Bar> :Align <Bar><CR>gv:S/\s\+$//e<CR>gv:S/^\s//e<CR>gv<Esc>
-
-" Align Maps (mapping overrides)
-map <Leader>At| <Plug>AM_t|
-map <Leader>At#   <Plug>AM_t#
-map <Leader>At,   <Plug>AM_t,
-map <Leader>At:   <Plug>AM_t:
-map <Leader>At;   <Plug>AM_t;
-map <Leader>At<   <Plug>AM_t<
-map <Leader>At=   <Plug>AM_t=
-map <Leader>Ats,  <Plug>AM_ts,
-map <Leader>Ats:  <Plug>AM_ts:
-map <Leader>Ats;  <Plug>AM_ts;
-map <Leader>Ats<  <Plug>AM_ts<
-map <Leader>Ats=  <Plug>AM_ts=
-map <Leader>Aw=   <Plug>AM_w=
-map <Leader>At?   <Plug>AM_t?
-map <Leader>At~   <Plug>AM_t~
-map <Leader>At@   <Plug>AM_t@
-map <Leader>Am=   <Plug>AM_m=
-map <Leader>Atab  <Plug>AM_tab
-map <Leader>Atml  <Plug>AM_tml
-map <Leader>Atsp  <Plug>AM_tsp
-map <Leader>Atsq  <Plug>AM_tsq
-map <Leader>Att   <Plug>AM_tt
-
 " TComment
 let g:tcommentMapLeaderOp1 = '<Leader>c'
 
@@ -151,3 +124,6 @@ vnoremap <Space> za
 let g:ctrlp_map = '<Leader>t'
 map <Leader>l :CtrlPBuffer<CR>
 map <Leader>m :CtrlPMRUFiles<CR>
+
+" Tabular
+nnoremap <Leader>= :Tabularize /\(=>\|=\)<CR>
