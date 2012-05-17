@@ -1,7 +1,5 @@
 " GVIMRC
 
-set background=dark
-colorscheme jellybeans
 set guioptions-=T  " Hide the tool bar
 set guioptions-=rL " Hide scrollbars
 

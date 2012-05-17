@@ -65,9 +65,10 @@ set laststatus=2
 
 " Terminal Vim
 if !has("gui")
-  colorscheme desert256
   let loaded_bookmarks = 0
 endif
+set background=dark
+colorscheme jellybeans
 
 " Tag files
 set tags=tmp/tags,tmp/bundle.tags;
