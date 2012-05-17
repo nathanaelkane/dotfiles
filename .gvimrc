@@ -30,6 +30,9 @@ set guicursor=a:blinkon0 " turn off cursor blink
 " Jellybeans
 if g:colors_name == 'jellybeans'
   let g:indent_guides_auto_colors = 0
+
+  " Color overrides
   hi ColorColumn guibg=#222222
-  hi LineNr guibg=#222222
+  hi LineNr      guibg=#222222
+  hi CursorLine  guibg=#333333
 endif
