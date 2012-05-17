@@ -124,6 +124,7 @@ vnoremap <Space> za
 let g:ctrlp_map = '<Leader>t'
 map <Leader>l :CtrlPBuffer<CR>
 map <Leader>m :CtrlPMRUFiles<CR>
+map <Leader>T :CtrlPClearAllCaches<CR>:CtrlP<CR>
 
 " Tabular
 nnoremap <Leader>= :Tabularize /\(=>\|=\)<CR>
