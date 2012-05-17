@@ -29,6 +29,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'sickill/vim-pasta'
 Bundle 'kien/ctrlp.vim'
 Bundle 'godlygeek/tabular'
+Bundle 'sjl/vitality.vim'
 
 Bundle 'git@github.com:nathanaelkane/vim-indent-guides.git'
 Bundle 'git@github.com:nathanaelkane/vim-command-w.git'
