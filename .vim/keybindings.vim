@@ -155,3 +155,7 @@ nmap <silent> <Leader>Zws <Plug>VimwikiUISelect
 nmap <silent> <Leader>Zwi <Plug>VimwikiDiaryIndex
 nmap <silent> <Leader>Zw<Leader>w <Plug>VimwikiMakeDiaryNote
 nmap <silent> <Leader>Zw<Leader>t <Plug>VimwikiTabMakeDiaryNote
+
+" Open word under cursor in Dash
+nmap <Leader>ru :silent !open dash://ruby:<cword><CR>
+nmap <Leader>ra :silent !open dash://rails:<cword><CR>
