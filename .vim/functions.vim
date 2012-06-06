@@ -1,10 +1,5 @@
 " FUNCTIONS
 
-function! CommandTWithFlush()
-  CommandTFlush
-  CommandT
-endfunction
-
 " Source: https://github.com/garybernhardt/dotfiles/blob/master/.vimrc
 function! RenameFile()
   let old_name = expand('%')
