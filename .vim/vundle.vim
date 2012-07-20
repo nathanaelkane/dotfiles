@@ -31,6 +31,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'sjl/vitality.vim'
 Bundle 'Shougo/neocomplcache'
 Bundle 'matschaffer/vim-islime2'
+Bundle 'myusuf3/numbers.vim'
 
 Bundle 'git@github.com:nathanaelkane/vim-indent-guides.git'
 Bundle 'git@github.com:nathanaelkane/vim-command-w.git'
