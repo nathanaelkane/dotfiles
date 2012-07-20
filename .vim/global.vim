@@ -23,6 +23,7 @@ set t_Co=256                               " Support for xterm with 256 colors (
 set ignorecase                             " Ignore case by default when searching
 set smartcase                              " Switch to case sensitive mode if needle contains uppercase characters
 set modelines=1
+set noesckeys                              " Remove <Esc> delay in Terminal Vim (also disables arrow keys in insert mode, meh)
 
 " Indentation
 set shiftwidth=2                           " Number of spaces to use in each autoindent step
