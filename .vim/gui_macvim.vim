@@ -1,6 +1,6 @@
 " MACVIM SETTINGS
 
-set guifont=DejaVu\ Sans\ Mono:h17
+set guifont=DejaVu\ Sans\ Mono:h13
 
 " Unmap annoying MacVim keys
 macmenu &File.New\ Tab key=<nop>
