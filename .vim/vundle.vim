@@ -34,6 +34,7 @@ Bundle 'AndrewRadev/linediff.vim'
 Bundle 'Shougo/neocomplcache'
 Bundle 'matschaffer/vim-islime2'
 Bundle 'myusuf3/numbers.vim'
+Bundle 'coderifous/textobj-word-column.vim'
 
 Bundle 'git@github.com:nathanaelkane/vim-indent-guides.git'
 Bundle 'git@github.com:nathanaelkane/vim-command-w.git'
