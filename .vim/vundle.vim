@@ -3,40 +3,51 @@
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
-Bundle 'cucumber.zip'
-Bundle 'bufexplorer.zip'
-Bundle 'trailing-whitespace'
-Bundle 'upAndDown'
+" Utility
 Bundle 'vimwiki'
-Bundle 'Syntastic'
 Bundle 'bufkill.vim'
-Bundle 'haml.zip'
-
-Bundle 'scrooloose/nerdtree'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-fugitive'
-Bundle 'mileszs/ack.vim'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'dterei/VimBookmarking'
-Bundle 'tomtom/quickfixsigns_vim'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'sickill/vim-pasta'
-Bundle 'kien/ctrlp.vim'
-Bundle 'godlygeek/tabular'
+Bundle 'gmarik/vundle'
 Bundle 'sjl/vitality.vim'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'AndrewRadev/linediff.vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'trailing-whitespace'
 Bundle 'Shougo/neocomplcache'
+Bundle 'Lokaltog/vim-powerline'
 Bundle 'matschaffer/vim-islime2'
-Bundle 'myusuf3/numbers.vim'
-Bundle 'coderifous/textobj-word-column.vim'
+Bundle 'AndrewRadev/linediff.vim'
+
+" Languages
+Bundle 'haml.zip'
+Bundle 'Syntastic'
+Bundle 'cucumber.zip'
+Bundle 'tpope/vim-rails'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'kchmck/vim-coffee-script'
+
+" Text manipulation
+Bundle 'upAndDown'
+Bundle 'godlygeek/tabular'
+Bundle 'sickill/vim-pasta'
+Bundle 'tpope/vim-surround'
+Bundle 'tomtom/tcomment_vim'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'coderifous/textobj-word-column.vim'
 
+" Colorschemes
+Bundle 'vim-scripts/Lucius'
+Bundle 'nanotech/jellybeans.vim'
+
+" Buffer navigation
+Bundle 'bufexplorer.zip'
+Bundle 'myusuf3/numbers.vim'
+Bundle 'dterei/VimBookmarking'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'tomtom/quickfixsigns_vim'
+
+" File navigation
+Bundle 'kien/ctrlp.vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'scrooloose/nerdtree'
+
+" Mine
 Bundle 'git@github.com:nathanaelkane/vim-indent-guides.git'
-Bundle 'git@github.com:nathanaelkane/vim-command-w.git'
