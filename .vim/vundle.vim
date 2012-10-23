@@ -49,6 +49,7 @@ Bundle 'tomtom/quickfixsigns_vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'jasoncodes/ctrlp-modified.vim'
 
 " Mine
 Bundle 'git@github.com:nathanaelkane/vim-indent-guides.git'
