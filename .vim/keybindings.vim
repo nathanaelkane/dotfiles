@@ -123,7 +123,7 @@ vnoremap <Space> za
 " CtrlP
 let g:ctrlp_map = '<Leader>t'
 map <Leader>l :CtrlPBuffer<CR>
-map <Leader>m :CtrlPMRUFiles<CR>
+map <Leader>M :CtrlPMRUFiles<CR>
 map <Leader>T :CtrlPClearAllCaches<CR>:CtrlP<CR>
 map <Leader>m :CtrlPModified<CR>
 
