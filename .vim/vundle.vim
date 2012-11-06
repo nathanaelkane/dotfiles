@@ -7,7 +7,6 @@ call vundle#rc()
 Bundle 'vimwiki'
 Bundle 'bufkill.vim'
 Bundle 'gmarik/vundle'
-Bundle 'sjl/vitality.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'trailing-whitespace'
 Bundle 'Shougo/neocomplcache'
