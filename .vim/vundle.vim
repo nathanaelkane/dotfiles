@@ -12,7 +12,6 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'trailing-whitespace'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'matschaffer/vim-islime2'
 Bundle 'AndrewRadev/linediff.vim'
 
 " Languages
