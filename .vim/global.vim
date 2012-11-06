@@ -69,7 +69,8 @@ if !has("gui")
   let loaded_bookmarks = 0
 endif
 set background=dark
-colorscheme jellybeans
+set cursorline
+colorscheme jellybeans_nate
 
 " Tag files
 set tags=tmp/tags,tmp/bundle.tags;
