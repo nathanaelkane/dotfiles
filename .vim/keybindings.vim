@@ -93,9 +93,6 @@ nnoremap <Leader>H *<C-O>:AckFromSearch!<CR>
 " Use `=` to indent the current line
 nnoremap = v=
 
-" Replace until end of line with yanked text. Uses blackhole register.
-nnoremap <silent><Leader>p "_DP
-
 " Source a single line of Vimscript
 nnoremap <Leader>S ^vg_y:execute @@<CR>
 
@@ -174,3 +171,9 @@ inoremap <expr><C-e> neocomplcache#cancel_popup()
 
 " Select all
 map <Leader>a ggVG
+
+" Yank and put system pasteboard with <Leader>y/p
+noremap  <Leader>y  "*y
+nnoremap <Leader>yy "*yy
+noremap  <Leader>p  "*p
+noremap  <Leader>P  "*P
