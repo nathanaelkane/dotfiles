@@ -177,3 +177,13 @@ noremap  <Leader>y  "*y
 nnoremap <Leader>yy "*yy
 noremap  <Leader>p  "*p
 noremap  <Leader>P  "*P
+
+" vimux
+map <Leader>rp :VimuxPromptCommand<CR>
+map <Leader>vl :VimuxRunLastCommand<CR>
+map <Leader>vi :VimuxInspectRunner<CR>
+map <Leader>vx :VimuxClosePanes<CR>
+map <Leader>vq :VimuxCloseRunner<CR>
+map <Leader>vs :VimuxInterruptRunner<CR>
+map <Leader>rr :wall<Bar>:call VimuxRunCommand("clear; ber " . bufname("%"))<CR>
+map <Leader>rl :wall<Bar>:call VimuxRunCommand("clear; ber " . bufname("%") . ":" . line("."))<CR>
