@@ -172,3 +172,6 @@ map <Leader>vrl :wall<Bar>:call VimuxRunCommand("clear; ber " . bufname("%") . "
 map <Leader>vcc :wall<Bar>:call VimuxRunCommand("clear; bec " . bufname("%"))<CR>
 map <Leader>vcl :wall<Bar>:call VimuxRunCommand("clear; bec " . bufname("%") . ":" . line("."))<CR>
 map <Leader>vx :call VimuxRunCommand('exit')<CR>
+
+" Refresh and save all teh things.
+map <Leader>r :checktime<CR>:wa<CR>
