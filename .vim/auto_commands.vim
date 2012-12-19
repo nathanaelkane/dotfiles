@@ -10,6 +10,8 @@ autocmd BufWinLeave *.feature set cc-=11
 " Markdown files
 autocmd BufRead,BufNewFile {*.md,*.mkd,*.markdown} set ft=markdown
 
+autocmd BufRead,BufNewFile *.hamlc set ft=haml
+
 " Add dashes to the list of 'word characters'
 autocmd Filetype * setlocal iskeyword+=-
 
