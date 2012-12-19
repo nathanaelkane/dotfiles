@@ -13,6 +13,7 @@ Bundle 'trailing-whitespace'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'AndrewRadev/linediff.vim'
+Bundle 'tpope/vim-eunuch'
 
 " Languages
 Bundle 'haml.zip'
