@@ -133,10 +133,6 @@ nmap <Leader>W :qall<CR>
 " Cmd+K for bufkill
 nmap <Leader>k :BD<CR>
 
-" Marked (markdown preview)
-command! Marked silent !open -a "Marked.app" "%:p"
-nmap <C-p> :Marked<CR>
-
 " Override Vimwiki mappings to avoid conflicts
 nmap <silent> <Leader>vw <Plug>VimwikiIndex
 nmap <silent> <Leader>Zwt <Plug>VimwikiTabIndex
