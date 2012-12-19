@@ -40,12 +40,6 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
-" Move around in insert mode
-inoremap <C-h> <left>
-inoremap <C-k> <up>
-inoremap <C-j> <down>
-inoremap <C-l> <right>
-
 " Remove annoying F1 help
 inoremap <F1> <nop>
 nnoremap <F1> <nop>
