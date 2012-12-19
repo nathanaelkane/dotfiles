@@ -113,6 +113,7 @@ map <Leader>l :CtrlPBuffer<CR>
 map <Leader>M :CtrlPMRUFiles<CR>
 map <Leader>T :CtrlPClearAllCaches<CR>:CtrlP<CR>
 map <Leader>m :CtrlPModified<CR>
+map <Leader>d :CtrlPCurFile<CR>
 
 " Tabular
 nnoremap <Leader>= :Tabularize /\(=>\|=\)<CR>
