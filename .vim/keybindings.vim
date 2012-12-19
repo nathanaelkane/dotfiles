@@ -145,10 +145,6 @@ nmap <silent> <Leader>Zwi <Plug>VimwikiDiaryIndex
 nmap <silent> <Leader>Zw<Leader>w <Plug>VimwikiMakeDiaryNote
 nmap <silent> <Leader>Zw<Leader>t <Plug>VimwikiTabMakeDiaryNote
 
-" Open word under cursor in Dash
-nmap <Leader>ru :silent !open dash://ruby:<cword><CR>
-nmap <Leader>ra :silent !open dash://rails:<cword><CR>
-
 " Neocomplcache (recommended)
 " <CR>: close popup and save indent
 inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
