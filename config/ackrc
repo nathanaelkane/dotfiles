@@ -15,7 +15,6 @@
 --ignore-dir=tmp
 --ignore-dir=backups
 
---noignorables
 --nonib
 --notmstuff
 --noxcode
