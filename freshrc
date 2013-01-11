@@ -13,6 +13,7 @@ fresh jasoncodes/dotfiles config/pryrc --file
 fresh jasoncodes/dotfiles config/gemrc --file
 fresh jasoncodes/dotfiles config/gitconfig --file
 fresh jasoncodes/dotfiles config/gitignore --file
+fresh jasoncodes/dotfiles config/inputrc --file
 fresh jasoncodes/dotfiles config/tmux.conf --file --marker='#'
 fresh twe4ked/dotfiles config/tmux.conf --file --marker='#'
 fresh 'config/*' --file
