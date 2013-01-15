@@ -8,7 +8,7 @@ nnoremap Y y$
 
 " NERDTree
 noremap <Leader>n :NERDTreeToggle<CR>
-noremap <Leader>N :NERDTreeFind<CR>
+noremap <Leader>. :NERDTreeFind<CR>
 
 " Trim & save
 noremap <Leader>sd :FixWhitespace<CR>:w<CR>
