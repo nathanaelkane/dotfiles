@@ -40,7 +40,6 @@ Bundle 'nanotech/jellybeans.vim'
 " Buffer navigation
 Bundle 'bufexplorer.zip'
 Bundle 'dterei/VimBookmarking'
-Bundle 'dahu/vim-fanfingtastic'
 Bundle 'tomtom/quickfixsigns_vim'
 
 " File navigation
