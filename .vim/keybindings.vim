@@ -55,9 +55,6 @@ let g:tcommentMapLeaderOp1 = '<Leader>c'
 " Clear search
 noremap <silent><Leader>/ :nohls<CR>
 
-" EasyMotion
-let g:EasyMotion_leader_key = '<Leader>e'
-
 " Surround
 let g:surround_no_mappings = 1
 nmap cs <Plug>Csurround

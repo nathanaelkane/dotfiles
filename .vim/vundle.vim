@@ -42,7 +42,6 @@ Bundle 'bufexplorer.zip'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'dterei/VimBookmarking'
 Bundle 'dahu/vim-fanfingtastic'
-Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tomtom/quickfixsigns_vim'
 
 " File navigation
