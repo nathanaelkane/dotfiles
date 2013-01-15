@@ -39,7 +39,6 @@ Bundle 'nanotech/jellybeans.vim'
 
 " Buffer navigation
 Bundle 'bufexplorer.zip'
-Bundle 'myusuf3/numbers.vim'
 Bundle 'dterei/VimBookmarking'
 Bundle 'dahu/vim-fanfingtastic'
 Bundle 'tomtom/quickfixsigns_vim'
