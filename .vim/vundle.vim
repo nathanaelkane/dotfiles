@@ -14,6 +14,7 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'AndrewRadev/linediff.vim'
 Bundle 'tpope/vim-eunuch'
+Bundle 'jszakmeister/vim-togglecursor'
 
 " Languages
 Bundle 'haml.zip'
