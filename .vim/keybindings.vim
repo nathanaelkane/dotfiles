@@ -97,9 +97,6 @@ nnoremap <silent><Leader>cl :let @*=expand('%').':'.line('.')<CR>
 nnoremap / /\v
 vnoremap / /\v
 
-" Use jk as <Esc> alternative
-inoremap jk <Esc>
-
 " Space to toggle folds
 nnoremap <Space> za
 vnoremap <Space> za
