@@ -8,12 +8,12 @@ Bundle 'vimwiki'
 Bundle 'bufkill.vim'
 Bundle 'gmarik/vundle'
 Bundle 'benmills/vimux'
+Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-fugitive'
 Bundle 'trailing-whitespace'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'AndrewRadev/linediff.vim'
-Bundle 'tpope/vim-eunuch'
 Bundle 'jszakmeister/vim-togglecursor'
 
 " Languages
