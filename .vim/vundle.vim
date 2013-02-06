@@ -32,7 +32,6 @@ Bundle 'tpope/vim-surround'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'coderifous/textobj-word-column.vim'
 
 " Colorschemes
 Bundle 'vim-scripts/Lucius'
