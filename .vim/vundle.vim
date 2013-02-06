@@ -38,7 +38,6 @@ Bundle 'nanotech/jellybeans.vim'
 
 " Buffer navigation
 Bundle 'bufexplorer.zip'
-Bundle 'teranex/jk-jumps.vim'
 Bundle 'dterei/VimBookmarking'
 Bundle 'tomtom/quickfixsigns_vim'
 
