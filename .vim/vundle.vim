@@ -34,7 +34,6 @@ Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 
 " Colorschemes
-Bundle 'vim-scripts/Lucius'
 Bundle 'nanotech/jellybeans.vim'
 
 " Buffer navigation
