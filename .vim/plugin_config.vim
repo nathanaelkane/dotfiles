@@ -40,6 +40,14 @@ let g:netrw_nogx = 1 " disable netrw's gx mapping
 
 " Quickfixsigns
 let g:quickfixsigns_classes = ['vcsdiff']
+func! TweakQuickfixsigns()
+  sign define QFS_VCS_ADD text=⇒ texthl=DiffAdd
+  sign define QFS_VCS_DEL text=⇐ texthl=DiffDelete
+  sign define QFS_VCS_CHANGE text=⇔ texthl=DiffChange
+  hi DiffAdd ctermfg=NONE guifg=NONE
+  hi DiffDelete ctermfg=NONE guifg=NONE
+endfunc
+auto VimEnter * call TweakQuickfixsigns()
 
 " CtrlP
 let g:ctrlp_clear_cache_on_exit   = 1
