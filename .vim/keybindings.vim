@@ -19,7 +19,7 @@ noremap <Leader><Leader> <C-^>
 " Quickly open/source .vimrc/.gvimrc
 nnoremap <Leader>vv :e $MYVIMRC<CR>
 nnoremap <Leader>gg :e $MYGVIMRC<CR>
-nnoremap <Leader>ss :source $MYVIMRC<Bar>:source $MYGVIMRC<CR>
+nnoremap <Leader>ss :source $MYVIMRC<CR>
 
 " Toggle invisibles
 noremap <Leader>i :set list!<CR>
