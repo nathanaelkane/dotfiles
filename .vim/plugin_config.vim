@@ -41,9 +41,9 @@ let g:netrw_nogx = 1 " disable netrw's gx mapping
 " Quickfixsigns
 let g:quickfixsigns_classes = ['vcsdiff']
 func! TweakQuickfixsigns()
-  sign define QFS_VCS_ADD text=⇒ texthl=DiffAdd
-  sign define QFS_VCS_DEL text=⇐ texthl=DiffDelete
-  sign define QFS_VCS_CHANGE text=⇔ texthl=DiffChange
+  sign define QFS_VCS_ADD texthl=DiffAdd
+  sign define QFS_VCS_DEL texthl=DiffDelete
+  sign define QFS_VCS_CHANGE texthl=DiffChange
   hi DiffAdd ctermfg=NONE guifg=NONE
   hi DiffDelete ctermfg=NONE guifg=NONE
 endfunc
