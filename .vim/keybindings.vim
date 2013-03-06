@@ -169,3 +169,7 @@ map <Leader>vx :call VimuxRunCommand('exit')<CR>
 
 " Refresh and save all teh things.
 map <Leader>r :checktime<CR>:wa<CR>
+
+" Jump between git diff hunks (quickfixsigns)
+nmap [d :silent call quickfixsigns#MoveSigns(-1, '', 1)<CR>
+nmap ]d :silent call quickfixsigns#MoveSigns(1, '', 1)<CR>
