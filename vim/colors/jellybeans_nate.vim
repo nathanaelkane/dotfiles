@@ -13,12 +13,3 @@ hi cCursor guibg=white
 
 hi IndentGuidesOdd ctermbg=NONE
 hi IndentGuidesEven ctermbg=233
-
-function! s:GitGutterColors()
-  hi lineAdded ctermbg=NONE
-  hi lineModified ctermbg=NONE
-  hi lineRemoved ctermbg=NONE
-endfunction
-
-hi SignColumn ctermbg=0
-autocmd BufEnter,WinEnter,ColorScheme * call s:GitGutterColors()
