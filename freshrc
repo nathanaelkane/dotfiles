@@ -25,6 +25,7 @@ fresh bobthecow/git-flow-completion git-flow-completion.bash
 
 # scripts
 fresh twe4ked/dotfiles bin/heroku-remote-add --bin
+fresh jasoncodes/dotfiles bin/adduser --bin
 
 # vim
 fresh vim/leader.vim --file=~/.vimrc
