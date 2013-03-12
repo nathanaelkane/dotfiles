@@ -1,8 +1,5 @@
 " KEYBINDINGS
 
-" Remap leader to ',' which is much easier than '\'
-let mapleader = ","
-
 " Yank from the cursor to the end of the line, to be consistent with C and D
 nnoremap Y y$
 
