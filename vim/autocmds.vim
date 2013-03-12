@@ -1,9 +1,5 @@
-" Ruby files
 autocmd FileType ruby,rails,haml,eruby,yaml,ru,cucumber set ai sw=2 sts=2 et
-
-" Markdown files
 autocmd BufRead,BufNewFile {*.md,*.mkd,*.markdown} set ft=markdown
-
 autocmd BufRead,BufNewFile *.hamlc set ft=haml
 
 " Add dashes to the list of 'word characters'
