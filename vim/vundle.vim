@@ -2,36 +2,36 @@ set nocompatible
 filetype off
 
 " Utility
-Bundle 'vimwiki'
+Bundle 'AndrewRadev/linediff.vim'
+Bundle 'benmills/vimux'
+Bundle 'bogado/file-line'
 Bundle 'bufkill.vim'
 Bundle 'gmarik/vundle'
-Bundle 'benmills/vimux'
-Bundle 'tpope/vim-eunuch'
-Bundle 'bogado/file-line'
-Bundle 'tpope/vim-fugitive'
-Bundle 'trailing-whitespace'
-Bundle 'Shougo/neocomplcache'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'AndrewRadev/linediff.vim'
 Bundle 'jszakmeister/vim-togglecursor'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'Shougo/neocomplcache'
+Bundle 'tpope/vim-eunuch'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'trailing-whitespace'
+Bundle 'vimwiki'
 
 " Languages
-Bundle 'haml.zip'
-Bundle 'Syntastic'
 Bundle 'cucumber.zip'
+Bundle 'haml.zip'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'Syntastic'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'kchmck/vim-coffee-script'
 
 " Text manipulation
-Bundle 'upAndDown'
 Bundle 'godlygeek/tabular'
-Bundle 'sickill/vim-pasta'
-Bundle 'tpope/vim-surround'
-Bundle 'tomtom/tcomment_vim'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'sickill/vim-pasta'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'tpope/vim-surround'
+Bundle 'upAndDown'
 
 " Colorschemes
 Bundle 'nanotech/jellybeans.vim'
@@ -42,10 +42,10 @@ Bundle 'dterei/VimBookmarking'
 Bundle 'tomtom/quickfixsigns_vim'
 
 " File navigation
+Bundle 'jasoncodes/ctrlp-modified.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/nerdtree'
-Bundle 'jasoncodes/ctrlp-modified.vim'
 
 " Mine
 Bundle 'git@github.com:nathanaelkane/vim-indent-guides.git'
