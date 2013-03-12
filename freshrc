@@ -22,6 +22,8 @@ fresh 'config/*' --file
 # completion
 fresh freshshell/fresh contrib/completion/fresh-completion.bash
 fresh bobthecow/git-flow-completion git-flow-completion.bash
+
+# scripts
 fresh twe4ked/dotfiles bin/heroku-remote-add --bin
 
 # vim
