@@ -1,7 +1,7 @@
 " VUNDLE
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set nocompatible
+filetype off
 
 " Utility
 Bundle 'vimwiki'
