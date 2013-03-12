@@ -1,5 +1,3 @@
-" VUNDLE
-
 set nocompatible
 filetype off
 

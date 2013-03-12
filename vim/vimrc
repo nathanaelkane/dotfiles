@@ -1,6 +1,3 @@
-" GLOBAL SETTINGS
-
-" Misc
 syntax on                                  " Turn on syntax highlighting
 filetype plugin indent on                  " Enable automatic filetype detection, filetype-specific plugins/indentation
 set nocompatible                           " Don't need to keep compatibility with Vi

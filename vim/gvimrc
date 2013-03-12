@@ -1,5 +1,3 @@
-" GVIMRC
-
 set guioptions-=T  " Hide the tool bar
 set guioptions-=rL " Hide scrollbars
 
