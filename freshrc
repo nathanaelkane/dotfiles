@@ -19,9 +19,6 @@ fresh jasoncodes/dotfiles config/tmux.conf --file --marker='#'
 fresh twe4ked/dotfiles config/tmux.conf --file --marker='#'
 fresh 'config/*' --file
 
-# scripts
-fresh jasoncodes/scripts adduser --bin
-
 # completion
 fresh freshshell/fresh contrib/completion/fresh-completion.bash
 fresh bobthecow/git-flow-completion git-flow-completion.bash
