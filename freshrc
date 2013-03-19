@@ -42,7 +42,7 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh vim/plugin_config.vim
   fresh vim/vimrc
   fresh jasoncodes/dotfiles vim/config/backups.vim
+  fresh jasoncodes/dotfiles vim/config/undo.vim
 fresh-options
 fresh vim/gvimrc --file
-fresh vim/undodir --file=~/.vim/undodir/
 fresh vim/colors --file=~/.vim/colors/
