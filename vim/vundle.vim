@@ -1,6 +1,3 @@
-set nocompatible
-filetype off
-
 " Utility
 Bundle 'AndrewRadev/linediff.vim'
 Bundle 'benmills/vimux'
