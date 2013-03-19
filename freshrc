@@ -41,8 +41,8 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh vim/keybindings.vim
   fresh vim/plugin_config.vim
   fresh vim/vimrc
+  fresh jasoncodes/dotfiles vim/config/backups.vim
 fresh-options
 fresh vim/gvimrc --file
-fresh vim/backup --file=~/.vim/backup/
 fresh vim/undodir --file=~/.vim/undodir/
 fresh vim/colors --file=~/.vim/colors/

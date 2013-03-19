@@ -48,10 +48,6 @@ set backspace=2                            " Allow backspacing over autoindent, 
 set showmatch                              " Briefly jump to a paren once it's balanced
 set matchtime=2                            " (for only .2 seconds).
 
-" Backups
-set backupdir=$HOME/.vim/backup
-set directory=$HOME/.vim/backup
-
 " Persistent Undo
 set undodir=$HOME/.vim/undodir
 set undofile
