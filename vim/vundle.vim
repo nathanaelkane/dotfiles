@@ -34,6 +34,3 @@ Bundle 'nanotech/jellybeans.vim'
 " Buffer navigation
 Bundle 'bufexplorer.zip'
 Bundle 'dterei/VimBookmarking'
-
-" File navigation
-Bundle 'mileszs/ack.vim'

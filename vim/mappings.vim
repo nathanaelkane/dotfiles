@@ -95,10 +95,6 @@ vnoremap <Space> za
 " Tabular
 nnoremap <Leader>= :Tabularize /\(=>\|=\)<CR>
 
-" Ack
-nmap <Leader>f :Ack!<Space>
-nmap <Leader>F :AckFromSearch!<CR>
-
 " Command-W
 nmap <Leader>w :CommandW<CR>
 nmap <Leader>sw :FixWhitespace<CR>:w<CR>:CommandW<CR>
