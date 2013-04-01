@@ -9,6 +9,3 @@ let g:syntastic_mode_map = {
 if !has("gui")
   let g:loaded_syntastic_plugin = 0
 endif
-
-" Powerline
-let g:Powerline_symbols = 'fancy'
