@@ -118,17 +118,6 @@ nmap <silent> <Leader>Zwi <Plug>VimwikiDiaryIndex
 nmap <silent> <Leader>Zw<Leader>w <Plug>VimwikiMakeDiaryNote
 nmap <silent> <Leader>Zw<Leader>t <Plug>VimwikiTabMakeDiaryNote
 
-" Neocomplcache (recommended)
-" <CR>: close popup and save indent
-inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
-" <TAB>: completion
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char
-inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><BS>  neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y> neocomplcache#close_popup()
-inoremap <expr><C-e> neocomplcache#cancel_popup()
-
 " Select all
 map <Leader>a ggVG
 
