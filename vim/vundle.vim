@@ -40,6 +40,4 @@ Bundle 'dterei/VimBookmarking'
 Bundle 'tomtom/quickfixsigns_vim'
 
 " File navigation
-Bundle 'jasoncodes/ctrlp-modified.vim'
-Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'

@@ -21,17 +21,6 @@ func! TweakQuickfixsigns()
 endfunc
 auto VimEnter * call TweakQuickfixsigns()
 
-" CtrlP
-let g:ctrlp_clear_cache_on_exit   = 1
-let g:ctrlp_working_path_mode     = 0 " Handle working path manually
-let g:ctrlp_dotfiles              = 0 " Ignore all dot/hidden files
-let g:ctrlp_match_window_reversed = 0
-let g:ctrlp_custom_ignore         = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|backups$\|logs$\|tmp$',
-  \ 'file': '',
-  \ 'link': '',
-  \ }
-
 " Neocomplcache
 let g:acp_enableAtStartup = 0                        " Disable AutoComplPop
 let g:neocomplcache_enable_at_startup = 1            " Use neocomplcache
