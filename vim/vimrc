@@ -60,9 +60,6 @@ set background=dark
 set cursorline
 colorscheme jellybeans_nate
 
-" Tag files
-set tags=tmp/tags,tmp/bundle.tags;
-
 " Fold settings
 set foldmethod=indent
 set foldnestmax=10
