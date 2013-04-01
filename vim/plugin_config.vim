@@ -1,9 +1,3 @@
-" Rails
-let g:rails_menu = 0
-
-" Preview
-let g:PreviewBrowsers='firefox,chrome,safari'
-
 " Syntastic
 let g:syntastic_enable_signs  = 1
 let g:syntastic_auto_loc_list = 0
@@ -20,12 +14,6 @@ endif
 let g:indent_guides_color_change_percent  = 3
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_exclude_filetypes = ['help', 'diff']
-
-" NERDCommenter
-let g:NERDSpaceDelims = 1
-
-" Open Browser
-let g:netrw_nogx = 1 " disable netrw's gx mapping
 
 " Quickfixsigns
 let g:quickfixsigns_classes = ['vcsdiff']
