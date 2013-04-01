@@ -1,10 +1,6 @@
 " Yank from the cursor to the end of the line, to be consistent with C and D
 nnoremap Y y$
 
-" NERDTree
-noremap <Leader>n :NERDTreeToggle<CR>
-noremap <Leader>. :NERDTreeFind<CR>
-
 " Trim & save
 noremap <Leader>sd :FixWhitespace<CR>:w<CR>
 
