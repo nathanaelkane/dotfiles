@@ -10,11 +10,6 @@ if !has("gui")
   let g:loaded_syntastic_plugin = 0
 endif
 
-" Indent Guides
-let g:indent_guides_color_change_percent  = 3
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_exclude_filetypes = ['help', 'diff']
-
 " Quickfixsigns
 let g:quickfixsigns_classes = ['vcsdiff']
 func! TweakQuickfixsigns()
