@@ -16,7 +16,6 @@ Bundle 'vimwiki'
 Bundle 'cucumber.zip'
 Bundle 'haml.zip'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'Syntastic'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
 
