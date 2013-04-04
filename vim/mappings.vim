@@ -15,6 +15,9 @@ nnoremap <Leader>ss :source $MYVIMRC<CR>
 " Toggle invisibles
 noremap <Leader>i :set list!<CR>
 
+" Toggle wrap
+noremap <Leader>w :set wrap!<CR>
+
 " Bookmarking
 noremap <C-Space> :ToggleBookmark<CR>
 noremap <C-Up>    :PreviousBookmark<CR>
