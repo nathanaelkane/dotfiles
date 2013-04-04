@@ -15,9 +15,12 @@ fresh jasoncodes/dotfiles config/gemrc --file
 fresh jasoncodes/dotfiles config/gitconfig --file
 fresh jasoncodes/dotfiles config/gitignore --file
 fresh jasoncodes/dotfiles config/inputrc --file
-fresh jasoncodes/dotfiles config/tmux.conf --file --marker='#'
-fresh twe4ked/dotfiles config/tmux.conf --file --marker='#'
-fresh 'config/*' --file
+fresh-options --file=~/.tmux.conf --marker=\#
+  fresh jasoncodes/dotfiles config/tmux.conf
+  fresh twe4ked/dotfiles config/tmux.conf
+  fresh config/tmux/\*
+fresh-options
+fresh config/\* --file
 
 # completion
 fresh freshshell/fresh contrib/completion/fresh-completion.bash
