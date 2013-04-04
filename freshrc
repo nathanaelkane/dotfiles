@@ -51,3 +51,4 @@ fresh-options --file=~/.vimrc --marker=\"
 fresh-options
 fresh vim/gvimrc --file
 fresh vim/colors --file=~/.vim/colors/
+fresh mislav/vimfiles plugin/tmux_navigator.vim --file=~/.vim/plugin/tmux_navigator.vim
