@@ -95,11 +95,6 @@ vnoremap <Space> za
 " Tabular
 nnoremap <Leader>= :Tabularize /\(=>\|=\)<CR>
 
-" Command-W
-nmap <Leader>w :CommandW<CR>
-nmap <Leader>sw :FixWhitespace<CR>:w<CR>:CommandW<CR>
-" nmap <Leader>sw :CommandW<CR>
-
 " Close Vim instance
 nmap <Leader>W :qall<CR>
 
