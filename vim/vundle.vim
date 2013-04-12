@@ -11,6 +11,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'trailing-whitespace'
 Bundle 'vimwiki'
+Bundle 'kablamo/vim-git-log'
 
 " Languages
 Bundle 'cucumber.zip'
