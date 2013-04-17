@@ -30,6 +30,7 @@ fresh bobthecow/git-flow-completion git-flow-completion.bash
 fresh bin/\* --bin
 fresh twe4ked/dotfiles bin/heroku-remote-add --bin
 fresh twe4ked/catacomb bin/catacomb --bin
+fresh twe4ked/dotfiles bin/skype-search --bin
 fresh jasoncodes/dotfiles bin/wemux/\* --bin
 fresh jasoncodes/dotfiles bin/adduser --bin
 fresh pengwynn/dotfiles bin/git-pr --bin
