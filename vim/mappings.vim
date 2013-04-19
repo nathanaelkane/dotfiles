@@ -46,9 +46,6 @@ vnoremap > >gv
 " TComment
 let g:tcommentMapLeaderOp1 = '<Leader>c'
 
-" Clear search
-noremap <silent><Leader>/ :nohls<CR>
-
 " Surround
 let g:surround_no_mappings = 1
 nmap cs <Plug>Csurround
@@ -64,12 +61,6 @@ nnoremap <Leader>sr :%s///g<left><left>
 " Open Browser
 nnoremap gx <Plug>(openbrowser-smart-search)
 vnoremap gx <Plug>(openbrowser-smart-search)
-
-" Highlight word at cursor without changing position
-nnoremap <Leader>h *<C-O>
-
-" Highlight and ack for word at cursor without changing position
-nnoremap <Leader>H *<C-O>:AckFromSearch!<CR>
 
 " Use `=` to indent the current line
 nnoremap = v=

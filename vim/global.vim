@@ -9,7 +9,6 @@ set showmode                               " Show current mode down the bottom
 set cmdheight=2                            " Make the command line a little taller
 set ttyfast                                " More smooth screen redrawing
 set incsearch                              " Find the next match as we type the search
-set hlsearch                               " Highlight searches by default
 set ruler                                  " Show ruler
 set number                                 " Show line numbers
 set vb t_vb=                               " Turn off bell
