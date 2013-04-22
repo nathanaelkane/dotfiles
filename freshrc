@@ -36,6 +36,9 @@ fresh jasoncodes/dotfiles bin/adduser --bin
 fresh pengwynn/dotfiles bin/git-pr --bin
 fresh pengwynn/dotfiles bin/gxpr --bin
 
+# functions
+fresh jasoncodes/dotfiles shell/functions/realpath.sh
+
 # vim
 fresh-options --file=~/.vimrc --marker=\"
   fresh vim/leader.vim
