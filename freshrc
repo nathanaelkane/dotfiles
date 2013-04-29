@@ -56,6 +56,7 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh jasoncodes/dotfiles vim/config/format.vim
   fresh jasoncodes/dotfiles vim/config/tags.vim
   fresh jasoncodes/dotfiles vim/config/search.vim
+  fresh jasoncodes/dotfiles vim/mappings/whitespace.vim
 fresh-options
 fresh vim/gvimrc --file
 fresh vim/colors --file=~/.vim/colors/
