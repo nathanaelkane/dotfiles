@@ -35,6 +35,7 @@ fresh jasoncodes/dotfiles bin/wemux/\* --bin
 fresh jasoncodes/dotfiles bin/adduser --bin
 fresh pengwynn/dotfiles bin/git-pr --bin
 fresh pengwynn/dotfiles bin/gxpr --bin
+fresh hackling/morse bin/morse --bin
 
 # functions
 fresh jasoncodes/dotfiles shell/functions/realpath.sh
