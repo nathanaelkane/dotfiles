@@ -7,7 +7,6 @@ set nolist                                 " Hide invisibles by default
 set showcmd                                " Show incomplete cmds down the bottom
 set showmode                               " Show current mode down the bottom
 set cmdheight=2                            " Make the command line a little taller
-set ttyfast                                " More smooth screen redrawing
 set incsearch                              " Find the next match as we type the search
 set ruler                                  " Show ruler
 set number                                 " Show line numbers
@@ -46,6 +45,12 @@ set scrolloff=3                            " Keep 3 context lines above and belo
 set backspace=2                            " Allow backspacing over autoindent, EOL, and BOL
 set showmatch                              " Briefly jump to a paren once it's balanced
 set matchtime=2                            " (for only .2 seconds).
+
+" Speed
+set synmaxcol=200
+set ttyscroll=3
+set ttyfast
+set lazyredraw
 
 " Custom status line
 set statusline=%F%m%r%h%w\ [TYPE=%Y]\ \ \ \ \ \ [POS=%2l,%2v][%p%%]\ \ \ \ \ \ [LEN=%L]
