@@ -11,7 +11,6 @@ set incsearch                              " Find the next match as we type the 
 set ruler                                  " Show ruler
 set number                                 " Show line numbers
 set vb t_vb=                               " Turn off bell
-set mouse=a                                " Enable the mouse
 set linespace=2                            " Spacing between lines
 set noswapfile                             " Disable creation of *.swp files
 set t_Co=256                               " Support for xterm with 256 colors (gets overriden in .gvimrc)
