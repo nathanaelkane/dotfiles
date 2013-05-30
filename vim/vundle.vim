@@ -1,4 +1,5 @@
 " Utility
+Bundle 'aaronbieber/quicktask'
 Bundle 'AndrewRadev/linediff.vim'
 Bundle 'benmills/vimux'
 Bundle 'bogado/file-line'
