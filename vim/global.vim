@@ -46,7 +46,6 @@ set showmatch                              " Briefly jump to a paren once it's b
 set matchtime=2                            " (for only .2 seconds).
 
 " Speed
-set synmaxcol=200
 set ttyscroll=3
 set ttyfast
 set lazyredraw
