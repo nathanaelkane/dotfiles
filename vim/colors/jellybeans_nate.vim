@@ -15,5 +15,3 @@ hi IndentGuidesOdd ctermbg=NONE
 hi IndentGuidesEven ctermbg=233
 
 hi MatchParen cterm=underline ctermbg=NONE ctermfg=NONE
-
-hi VertSplit ctermbg=235
