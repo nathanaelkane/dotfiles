@@ -12,6 +12,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'trailing-whitespace'
 Bundle 'vimwiki'
 Bundle 'kablamo/vim-git-log'
+Bundle 'christoomey/vim-tmux-navigator'
 
 " Languages
 Bundle 'cucumber.zip'
