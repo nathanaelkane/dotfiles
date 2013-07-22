@@ -51,10 +51,6 @@ let g:surround_no_mappings = 1
 nmap cs <Plug>Csurround
 xmap S  <Plug>VSurround
 
-" Close quickfix window
-" Handy for getting rid of Ack results
-nnoremap <silent><Leader>q :cclose<CR>
-
 " Substitute
 nnoremap <Leader>sr :%s///g<left><left>
 
@@ -91,9 +87,6 @@ nnoremap <Leader>= :Tabularize /\(=>\|=\)<CR>
 
 " Close Vim instance
 nmap <Leader>W :qall<CR>
-
-" Cmd+K for bufkill
-nmap <Leader>k :BD<CR>
 
 " Override Vimwiki mappings to avoid conflicts
 nmap <silent> <Leader>vw <Plug>VimwikiIndex
