@@ -19,6 +19,7 @@ fresh-options --file=~/.tmux.conf --marker=\#
   fresh jasoncodes/dotfiles config/tmux.conf
   fresh twe4ked/dotfiles config/tmux.conf
   fresh config/tmux/\*
+  fresh christoomey/vim-tmux-navigator README.mkd --filter='grep "^bind"' --ref=1c32f8da
 fresh-options
 fresh config/\* --file
 
