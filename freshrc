@@ -67,3 +67,4 @@ fresh-options --file=~/.vimrc --marker=\"
 fresh-options
 fresh vim/gvimrc --file
 fresh vim/colors --file=~/.vim/colors/
+fresh jasoncodes/dotfiles vim/config/bubbling.vim --file=~/.vimrc
