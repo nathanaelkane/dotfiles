@@ -118,4 +118,4 @@ map <Leader>vcl :wall<Bar>:call VimuxRunCommand("clear; bec " . bufname("%") . "
 map <Leader>vx :call VimuxRunCommand('exit')<CR>
 
 " Refresh and save all teh things.
-map <Leader>r :checktime<CR>:wa<CR>
+map <silent><Leader>r :checktime<CR>:silent! wall<CR>:redraw!<CR>:call QuickfixsignsUpdate()<CR>
