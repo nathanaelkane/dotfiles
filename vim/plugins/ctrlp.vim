@@ -1,6 +1,5 @@
 Bundle 'kien/ctrlp.vim'
 Bundle 'jasoncodes/ctrlp-modified.vim'
-Bundle 'ivalkeen/vim-ctrlp-tjump'
 
 " CtrlP
 let g:ctrlp_clear_cache_on_exit   = 1
@@ -30,4 +29,3 @@ map <Leader>l :CtrlPBuffer<CR>
 map <Leader>m :CtrlPModified<CR>
 map <Leader>M :CtrlPBranch<CR>
 map <Leader>d :CtrlPCurFile<CR>
-map <C-]> :CtrlPtjump<CR>
