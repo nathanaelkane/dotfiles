@@ -14,11 +14,8 @@ Bundle 'kablamo/vim-git-log'
 Bundle 'christoomey/vim-tmux-navigator'
 
 " Languages
-Bundle 'cucumber.zip'
-Bundle 'haml.zip'
-Bundle 'kchmck/vim-coffee-script'
+Bundle 'sheerun/vim-polyglot'
 Bundle 'tpope/vim-rails'
-Bundle 'vim-ruby/vim-ruby'
 
 " Text manipulation
 Bundle 'godlygeek/tabular'
