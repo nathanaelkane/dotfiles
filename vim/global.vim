@@ -9,7 +9,8 @@ set showmode                               " Show current mode down the bottom
 set cmdheight=2                            " Make the command line a little taller
 set incsearch                              " Find the next match as we type the search
 set ruler                                  " Show ruler
-set number                                 " Show line numbers
+set relativenumber                         " Show relative line numbers
+set number                                 " Show absolute line number for current line (when used with relativenumber)
 set vb t_vb=                               " Turn off bell
 set linespace=2                            " Spacing between lines
 set noswapfile                             " Disable creation of *.swp files
