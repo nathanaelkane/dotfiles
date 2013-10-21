@@ -45,11 +45,6 @@ vnoremap > >gv
 " TComment
 let g:tcommentMapLeaderOp1 = '<Leader>c'
 
-" Surround
-let g:surround_no_mappings = 1
-nmap cs <Plug>Csurround
-xmap S  <Plug>VSurround
-
 " Substitute
 nnoremap <Leader>sr :%s///g<left><left>
 

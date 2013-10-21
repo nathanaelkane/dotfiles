@@ -23,7 +23,6 @@ Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'sickill/vim-pasta'
 Bundle 'tomtom/tcomment_vim'
-Bundle 'tpope/vim-surround'
 Bundle 'upAndDown'
 
 " Colorschemes
