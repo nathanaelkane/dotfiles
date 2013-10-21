@@ -1,8 +1,7 @@
 " Yank from the cursor to the end of the line, to be consistent with C and D
 nnoremap Y y$
 
-" Trim & save
-noremap <Leader>sd :FixWhitespace<CR>:w<CR>
+noremap <Leader>sd :echoerr "Use <Leader>sw or <Leader>r instead"<CR>
 
 " Buffer navigation
 noremap <Leader><Leader> <C-^>
