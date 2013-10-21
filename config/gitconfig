@@ -1,3 +1,7 @@
 [user]
   name = Nate Kane
   email = nathanaelkane@gmail.com
+[pager]
+  log = diff-highlight | less
+  show = diff-highlight | less
+  diff = diff-highlight | less
