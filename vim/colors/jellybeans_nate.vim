@@ -18,3 +18,5 @@ hi MatchParen cterm=underline ctermbg=NONE ctermfg=NONE
 
 hi CursorLine ctermbg=233
 hi CursorLineNr ctermbg=233 ctermfg=246 guifg=#a4a4a4 guibg=#151515
+
+hi SignColumn ctermbg=233 guibg=#151515
