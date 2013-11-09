@@ -11,7 +11,6 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'vimwiki'
 Bundle 'kablamo/vim-git-log'
-Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'twe4ked/vim-diff-toggle'
 
 " Languages
