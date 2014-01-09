@@ -14,7 +14,6 @@ Bundle 'kablamo/vim-git-log'
 Bundle 'twe4ked/vim-diff-toggle'
 
 " Languages
-Bundle 'sheerun/vim-polyglot'
 Bundle 'tpope/vim-rails'
 
 " Text manipulation
