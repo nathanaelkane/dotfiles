@@ -13,9 +13,6 @@ Bundle 'vimwiki'
 Bundle 'kablamo/vim-git-log'
 Bundle 'twe4ked/vim-diff-toggle'
 
-" Languages
-Bundle 'tpope/vim-rails'
-
 " Text manipulation
 Bundle 'godlygeek/tabular'
 Bundle 'kana/vim-textobj-user'
