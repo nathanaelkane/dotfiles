@@ -22,6 +22,7 @@ fresh-options --file=~/.tmux.conf --marker=\#
   fresh config/tmux/\*
 fresh-options
 fresh config/\* --file
+fresh jasoncodes/dotfiles shell/config/rbenv.sh
 
 # completion
 fresh freshshell/fresh contrib/completion/fresh-completion.bash
