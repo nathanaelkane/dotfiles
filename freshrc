@@ -56,7 +56,6 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh vim/autocmds.vim
   fresh vim/functions.vim
   fresh vim/mappings.vim
-  fresh vim/global.vim
   fresh vim/config/\*.vim
   fresh jasoncodes/dotfiles vim/config/backups.vim
   fresh jasoncodes/dotfiles vim/config/undo.vim
@@ -65,6 +64,7 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh jasoncodes/dotfiles vim/config/search.vim
   fresh jasoncodes/dotfiles vim/mappings/whitespace.vim
   fresh jasoncodes/dotfiles vim/config/statusline.vim
+  fresh vim/global.vim
 fresh-options
 fresh vim/gvimrc --file
 fresh vim/colors --file=~/.vim/colors/
