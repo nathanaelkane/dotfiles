@@ -9,6 +9,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'kablamo/vim-git-log'
 Bundle 'twe4ked/vim-diff-toggle'
 Bundle 'itspriddle/vim-marked'
+Bundle 'gregsexton/gitv'
 
 " Text manipulation
 Bundle 'godlygeek/tabular'
