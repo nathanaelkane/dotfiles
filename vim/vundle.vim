@@ -1,7 +1,6 @@
 " Utility
 Bundle 'AndrewRadev/linediff.vim'
 Bundle 'bogado/file-line'
-Bundle 'gmarik/vundle'
 Bundle 'jszakmeister/vim-togglecursor'
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-fugitive'
