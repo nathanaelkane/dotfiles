@@ -6,5 +6,5 @@ nate_development.rb
 .DS_Store
 TODO.txt
 .ruby-version
-.rbenv-vars
 db/structure.sql
+/.envrc
