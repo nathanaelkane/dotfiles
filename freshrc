@@ -7,7 +7,7 @@ fresh freshshell/fresh contrib/source-build.sh --file=~/.bashrc
 
 # aliases
 fresh jasoncodes/dotfiles shell/aliases/\*
-fresh 'aliases/*'
+fresh shell/aliases/\*
 
 # config
 fresh jasoncodes/dotfiles config/pryrc --file
