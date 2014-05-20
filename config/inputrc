@@ -1,0 +1,17 @@
+# Show current editing mode in prompt
+#
+# NOTE: Requires GNU Bash version 4.3:
+# - brew install bash
+# - Add /usr/local/bin/bash to /etc/shells
+# - chsh -s /usr/local/bin/bash
+$if Bash
+  set show-mode-in-prompt on
+$endif
+
+$if mode=vi
+  set keymap vi-command
+  "gg": beginning-of-history
+  "G": end-of-history
+  "H": beginning-of-line
+  "L": end-of-line
+$endif
