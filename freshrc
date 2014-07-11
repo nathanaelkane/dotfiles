@@ -23,8 +23,6 @@ fresh-options --file=~/.tmux.conf --marker=\#
   fresh config/tmux/\*
 fresh-options
 fresh config/\* --file
-fresh jasoncodes/dotfiles shell/config/chruby.sh
-fresh jasoncodes/dotfiles shell/config/direnv.sh
 
 # completion
 fresh freshshell/fresh contrib/completion/fresh-completion.bash
@@ -73,20 +71,6 @@ fresh vim/colors --file=~/.vim/colors/
 fresh jasoncodes/dotfiles vim/config/bubbling.vim --file=~/.vimrc
 
 # shell
-fresh jasoncodes/dotfiles shell/config/path.sh
-fresh jasoncodes/dotfiles shell/config/pager.sh
-fresh jasoncodes/dotfiles shell/config/z.sh
-fresh jasoncodes/dotfiles shell/config/hitch.sh
-fresh jasoncodes/dotfiles shell/config/chruby.sh
-fresh jasoncodes/dotfiles shell/config/direnv.sh
-fresh jasoncodes/dotfiles shell/config/heroku.sh
-fresh jasoncodes/dotfiles shell/config/filters.sh
-fresh jasoncodes/dotfiles shell/config/ctrlc.sh
-fresh jasoncodes/dotfiles shell/config/git.sh
-fresh jasoncodes/dotfiles shell/config/prompt.sh
-fresh jasoncodes/dotfiles shell/config/ls.sh
-fresh jasoncodes/dotfiles shell/config/history.sh
-fresh jasoncodes/dotfiles shell/config/input.sh
-fresh jasoncodes/dotfiles shell/config/tmux.sh
 fresh jasoncodes/dotfiles shell/\*
+fresh jasoncodes/dotfiles shell/config/\*
 fresh rupa/z z.sh
