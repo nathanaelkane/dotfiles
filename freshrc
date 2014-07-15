@@ -73,4 +73,5 @@ fresh jasoncodes/dotfiles vim/config/bubbling.vim --file=~/.vimrc
 # shell
 fresh jasoncodes/dotfiles shell/\*
 fresh jasoncodes/dotfiles shell/config/\*
+fresh shell/config/\*
 fresh rupa/z z.sh
