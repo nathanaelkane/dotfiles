@@ -10,6 +10,7 @@ Bundle 'twe4ked/vim-diff-toggle'
 Bundle 'itspriddle/vim-marked'
 Bundle 'gregsexton/gitv'
 Bundle 'AndrewRadev/splitjoin.vim'
+Bundle 'emilsoman/spec-outline.vim'
 
 " Text manipulation
 Bundle 'godlygeek/tabular'
