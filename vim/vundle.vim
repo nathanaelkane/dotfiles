@@ -9,6 +9,7 @@ Bundle 'kablamo/vim-git-log'
 Bundle 'twe4ked/vim-diff-toggle'
 Bundle 'itspriddle/vim-marked'
 Bundle 'gregsexton/gitv'
+Bundle 'AndrewRadev/splitjoin.vim'
 
 " Text manipulation
 Bundle 'godlygeek/tabular'
