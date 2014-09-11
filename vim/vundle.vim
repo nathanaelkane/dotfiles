@@ -16,7 +16,6 @@ Bundle 'emilsoman/spec-outline.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'sickill/vim-pasta'
 Bundle 'tomtom/tcomment_vim'
-Bundle 'upAndDown'
 
 " Colorschemes
 Bundle 'nanotech/jellybeans.vim'
