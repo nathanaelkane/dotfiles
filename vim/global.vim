@@ -57,9 +57,8 @@ set laststatus=2
 if !has("gui")
   let loaded_bookmarks = 0
 endif
-set background=dark
-set cursorline
-colorscheme jellybeans_nate
+set background=light
+colorscheme clear_colors_light_term_nate
 
 " Required for textobjs
 runtime macros/matchit.vim

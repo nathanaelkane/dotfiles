@@ -19,6 +19,7 @@ Bundle 'tomtom/tcomment_vim'
 
 " Colorschemes
 Bundle 'nanotech/jellybeans.vim'
+Bundle 'AlxHnr/clear_colors'
 
 " Visual
 Bundle 'chreekat/vim-paren-crosshairs'
