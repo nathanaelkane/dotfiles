@@ -20,8 +20,5 @@ Bundle 'tomtom/tcomment_vim'
 " Colorschemes
 Bundle 'nanotech/jellybeans.vim'
 
-" Buffer navigation
-Bundle 'bufexplorer.zip'
-
 " Visual
 Bundle 'chreekat/vim-paren-crosshairs'
