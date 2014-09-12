@@ -99,17 +99,5 @@ nnoremap <Leader>yy "*yy
 noremap  <Leader>p  "*p
 noremap  <Leader>P  "*P
 
-" vimux
-map <Leader>vp :VimuxPromptCommand<CR>
-map <Leader>vl :VimuxRunLastCommand<CR>
-map <Leader>vi :VimuxInspectRunner<CR>
-map <Leader>vq :VimuxCloseRunner<CR>
-map <Leader>vs :VimuxInterruptRunner<CR>
-map <Leader>vrr :wall<Bar>:call VimuxRunCommand("clear; ber " . bufname("%"))<CR>
-map <Leader>vrl :wall<Bar>:call VimuxRunCommand("clear; ber " . bufname("%") . ":" . line("."))<CR>
-map <Leader>vcc :wall<Bar>:call VimuxRunCommand("clear; bec " . bufname("%"))<CR>
-map <Leader>vcl :wall<Bar>:call VimuxRunCommand("clear; bec " . bufname("%") . ":" . line("."))<CR>
-map <Leader>vx :call VimuxRunCommand('exit')<CR>
-
 " Refresh and save all teh things.
 map <silent><Leader>r :checktime<CR>:silent! wall<CR>:redraw!<CR>
