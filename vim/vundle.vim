@@ -11,6 +11,7 @@ Bundle 'itspriddle/vim-marked'
 Bundle 'gregsexton/gitv'
 Bundle 'AndrewRadev/splitjoin.vim'
 Bundle 'emilsoman/spec-outline.vim'
+Bundle 'vasconcelloslf/vim-interestingwords'
 
 " Text manipulation
 Bundle 'godlygeek/tabular'
