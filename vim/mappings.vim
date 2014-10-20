@@ -68,10 +68,6 @@ nnoremap <silent><Leader>cf :let @*=expand('%')<CR>
 " Copy relative path and line number to the system pasteboard
 nnoremap <silent><Leader>cl :let @*=expand('%').':'.line('.')<CR>
 
-" Use sane regexes
-nnoremap / /\v
-vnoremap / /\v
-
 " Space to toggle folds
 nnoremap <Space> za
 vnoremap <Space> za
