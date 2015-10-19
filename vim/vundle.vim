@@ -14,7 +14,6 @@ Bundle 'emilsoman/spec-outline.vim'
 Bundle 'vasconcelloslf/vim-interestingwords'
 
 " Text manipulation
-Bundle 'godlygeek/tabular'
 Bundle 'sickill/vim-pasta'
 Bundle 'tomtom/tcomment_vim'
 
