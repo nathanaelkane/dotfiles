@@ -35,6 +35,7 @@ fresh twe4ked/dotfiles bin/skype-search --bin
 fresh jasoncodes/dotfiles bin/wemux/\* --bin
 fresh jasoncodes/dotfiles bin/adduser --bin
 fresh jasoncodes/dotfiles bin/loop --bin
+fresh jasoncodes/dotfiles bin/toggl --bin
 fresh pengwynn/dotfiles bin/git-pr --bin
 fresh pengwynn/dotfiles bin/gxpr --bin
 fresh hackling/morse bin/morse --bin
