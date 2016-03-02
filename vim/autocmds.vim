@@ -7,3 +7,6 @@ autocmd Filetype * setlocal iskeyword+=-
 
 " Save on FocusLost
 autocmd FocusLost * nested :silent! wall
+
+" Turn on spell checking for git commits
+autocmd FileType gitcommit setlocal spell
