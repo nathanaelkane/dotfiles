@@ -12,6 +12,7 @@ Bundle 'gregsexton/gitv'
 Bundle 'AndrewRadev/splitjoin.vim'
 Bundle 'emilsoman/spec-outline.vim'
 Bundle 'vasconcelloslf/vim-interestingwords'
+Bundle 'diepm/vim-rest-console'
 
 " Text manipulation
 Bundle 'sickill/vim-pasta'
