@@ -61,13 +61,8 @@ end
 if !has("gui")
   let loaded_bookmarks = 0
 endif
-if has('nvim')
-  set background=dark
-  colorscheme jellybeans
-else
-  set background=light
-  colorscheme clear_colors_light_term_nate
-endif
+set background=light
+colorscheme clear_colors_light_nate
 
 " Required for textobjs
 runtime macros/matchit.vim
