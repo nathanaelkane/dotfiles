@@ -8,3 +8,4 @@ TODO.txt
 .ruby-version
 db/structure.sql
 /.envrc
+notes.markdown
