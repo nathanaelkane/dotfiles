@@ -88,7 +88,6 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh jasoncodes/dotfiles vim/config/tags.vim
   fresh jasoncodes/dotfiles vim/mappings/whitespace.vim
   fresh jasoncodes/dotfiles vim/config/bubbling.vim
-  fresh nvim/plug_end.vim
   fresh vim/autocmds.vim
   fresh vim/functions.vim
   fresh vim/mappings.vim
@@ -98,6 +97,7 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh jasoncodes/dotfiles vim/config/format.vim
   fresh jasoncodes/dotfiles vim/config/search.vim
   fresh jasoncodes/dotfiles vim/config/diff.vim
+  fresh nvim/plug_end.vim
   fresh vim/global.vim
 fresh-options
 fresh vim/colors --file=~/.config/nvim/colors/
