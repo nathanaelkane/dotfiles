@@ -64,5 +64,10 @@ endif
 set background=light
 colorscheme clear_colors_light_nate
 
+if has('nvim')
+  " Hack to get C-h working in NeoVim
+  nmap <BS> <C-W>h
+endif
+
 " Required for textobjs
 runtime macros/matchit.vim
