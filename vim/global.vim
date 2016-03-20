@@ -45,20 +45,29 @@ set showmatch                              " Briefly jump to a paren once it's b
 set matchtime=2                            " (for only .2 seconds).
 
 " Speed
-set ttyscroll=3
+if !has('nvim')
+  set ttyscroll=3
+endif
 set ttyfast
 set lazyredraw
 
 " Custom status line
-set statusline=%F%m%r%h%w\ [TYPE=%Y]\ \ \ \ \ \ [POS=%2l,%2v][%p%%]\ \ \ \ \ \ [LEN=%L]
-set laststatus=2
+if !has('nvim')
+  set statusline=%F%m%r%h%w\ [TYPE=%Y]\ \ \ \ \ \ [POS=%2l,%2v][%p%%]\ \ \ \ \ \ [LEN=%L]
+  set laststatus=2
+end
 
 " Terminal Vim
 if !has("gui")
   let loaded_bookmarks = 0
 endif
-set background=light
-colorscheme clear_colors_light_term_nate
+if has('nvim')
+  set background=dark
+  colorscheme jellybeans
+else
+  set background=light
+  colorscheme clear_colors_light_term_nate
+endif
 
 " Required for textobjs
 runtime macros/matchit.vim

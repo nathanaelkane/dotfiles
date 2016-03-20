@@ -74,8 +74,44 @@ fresh vim/gvimrc --file
 fresh vim/colors --file=~/.vim/colors/
 fresh jasoncodes/dotfiles vim/config/bubbling.vim --file=~/.vimrc
 
+# neovim
+fresh junegunn/vim-plug plug.vim --file=~/.config/nvim/autoload/plug.vim
+fresh-options --file=~/.config/nvim/init.vim --marker=\"
+  fresh vim/leader.vim
+  fresh nvim/plug_begin.vim
+  fresh vim/vundle.vim
+  fresh nvim/plugins/\*.vim
+  fresh vim/plugins/\*.vim
+  fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim
+  fresh jasoncodes/dotfiles vim/plugins/ruby.vim
+  fresh jasoncodes/dotfiles vim/plugins/tabular.vim
+  fresh jasoncodes/dotfiles vim/config/tags.vim
+  fresh jasoncodes/dotfiles vim/mappings/whitespace.vim
+  fresh jasoncodes/dotfiles vim/config/bubbling.vim
+  fresh nvim/plug_end.vim
+  fresh vim/autocmds.vim
+  fresh vim/functions.vim
+  fresh vim/mappings.vim
+  fresh vim/config/\*.vim
+  fresh jasoncodes/dotfiles vim/config/backups.vim
+  fresh jasoncodes/dotfiles vim/config/undo.vim
+  fresh jasoncodes/dotfiles vim/config/format.vim
+  fresh jasoncodes/dotfiles vim/config/search.vim
+  fresh jasoncodes/dotfiles vim/config/diff.vim
+  fresh vim/global.vim
+fresh-options
+fresh vim/colors --file=~/.config/nvim/colors/
+
+nvim_replace_bundle_with_plug() {
+  gsed -i 's/Bundle/Plug/' ~/.fresh/build/config-nvim-init.vim
+}
+
 # shell
 fresh jasoncodes/dotfiles shell/\*
 fresh jasoncodes/dotfiles shell/config/\*
 fresh shell/config/\*
 fresh rupa/z z.sh
+
+fresh_after_build() {
+  nvim_replace_bundle_with_plug
+}
