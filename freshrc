@@ -110,6 +110,7 @@ nvim_replace_bundle_with_plug() {
 fresh jasoncodes/dotfiles shell/\*
 fresh jasoncodes/dotfiles shell/config/\*
 fresh shell/\*
+fresh shell/config/\*
 fresh rupa/z z.sh
 
 fresh_after_build() {
