@@ -1,6 +1,8 @@
 Plug 'brettanomyces/nvim-editcommand'
 
 let g:terminal_scrollback_buffer_size = 10000
+let $GIT_EDITOR = 'nvim-client -f'
+let $PSQL_EDITOR = 'nvim-client -f'
 
 " <C-\><C-n> is too inconvenient
 tnoremap <ESC> <C-\><C-n>
