@@ -67,6 +67,9 @@ colorscheme clear_colors_light_nate
 if has('nvim')
   " Hack to get C-h working in NeoVim
   nmap <BS> <C-W>h
+
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 endif
 
 " Required for textobjs
