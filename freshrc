@@ -41,6 +41,7 @@ fresh pengwynn/dotfiles bin/gxpr --bin
 fresh hackling/morse bin/morse --bin
 fresh git/git contrib/diff-highlight/diff-highlight --bin
 fresh rauchg/wifi-password wifi-password.sh --bin=~/bin/wifi-password
+fresh JohnMorales/dotfiles colors/24-bit-color.sh --bin
 
 # functions
 fresh jasoncodes/dotfiles shell/functions/realpath.sh
