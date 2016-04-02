@@ -3,7 +3,7 @@ runtime colors/clear_colors_light.vim
 let colors_name = 'clear_colors_light_nate'
 
 let g:indent_guides_auto_colors = 0
-hi IndentGuidesEven ctermbg=255 guibg=#EEEEEE
+hi IndentGuidesEven ctermbg=255 guibg=#F8F8F8
 hi IndentGuidesOdd ctermbg=NONE guibg=NONE
 
 hi GitGutterAdd ctermbg=254 ctermfg=107 guibg=#E4E4E4 guifg=#87AF5F
