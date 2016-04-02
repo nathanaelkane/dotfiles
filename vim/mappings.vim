@@ -101,3 +101,6 @@ noremap  <Leader>P  "*P
 
 " Refresh and save all teh things.
 map <silent><Leader>r :checktime<CR>:silent! wall<CR>:redraw!<CR>
+
+" Get the highlight group of the word under the cursor
+map <Leader>g :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
