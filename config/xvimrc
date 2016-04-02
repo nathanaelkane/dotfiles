@@ -1,0 +1,29 @@
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+
+nmap Y y$
+
+" Go to start/end of line
+" TODO: Combine into single mappings for both n and v? i.e. map H
+nmap H ^
+vmap H ^
+nmap L $
+vmap L $
+
+" Clear search
+nmap ,/ :nohls<CR>
+
+" Highlight word at cursor without changing position
+" TODO: Combine into single mapping for both n and v? i.e. map ,h
+nmap ,h *N
+vmap ,h *N
+
+" Reselect visual block after indent
+vmap < <gv
+vmap > >gv
+
+" Toggle comment
+nmap ,cc :xccmd commentAndUncommentCurrentLines<CR>
+vmap ,c :xccmd commentAndUncommentCurrentLines<CR>
