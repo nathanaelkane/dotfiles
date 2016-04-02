@@ -13,10 +13,12 @@ Bundle 'AndrewRadev/splitjoin.vim'
 Bundle 'emilsoman/spec-outline.vim'
 Bundle 'vasconcelloslf/vim-interestingwords'
 Bundle 'diepm/vim-rest-console'
+Bundle 'tpope/vim-repeat'
 
 " Text manipulation
 Bundle 'sickill/vim-pasta'
 Bundle 'tomtom/tcomment_vim'
+Bundle 'tpope/vim-surround'
 
 " Colorschemes
 Bundle 'nanotech/jellybeans.vim'
