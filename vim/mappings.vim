@@ -82,14 +82,6 @@ nnoremap <Leader>= :Tabularize /\(=>\|=\)<CR>
 " Close Vim instance
 nmap <Leader>W :qall<CR>
 
-" Override Vimwiki mappings to avoid conflicts
-nmap <silent> <Leader>vw <Plug>VimwikiIndex
-nmap <silent> <Leader>Zwt <Plug>VimwikiTabIndex
-nmap <silent> <Leader>Zws <Plug>VimwikiUISelect
-nmap <silent> <Leader>Zwi <Plug>VimwikiDiaryIndex
-nmap <silent> <Leader>Zw<Leader>w <Plug>VimwikiMakeDiaryNote
-nmap <silent> <Leader>Zw<Leader>t <Plug>VimwikiTabMakeDiaryNote
-
 " Select all
 map <Leader>a ggVG
 
