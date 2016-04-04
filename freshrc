@@ -24,6 +24,10 @@ fresh-options --file=~/.tmux.conf --marker=\#
 fresh-options
 fresh config/\* --file
 
+tmux_remove_utf8_option() {
+  gsed -i '/set-option -g status-utf8 on/d' ~/.fresh/build/tmux.conf
+}
+
 # completion
 fresh freshshell/fresh contrib/completion/fresh-completion.bash
 fresh bobthecow/git-flow-completion git-flow-completion.bash
@@ -116,5 +120,6 @@ fresh shell/config/\*
 fresh rupa/z z.sh
 
 fresh_after_build() {
+  tmux_remove_utf8_option
   nvim_replace_bundle_with_plug
 }
