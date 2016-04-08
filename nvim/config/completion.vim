@@ -1,4 +1,5 @@
 Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/context_filetype.vim'
 
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
@@ -19,3 +20,10 @@ inoremap <expr><BS> deoplete#mappings#close_popup()."\<C-h>"
 
 " <CR>: close popup and insert candidate
 inoremap <silent><expr><CR> pumvisible() ? deoplete#mappings#close_popup() : "\<CR>"
+
+if !exists('g:context_filetype#same_filetypes')
+  let g:context_filetype#same_filetypes = {}
+endif
+
+" Source keywords from all buffers (rather than the current buffer or ones with the same filetype)
+let g:context_filetype#same_filetypes._ = '_'
