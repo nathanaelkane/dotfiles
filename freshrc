@@ -119,6 +119,8 @@ fresh shell/\*
 fresh shell/config/\*
 fresh rupa/z z.sh
 
+fresh jasoncodes/dotfiles hammerspoon/\*.lua --file=~/.hammerspoon/init.lua
+
 fresh_after_build() {
   tmux_remove_utf8_option
   nvim_replace_bundle_with_plug
