@@ -68,7 +68,8 @@ if has('nvim')
   " Hack to get C-h working in NeoVim
   nmap <BS> <C-W>h
 
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  set termguicolors " true color support
+  set inccommand=nosplit " show results while typing a :substitute command
   let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 endif
 
