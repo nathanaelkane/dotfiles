@@ -54,13 +54,13 @@ fresh jasoncodes/dotfiles shell/functions/realpath.sh
 # vim
 fresh-options --file=~/.vimrc --marker=\"
   fresh vim/leader.vim
-  fresh twe4ked/dotfiles vim/vundle_before.vim
+  fresh vim/vundle_before.vim
   fresh vim/vundle.vim
   fresh vim/plugins/\*.vim
   fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim
   fresh jasoncodes/dotfiles vim/plugins/ruby.vim
   fresh jasoncodes/dotfiles vim/plugins/tabular.vim
-  fresh twe4ked/dotfiles vim/vundle_after.vim
+  fresh vim/vundle_after.vim
   fresh vim/autocmds.vim
   fresh vim/functions.vim
   fresh vim/mappings.vim
