@@ -72,7 +72,7 @@ if has('nvim')
 endif
 
 set background=light
-colorscheme clear_colors_light_nate
+colorscheme solarized8_light_high_nate
 
 " Required for textobjs
 runtime macros/matchit.vim
