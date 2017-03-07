@@ -61,8 +61,6 @@ end
 if !has("gui")
   let loaded_bookmarks = 0
 endif
-set background=light
-colorscheme clear_colors_light_nate
 
 if has('nvim')
   " Hack to get C-h working in NeoVim
@@ -72,6 +70,9 @@ if has('nvim')
   set inccommand=nosplit " show results while typing a :substitute command
   let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 endif
+
+set background=light
+colorscheme clear_colors_light_nate
 
 " Required for textobjs
 runtime macros/matchit.vim
