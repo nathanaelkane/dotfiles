@@ -24,6 +24,3 @@ Bundle 'tpope/vim-surround'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'AlxHnr/clear_colors'
 Bundle 'lifepillar/vim-solarized8'
-
-" Visual
-Bundle 'chreekat/vim-paren-crosshairs'
