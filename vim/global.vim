@@ -68,6 +68,7 @@ if has('nvim')
 
   set termguicolors " true color support
   set inccommand=nosplit " show results while typing a :substitute command
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1 " for colorschemes that still rely on this value
   let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 endif
 
