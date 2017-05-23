@@ -91,3 +91,9 @@ map <silent><Leader>r :checktime<CR>:silent! wall<CR>:redraw!<CR>
 
 " Get the highlight group of the word under the cursor
 map <Leader>g :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+" Remove the escape delay when using capslock as escape/control.
+inoremap <C-h> <Esc>
+inoremap <C-j> <Esc>
+inoremap <C-k> <Esc>
+inoremap <C-l> <Esc>
