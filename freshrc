@@ -44,7 +44,7 @@ fresh jasoncodes/dotfiles bin/toggl --bin
 fresh pengwynn/dotfiles bin/git-pr --bin
 fresh pengwynn/dotfiles bin/gxpr --bin
 fresh hackling/morse bin/morse --bin
-fresh git/git contrib/diff-highlight/diff-highlight --bin
+fresh git/git contrib/diff-highlight/diff-highlight --ref=0c977db~ --bin
 fresh rauchg/wifi-password wifi-password.sh --bin=~/bin/wifi-password
 fresh JohnMorales/dotfiles colors/24-bit-color.sh --bin
 fresh https://gist.github.com/rf-/33fc88d3071f4254b80e nvim-client --bin
