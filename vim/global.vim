@@ -17,7 +17,9 @@ set t_Co=256                               " Support for xterm with 256 colors (
 set ignorecase                             " Ignore case by default when searching
 set smartcase                              " Switch to case sensitive mode if needle contains uppercase characters
 set modelines=1
-set noesckeys                              " Remove <Esc> delay in Terminal Vim (also disables arrow keys in insert mode, meh)
+if !has('nvim')
+  set noesckeys                            " Remove <Esc> delay in Terminal Vim (also disables arrow keys in insert mode, meh)
+endif
 set noequalalways                          " Don't make windows the same size after splitting or closing a window
 
 " Indentation
