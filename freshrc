@@ -41,6 +41,7 @@ fresh jasoncodes/dotfiles bin/wemux/\* --bin
 fresh jasoncodes/dotfiles bin/adduser --bin
 fresh jasoncodes/dotfiles bin/loop --bin
 fresh jasoncodes/dotfiles bin/toggl --bin
+fresh jasoncodes/dotfiles bin/chruby-exec-all --bin
 fresh pengwynn/dotfiles bin/git-pr --bin
 fresh hackling/morse bin/morse --bin
 fresh git/git contrib/diff-highlight/diff-highlight --ref=0c977db~ --bin
