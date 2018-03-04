@@ -10,7 +10,6 @@ Bundle 'twe4ked/vim-diff-toggle'
 Bundle 'itspriddle/vim-marked'
 Bundle 'gregsexton/gitv'
 Bundle 'vasconcelloslf/vim-interestingwords'
-Bundle 'diepm/vim-rest-console'
 Bundle 'tpope/vim-repeat'
 
 " Text manipulation
