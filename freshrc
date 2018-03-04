@@ -110,6 +110,7 @@ fresh vim/colors --file=~/.config/nvim/colors/
 
 nvim_replace_bundle_with_plug() {
   gsed -i 's/Bundle/Plug/' ~/.fresh/build/config-nvim-init.vim
+  gsed -i '/grepper#parse_flags/d' ~/.fresh/build/config-nvim-init.vim
 }
 
 # shell
