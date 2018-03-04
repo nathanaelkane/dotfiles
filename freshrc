@@ -108,11 +108,6 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
 fresh-options
 fresh vim/colors --file=~/.config/nvim/colors/
 
-nvim_replace_bundle_with_plug() {
-  gsed -i 's/Bundle/Plug/' ~/.fresh/build/config-nvim-init.vim
-  gsed -i '/grepper#parse_flags/d' ~/.fresh/build/config-nvim-init.vim
-}
-
 # shell
 fresh jasoncodes/dotfiles shell/\*
 fresh jasoncodes/dotfiles shell/config/\*
@@ -125,5 +120,6 @@ fresh jasoncodes/dotfiles hammerspoon/\*.lua --file=~/.hammerspoon/init.lua
 
 fresh_after_build() {
   tmux_remove_utf8_option
-  nvim_replace_bundle_with_plug
+  gsed -i 's/Bundle/Plug/' ~/.fresh/build/config-nvim-init.vim
+  gsed -i '/grepper#parse_flags/d' ~/.fresh/build/config-nvim-init.vim
 }
