@@ -117,6 +117,7 @@ fresh jasoncodes/dotfiles shell/\*
 fresh jasoncodes/dotfiles shell/config/\*
 fresh shell/\*
 fresh shell/config/\*
+fresh jasoncodes/dotfiles shell/config/keybindings.sh
 fresh rupa/z z.sh
 
 fresh jasoncodes/dotfiles hammerspoon/\*.lua --file=~/.hammerspoon/init.lua
