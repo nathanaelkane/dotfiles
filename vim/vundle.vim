@@ -13,7 +13,6 @@ Bundle 'vasconcelloslf/vim-interestingwords'
 Bundle 'tpope/vim-repeat'
 Bundle 'arithran/vim-delete-hidden-buffers'
 Bundle 'justinmk/vim-dirvish'
-Bundle 'vimwiki/vimwiki'
 
 " Text manipulation
 Bundle 'sickill/vim-pasta'
