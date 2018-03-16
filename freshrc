@@ -123,4 +123,5 @@ fresh_after_build() {
   tmux_remove_utf8_option
   gsed -i 's/Bundle/Plug/' ~/.fresh/build/config-nvim-init.vim
   gsed -i '/grepper#parse_flags/d' ~/.fresh/build/config-nvim-init.vim
+  gsed -i 's,^#!/usr/bin/env python$,#!/usr/bin/python,' ~/.fresh/build/bin/scalyr
 }
