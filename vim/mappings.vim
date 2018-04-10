@@ -35,7 +35,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " TComment
-let g:tcommentMapLeaderOp1 = '<Leader>c'
+let g:tcomment_opleader1 = '<Leader>c'
 
 " Substitute
 nnoremap <Leader>sr :%s///g<left><left>
