@@ -61,6 +61,8 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim
   fresh jasoncodes/dotfiles vim/plugins/ruby.vim
   fresh jasoncodes/dotfiles vim/plugins/tabular.vim
+  fresh jasoncodes/dotfiles vim/plugins/gitgutter.vim
+
   fresh vim/vundle_after.vim
   fresh vim/autocmds.vim
   fresh vim/functions.vim
@@ -94,6 +96,7 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh jasoncodes/dotfiles vim/config/tags.vim
   fresh jasoncodes/dotfiles vim/mappings/whitespace.vim
   fresh jasoncodes/dotfiles vim/config/bubbling.vim
+  fresh jasoncodes/dotfiles vim/plugins/gitgutter.vim
   fresh vim/autocmds.vim
   fresh vim/functions.vim
   fresh vim/mappings.vim
