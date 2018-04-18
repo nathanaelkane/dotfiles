@@ -6,16 +6,15 @@ let g:lightline = {}
 let g:lightline.component = {}
 let g:lightline.component_visible_condition = {}
 
-Plug 'tpope/vim-fugitive'
-let g:lightline.component.fugitive = '%{exists("*fugitive#head")?fugitive#head():""}'
-let g:lightline.component_visible_condition.fugitive = '(exists("*fugitive#head") && ""!=fugitive#head())'
-let g:lightline.component.modified = '%#ModifiedColor#%{LightlineModified()}'
+Plug 'itchyny/vim-gitbranch'
+let g:lightline.component_function = {}
+let g:lightline.component_function.gitbranch = 'gitbranch#name'
 
 let g:lightline.active =
   \ {
   \   'left': [
   \     [ 'mode', 'paste' ],
-  \     [ 'fugitive', 'readonly', 'relativepath', 'modified' ]
+  \     [ 'gitbranch', 'readonly', 'relativepath', 'modified' ]
   \   ],
   \   'right': [
   \     [ 'lineinfo' ],
