@@ -72,6 +72,7 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh jasoncodes/dotfiles vim/mappings/whitespace.vim
   fresh jasoncodes/dotfiles vim/config/statusline.vim
   fresh jasoncodes/dotfiles vim/config/diff.vim
+  fresh jasoncodes/dotfiles vim/config/profile.vim
   fresh vim/global.vim
 fresh-options
 fresh vim/gvimrc --file
@@ -103,6 +104,7 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh jasoncodes/dotfiles vim/config/format.vim
   fresh jasoncodes/dotfiles vim/config/search.vim
   fresh jasoncodes/dotfiles vim/config/diff.vim
+  fresh jasoncodes/dotfiles vim/config/profile.vim
   fresh nvim/plug_end.vim
   fresh vim/global.vim
 fresh-options
