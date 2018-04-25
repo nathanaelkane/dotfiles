@@ -44,6 +44,7 @@ fresh git/git contrib/diff-highlight/diff-highlight --ref=0c977db~ --bin
 fresh rauchg/wifi-password wifi-password.sh --bin=~/bin/wifi-password
 fresh JohnMorales/dotfiles colors/24-bit-color.sh --bin
 fresh scalyr/scalyr-tool scalyr --bin
+fresh bin/ripper-tags-wrapper --bin
 
 # functions
 fresh jasoncodes/dotfiles shell/functions/realpath.sh

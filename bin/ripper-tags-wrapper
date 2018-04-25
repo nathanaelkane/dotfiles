@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require 'shellwords'
+
+args = ARGV.dup
+tags_file = nil
+append = !args.delete('--append').nil?
+
+if index = args.index('-f')
+  tags_file = Shellwords.escape(args.delete_at(index + 1))
+  args.delete_at(index)
+end
+
+if append && tags_file
+  `cat #{tags_file} | (cat && ripper-tags -f - #{Shellwords.join(args)}) | grep -v '^!_' | sort > #{tags_file}~ && mv #{tags_file}~ #{tags_file}`
+else
+  `ripper-tags #{Shellwords.join ARGV}`
+end
