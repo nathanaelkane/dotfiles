@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'shellwords'
+require 'English'
 
 args = ARGV.dup
 tags_file = nil
@@ -16,3 +17,5 @@ if append && tags_file
 else
   `ripper-tags #{Shellwords.join ARGV}`
 end
+
+exit $CHILD_STATUS.exitstatus
