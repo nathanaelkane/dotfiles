@@ -46,6 +46,10 @@ set backspace=2                            " Allow backspacing over autoindent, 
 set showmatch                              " Briefly jump to a paren once it's balanced
 set matchtime=2                            " (for only .2 seconds).
 
+" Better horizontal scrolling
+set sidescroll=5
+set listchars+=precedes:<,extends:>
+
 " Speed
 if !has('nvim')
   set ttyscroll=3
