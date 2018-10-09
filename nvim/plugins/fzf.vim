@@ -7,7 +7,7 @@
 " https://github.com/junegunn/fzf/wiki/Examples-(vim)
 "
 " TODO:
-" - Fix <Leader>d so that it excludes sub-directories and works in project root.
+" - Fix <Leader>d so that it excludes sub-directories.
 " - Add ivalkeen/vim-ctrlp-tjump equivalent.
 
 Plug '/usr/local/opt/fzf'
@@ -41,4 +41,4 @@ map <silent> <leader>t :FzfFiles<CR>
 map <silent> <leader>l :FzfBuffers<CR>
 map <silent> <leader>m :FzfModified<CR>
 map <silent> <leader>M :FzfBranchModified<CR>
-map <silent> <leader>d :FzfFiles %:h<CR>
+map <silent> <leader>d :exe 'FzfFiles ' . expand('%:p:h', 1)<CR>
