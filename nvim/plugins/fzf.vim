@@ -7,7 +7,6 @@
 " https://github.com/junegunn/fzf/wiki/Examples-(vim)
 "
 " TODO:
-" - Fix <Leader>d so that it excludes sub-directories.
 " - Add ivalkeen/vim-ctrlp-tjump equivalent.
 
 Plug '/usr/local/opt/fzf'
