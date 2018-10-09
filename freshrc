@@ -38,6 +38,9 @@ fresh jasoncodes/dotfiles bin/adduser --bin
 fresh jasoncodes/dotfiles bin/loop --bin
 fresh jasoncodes/dotfiles bin/toggl --bin
 fresh jasoncodes/dotfiles bin/chruby-exec-all --bin
+fresh jasoncodes/ctrlp-modified.vim lib/branch.sh --bin
+fresh jasoncodes/ctrlp-modified.vim lib/branch_modified.sh --bin
+fresh jasoncodes/ctrlp-modified.vim lib/modified.sh --bin
 fresh pengwynn/dotfiles bin/git-pr --bin
 fresh hackling/morse bin/morse --bin
 fresh git/git contrib/diff-highlight/diff-highlight --ref=0c977db~ --bin
@@ -88,7 +91,6 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh vim/vundle.vim
   fresh nvim/plugins/\*.vim
   fresh vim/plugins/\*.vim
-  fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim
   fresh jasoncodes/dotfiles vim/plugins/ruby.vim
   fresh jasoncodes/dotfiles vim/plugins/tabular.vim
   fresh jasoncodes/dotfiles vim/config/tags.vim
