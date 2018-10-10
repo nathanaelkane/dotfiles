@@ -5,9 +5,6 @@
 "
 " Examples:
 " https://github.com/junegunn/fzf/wiki/Examples-(vim)
-"
-" TODO:
-" - Add ivalkeen/vim-ctrlp-tjump equivalent.
 
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
@@ -36,8 +33,16 @@ command! -bang FzfBranchModified
   \   'options': '--prompt="BranchModified> "',
   \ }, g:fzf_layout))
 
+command! -bang FzfTagJump
+  \ call fzf#vim#tags(
+  \   expand('<cword>'),
+  \   {'options': '--select-1 --exact'},
+  \   <bang>0
+  \ )
+
 map <silent> <leader>t :FzfFiles<CR>
 map <silent> <leader>l :FzfBuffers<CR>
 map <silent> <leader>m :FzfModified<CR>
 map <silent> <leader>M :FzfBranchModified<CR>
 map <silent> <leader>d :exe 'FzfFiles ' . expand('%:p:h', 1)<CR>
+map <silent> <C-]> :FzfTagJump<CR>
