@@ -35,9 +35,8 @@ command! -bang FzfBranchModified
 
 command! -bang FzfTagJump
   \ call fzf#vim#tags(
-  \   expand('<cword>'),
-  \   {'options': '--select-1 --exact'},
-  \   <bang>0
+  \   expand('<cword>') . '$',
+  \   {'options': '--nth=1,2 --delimiter="\t" --select-1 --exit-0 +i'}
   \ )
 
 map <silent> <leader>t :FzfFiles<CR>
