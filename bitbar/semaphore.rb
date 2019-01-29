@@ -13,12 +13,12 @@
 #     "auth_token": "SEMAPHORE-TOKEN",
 #     "projects": [
 #       {
-#         "name": "foo",
+#         "name": "owner/project-foo",
 #         "alias": "FO",
 #         "directory": "~/code/foo"
 #       },
 #       {
-#         "name": "bar",
+#         "name": "owner/project-bar",
 #         "alias": "BA",
 #         "directory": "~/code/bar"
 #       }
@@ -109,11 +109,12 @@ def run
   ]
 
   projects.map do |project|
-    next unless project_config = PROJECTS_CONFIG.fetch(project.fetch('name'), nil)
+    full_name = "#{project.fetch('owner')}/#{project.fetch('name')}"
+    next unless project_config = PROJECTS_CONFIG.fetch(full_name, nil)
 
     # Add project heading.
     items << '---'
-    items << "#{project.fetch('owner')}/#{project.fetch('name')} | href=#{project.fetch('html_url')}"
+    items << "#{full_name} | href=#{project.fetch('html_url')}"
 
     branches = project.fetch('branches').index_by { |branch| branch.fetch('branch_name') }
     local_branch = local_branch(project_config.fetch('directory'))
