@@ -15,12 +15,12 @@
 #       {
 #         "name": "owner/project-foo",
 #         "alias": "FO",
-#         "directory": "~/code/foo"
+#         "directory": "~/code/project-foo"
 #       },
 #       {
 #         "name": "owner/project-bar",
 #         "alias": "BA",
-#         "directory": "~/code/bar"
+#         "directory": "~/code/project-bar"
 #       }
 #     ]
 #   }
