@@ -122,7 +122,7 @@ def run
     other_branch_names = (branches.keys - focus_branch_names).sort
 
     # Add focus branches.
-    project_results = branches.values_at(*focus_branch_names).map do |branch|
+    project_results = branches.values_at(*focus_branch_names).compact.map do |branch|
       current = branch.fetch('branch_name') == local_branch
       items << output_branch_info(branch, current: current)
       branch.fetch('result')
