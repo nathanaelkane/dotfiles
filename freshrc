@@ -124,7 +124,8 @@ fresh rupa/z z.sh
 
 fresh jasoncodes/dotfiles hammerspoon/\*.lua --file=~/.hammerspoon/init.lua
 
-fresh bitbar/semaphore.rb --bin=~/Documents/BitBar/semaphore.30s.rb
+fresh bitbar/semaphore.rb --file=~/.bitbar/.semaphore.rb
+fresh bitbar/ruby-shim.sh --bin=~/.bitbar/semaphore.30s.sh
 
 fresh_after_build() {
   tmux_remove_utf8_option
