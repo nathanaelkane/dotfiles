@@ -1,0 +1,5 @@
+#!/bin/bash
+
+file=`mktemp`.sh
+tmux capture-pane -p -S -32768 > $file
+tmux new-window "$EDITOR $file"
