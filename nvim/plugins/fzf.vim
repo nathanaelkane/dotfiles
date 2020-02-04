@@ -6,17 +6,12 @@
 " Examples:
 " https://github.com/junegunn/fzf/wiki/Examples-(vim)
 
-Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-
-" Hide statusline
-autocmd! FileType fzf
-autocmd  FileType fzf set laststatus=0 noshowmode noruler
-  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
 let g:fzf_command_prefix = 'Fzf'
 let g:fzf_layout = {
-  \   'window': 'botright 10split enew',
+  \   'window': {'width': 0.9, 'height': 0.6}
   \ }
 
 command! -bang FzfModified
