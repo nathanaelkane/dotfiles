@@ -10,3 +10,6 @@ db/structure.sql
 /.envrc
 notes.markdown
 stellar.yaml
+.idea/
+.solargraph.yml
+.vscode/
