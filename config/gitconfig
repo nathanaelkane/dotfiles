@@ -1,7 +1,66 @@
-[user]
-  name = Nate Kane
-  email = nathanaelkane@gmail.com
-[pager]
-  log = diff-highlight | $PAGER
-  show = diff-highlight | $PAGER
-  diff = diff-highlight | $PAGER
+# Set your name and email with the following:
+#   git config -f ~/.gitconfig.local user.name "John Appleseed"
+#   git config -f ~/.gitconfig.local user.email me@example.com
+
+[include]
+path = .gitconfig.local
+
+[color]
+ui = auto
+
+[color "diff"]
+commit = yellow reverse
+
+[core]
+excludesfile = ~/.gitignore
+pager = (which diff-highlight &> /dev/null && diff-highlight || cat) | ${PAGER:-less}
+
+[interactive]
+diffFilter=(which diff-highlight &> /dev/null && diff-highlight || cat)
+
+[push]
+default = tracking
+
+[merge]
+log = true
+conflictstyle = diff3
+tool = vimdiff
+
+[rerere]
+enabled = 1
+
+[diff]
+compactionHeuristic = true
+
+[difftool "vimdiff"]
+cmd = vimdiff $LOCAL $REMOTE
+
+[mergetool]
+prompt = false
+
+[rebase]
+autosquash = true
+autostash = true
+
+[tag]
+sort = version:refname
+
+[git-up "bundler"]
+check = true
+
+[git-up "rebase"]
+auto = false
+
+[gitflow "branch"]
+master = master
+develop = develop
+
+[gitflow "prefix"]
+feature = feature/
+release = release/
+hotfix = hotfix/
+support = support/
+versiontag =
+
+[git-up "rebase"]
+arguments = --preserve-merges
