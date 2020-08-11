@@ -43,7 +43,6 @@ fresh jasoncodes/ctrlp-modified.vim lib/branch_modified.sh --bin
 fresh jasoncodes/ctrlp-modified.vim lib/modified.sh --bin
 fresh pengwynn/dotfiles bin/git-pr --bin
 fresh hackling/morse bin/morse --bin
-fresh git/git contrib/diff-highlight/diff-highlight --ref=0c977db~ --bin
 fresh rauchg/wifi-password wifi-password.sh --bin=~/bin/wifi-password
 fresh JohnMorales/dotfiles colors/24-bit-color.sh --bin
 fresh scalyr/scalyr-tool scalyr --bin
