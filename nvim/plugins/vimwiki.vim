@@ -1,7 +1,5 @@
 Plug 'vimwiki/vimwiki'
 
-let g:vimwiki_conceallevel = 0
-
 function! s:open_diary()
   " Diary index
 
