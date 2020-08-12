@@ -39,3 +39,5 @@ function! s:open_diary()
 endfunction
 
 command! Diary call <SID>open_diary()
+
+nnoremap <silent> tt :e ~/vimwiki/Work ToDo List.wiki<CR>
