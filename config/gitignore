@@ -13,3 +13,4 @@ stellar.yaml
 .idea/
 .solargraph.yml
 .vscode/
+.tool-versions
