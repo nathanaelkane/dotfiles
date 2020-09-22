@@ -14,6 +14,7 @@ Bundle 'aliou/sql-heredoc.vim'
 " Text manipulation
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-surround'
+Bundle 'arthurxavierx/vim-caser'
 
 " Colorschemes
 Bundle 'nanotech/jellybeans.vim'
