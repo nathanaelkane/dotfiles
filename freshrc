@@ -78,7 +78,7 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh nvim/config/after_plug_end/\*.vim
   fresh nvim/global.vim
 fresh-options
-fresh vim/colors --file=~/.config/nvim/colors/
+fresh nvim/colors --file=~/.config/nvim/colors/
 
 # shell
 fresh jasoncodes/dotfiles shell/aliases/\*
