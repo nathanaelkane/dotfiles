@@ -56,7 +56,7 @@ fresh junegunn/vim-plug plug.vim --file=~/.config/nvim/autoload/plug.vim
 fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh nvim/leader.vim
   fresh nvim/plug_begin.vim
-  fresh nvim/vundle.vim
+  fresh nvim/plugins.vim
   fresh nvim/plugins/\*.vim
   fresh vim/plugins/\*.vim
   fresh jasoncodes/dotfiles vim/plugins/ruby.vim
