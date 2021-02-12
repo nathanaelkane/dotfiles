@@ -67,7 +67,6 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh nvim/autocmds.vim
   fresh nvim/functions.vim
   fresh nvim/mappings.vim
-  fresh vim/config/\*.vim
   fresh nvim/config/\*.vim
   fresh jasoncodes/dotfiles vim/config/backups.vim
   fresh jasoncodes/dotfiles vim/config/undo.vim
