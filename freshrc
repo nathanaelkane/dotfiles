@@ -51,37 +51,6 @@ fresh bin/ripper-tags-wrapper --bin
 # functions
 fresh jasoncodes/dotfiles shell/functions/realpath.sh
 
-# vim
-fresh-options --file=~/.vimrc --marker=\"
-  fresh vim/leader.vim
-  fresh vim/vundle_before.vim
-  fresh vim/vundle.vim
-  fresh vim/plugins/\*.vim
-  fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim
-  fresh jasoncodes/dotfiles vim/plugins/ruby.vim
-  fresh jasoncodes/dotfiles vim/plugins/tabular.vim
-  fresh jasoncodes/dotfiles vim/plugins/gitgutter.vim
-
-  fresh vim/vundle_after.vim
-  fresh vim/autocmds.vim
-  fresh vim/functions.vim
-  fresh vim/mappings.vim
-  fresh vim/config/\*.vim
-  fresh jasoncodes/dotfiles vim/config/backups.vim
-  fresh jasoncodes/dotfiles vim/config/undo.vim
-  fresh jasoncodes/dotfiles vim/config/format.vim
-  fresh jasoncodes/dotfiles vim/config/tags.vim
-  fresh jasoncodes/dotfiles vim/config/search.vim
-  fresh jasoncodes/dotfiles vim/mappings/whitespace.vim
-  fresh jasoncodes/dotfiles vim/config/statusline.vim
-  fresh jasoncodes/dotfiles vim/config/diff.vim
-  fresh jasoncodes/dotfiles vim/config/profile.vim
-  fresh vim/global.vim
-fresh-options
-fresh vim/gvimrc --file
-fresh vim/colors --file=~/.vim/colors/
-fresh jasoncodes/dotfiles vim/config/bubbling.vim --file=~/.vimrc
-
 # neovim
 fresh junegunn/vim-plug plug.vim --file=~/.config/nvim/autoload/plug.vim
 fresh-options --file=~/.config/nvim/init.vim --marker=\"
