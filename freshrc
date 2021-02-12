@@ -58,7 +58,6 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh nvim/plug_begin.vim
   fresh nvim/plugins.vim
   fresh nvim/plugins/\*.vim
-  fresh vim/plugins/\*.vim
   fresh jasoncodes/dotfiles vim/plugins/ruby.vim
   fresh jasoncodes/dotfiles vim/plugins/tabular.vim
   fresh jasoncodes/dotfiles vim/config/tags.vim
