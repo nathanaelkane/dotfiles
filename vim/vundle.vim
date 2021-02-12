@@ -1,7 +1,9 @@
 " Utility
 Bundle 'AndrewRadev/linediff.vim'
 Bundle 'bogado/file-line'
-Bundle 'jszakmeister/vim-togglecursor'
+if !has('nvim')
+  Bundle 'jszakmeister/vim-togglecursor'
+endif
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-unimpaired'
