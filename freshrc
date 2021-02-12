@@ -54,9 +54,9 @@ fresh jasoncodes/dotfiles shell/functions/realpath.sh
 # neovim
 fresh junegunn/vim-plug plug.vim --file=~/.config/nvim/autoload/plug.vim
 fresh-options --file=~/.config/nvim/init.vim --marker=\"
-  fresh vim/leader.vim
+  fresh nvim/leader.vim
   fresh nvim/plug_begin.vim
-  fresh vim/vundle.vim
+  fresh nvim/vundle.vim
   fresh nvim/plugins/\*.vim
   fresh vim/plugins/\*.vim
   fresh jasoncodes/dotfiles vim/plugins/ruby.vim
@@ -65,9 +65,9 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh jasoncodes/dotfiles vim/mappings/whitespace.vim
   fresh jasoncodes/dotfiles vim/config/bubbling.vim
   fresh jasoncodes/dotfiles vim/plugins/gitgutter.vim
-  fresh vim/autocmds.vim
-  fresh vim/functions.vim
-  fresh vim/mappings.vim
+  fresh nvim/autocmds.vim
+  fresh nvim/functions.vim
+  fresh nvim/mappings.vim
   fresh vim/config/\*.vim
   fresh nvim/config/\*.vim
   fresh jasoncodes/dotfiles vim/config/backups.vim
@@ -78,7 +78,7 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh jasoncodes/dotfiles vim/config/profile.vim
   fresh nvim/plug_end.vim
   fresh nvim/config/after_plug_end/\*.vim
-  fresh vim/global.vim
+  fresh nvim/global.vim
 fresh-options
 fresh vim/colors --file=~/.config/nvim/colors/
 
