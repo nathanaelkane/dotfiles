@@ -113,12 +113,6 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
 fresh-options
 fresh vim/colors --file=~/.config/nvim/colors/
 
-# vscode-neovim
-fresh tpope/vim-pathogen autoload/pathogen.vim --file=~/.config/vscode-neovim/autoload/pathogen.vim
-fresh-options --file=~/.config/vscode-neovim/init.vim --marker=\"
-  fresh vscode-neovim/init.vim
-fresh-options
-
 # shell
 fresh jasoncodes/dotfiles shell/aliases/\*
 fresh jasoncodes/dotfiles shell/\*
