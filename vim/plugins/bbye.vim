@@ -1,4 +1,4 @@
-Bundle 'moll/vim-bbye'
+Plug 'moll/vim-bbye'
 
 nnoremap <silent><Leader>q :call CloseWindow()<CR>
 nnoremap <Leader>Q :bufdo :Bdelete<CR>

@@ -97,6 +97,6 @@ fresh bitbar/ruby-shim.sh --bin=~/.bitbar/semaphore.30s.sh
 
 fresh_after_build() {
   tmux_remove_utf8_option
-  gsed -i 's/Bundle/Plug/' ~/.fresh/build/vimrc
+  gsed -i 's/Bundle/Plug/' ~/.fresh/build/vimrc # For external dependencies still using Vundle.
   gsed -i 's,^#!/usr/bin/env python$,#!/usr/bin/python,' ~/.fresh/build/bin/scalyr
 }
