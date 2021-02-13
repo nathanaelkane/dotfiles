@@ -51,7 +51,7 @@ fresh bin/ripper-tags-wrapper --bin
 # functions
 fresh jasoncodes/dotfiles shell/functions/realpath.sh
 
-# neovim
+# vim
 fresh junegunn/vim-plug plug.vim --file=~/.vim/autoload/plug.vim
 fresh-options --file=~/.vimrc --marker=\"
   fresh vim/leader.vim
@@ -79,6 +79,8 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh vim/global.vim
 fresh-options
 fresh vim/colors --file=~/.vim/colors/
+
+# neovim
 fresh vim/nvim-init.vim --file=~/.config/nvim/init.vim
 
 # shell
