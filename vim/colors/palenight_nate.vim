@@ -2,6 +2,7 @@ runtime colors/palenight.vim
 
 let colors_name = 'palenight_nate'
 let g:lightline.colorscheme = 'palenight'
+let g:indent_blankline_char_highlight = 'SpecialKey'
 
 hi LineNr guibg=#242836
 hi SignColumn guibg=#242836
