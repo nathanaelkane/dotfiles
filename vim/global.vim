@@ -57,12 +57,6 @@ endif
 set ttyfast
 set lazyredraw
 
-" Custom status line
-if !has('nvim')
-  set statusline=%F%m%r%h%w\ [TYPE=%Y]\ \ \ \ \ \ [POS=%2l,%2v][%p%%]\ \ \ \ \ \ [LEN=%L]
-  set laststatus=2
-end
-
 " Terminal Vim
 if !has("gui")
   let loaded_bookmarks = 0
