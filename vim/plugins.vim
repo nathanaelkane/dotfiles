@@ -11,6 +11,9 @@ Plug 'twe4ked/vim-diff-toggle'
 Plug 'tpope/vim-repeat'
 Plug 'arithran/vim-delete-hidden-buffers'
 Plug 'aliou/sql-heredoc.vim'
+if has('nvim')
+  Plug 'dstein64/nvim-scrollview'
+endif
 
 " Text manipulation
 Plug 'tomtom/tcomment_vim'
