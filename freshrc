@@ -75,7 +75,7 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh jasoncodes/dotfiles vim/config/diff.vim
   fresh jasoncodes/dotfiles vim/config/profile.vim
   fresh vim/plug_end.vim
-  fresh vim/config/after_plug_end/\*.vim
+  fresh vim/after_plug_end/\*.vim
   fresh vim/global.vim
 fresh-options
 fresh vim/colors --file=~/.vim/colors/
