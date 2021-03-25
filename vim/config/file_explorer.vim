@@ -4,6 +4,7 @@ if has('nvim')
 
   let g:nvim_tree_side = 'right'
   let g:nvim_tree_hide_dotfiles = 1
+  let g:nvim_tree_indent_markers = 1
 
   nnoremap <Leader>n :NvimTreeToggle<CR>
   nnoremap <Leader>. :NvimTreeFindFile<CR>
