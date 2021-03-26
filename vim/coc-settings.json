@@ -1,0 +1,17 @@
+// https://github.com/neoclide/coc.nvim/blob/release/data/schema.json
+{
+  "suggest.autoTrigger": "always",
+
+  "diagnostic.enable": false,
+
+  "coc.source.around.priority": 100,
+
+  "solargraph.useBundler": true,
+  "solargraph.definitions": true,
+  "solargraph.references": true,
+  "solargraph.folding": false,
+  "solargraph.hover": false,
+  "solargraph.diagnostics": false, // I prefer ALE's linting errors as it shows ruby warnings too (e.g. "warning: assigned but unused variable")
+  "solargraph.autoformat": false,
+  "solargraph.formatting": false
+}

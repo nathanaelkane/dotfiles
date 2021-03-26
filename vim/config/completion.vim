@@ -1,11 +1,5 @@
-Plug 'ervandew/supertab'
-
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
-
-  let g:deoplete#enable_at_startup = 1
-  let g:SuperTabDefaultCompletionType = "<C-n>"
-else
+if !has('nvim')
+  Plug 'ervandew/supertab'
   Plug 'szw/vim-kompleter'
 
   let g:kompleter_replace_standard_mappings = 0 " Keep default <C-n> and <C-p> completion mappings
