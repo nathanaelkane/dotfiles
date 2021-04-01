@@ -16,14 +16,14 @@ if has('nvim')
   " - jump to next/prev snippet placeholder (if currently in a snippet), or
   " - else revert to default behaviour
   inoremap <silent><expr> <tab>
-        \ pumvisible() ? "\<c-n>" :
-        \ coc#jumpable() ? "\<c-r>=coc#rpc#request('snippetNext',[])\<cr>" :
-        \ <sid>check_back_space() ? "\<tab>" :
-        \ coc#refresh()
+    \ pumvisible() ? "\<c-n>" :
+    \ coc#jumpable() ? "\<c-r>=coc#rpc#request('snippetNext',[])\<cr>" :
+    \ <sid>check_back_space() ? "\<tab>" :
+    \ coc#refresh()
   inoremap <silent><expr> <s-tab>
-        \ pumvisible() ? "\<c-p>" :
-        \ coc#jumpable() ? "\<c-r>=coc#rpc#request('snippetPrev',[])\<cr>" :
-        \ "\<c-h>"
+    \ pumvisible() ? "\<c-p>" :
+    \ coc#jumpable() ? "\<c-r>=coc#rpc#request('snippetPrev',[])\<cr>" :
+    \ "\<c-h>"
 
   function! s:check_back_space() abort
     let col = col('.') - 1
