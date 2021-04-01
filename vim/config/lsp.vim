@@ -8,14 +8,22 @@ if has('nvim')
   " Don't pass messages to |ins-completion-menu|.
   set shortmess+=c
 
-  " Use tab for trigger completion with characters ahead and navigate.
-  " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-  " other plugin before putting this into your config.
+  let g:coc_snippet_next = '<tab>'
+  let g:coc_snippet_prev = '<s-tab>'
+
+  " Use tab/shift-tab to:
+  " - select next/prev completion item (if popup menu is visible), or
+  " - jump to next/prev snippet placeholder (if currently in a snippet), or
+  " - else revert to default behaviour
   inoremap <silent><expr> <TAB>
         \ pumvisible() ? "\<C-n>" :
+        \ coc#jumpable() ? "\<C-r>=coc#rpc#request('snippetNext',[])\<CR>" :
         \ <SID>check_back_space() ? "\<TAB>" :
         \ coc#refresh()
-  inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+  inoremap <silent><expr> <S-TAB>
+        \ pumvisible() ? "\<C-p>" :
+        \ coc#jumpable() ? "\<C-r>=coc#rpc#request('snippetPrev',[])\<CR>" :
+        \ "\<C-h>"
 
   function! s:check_back_space() abort
     let col = col('.') - 1
@@ -25,10 +33,8 @@ if has('nvim')
   " Use <c-space> to trigger completion.
   inoremap <silent><expr> <c-space> coc#refresh()
 
-  " Make <CR> auto-select the first completion item and notify coc.nvim to
-  " format on enter, <cr> could be remapped by other vim plugin
-  inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                                \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+  " Make <CR> expand the currently selected snippet.
+  inoremap <silent><expr> <cr> pumvisible() && coc#expandable() ? coc#_select_confirm() : "\<CR>"
 
   " GoTo code navigation.
   nmap <silent> gd <Plug>(coc-definition)
