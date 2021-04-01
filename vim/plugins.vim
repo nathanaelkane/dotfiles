@@ -14,6 +14,7 @@ Plug 'aliou/sql-heredoc.vim'
 if has('nvim')
   Plug 'dstein64/nvim-scrollview'
 endif
+Plug 'kevinoid/vim-jsonc'
 
 " Text manipulation
 Plug 'tomtom/tcomment_vim'
