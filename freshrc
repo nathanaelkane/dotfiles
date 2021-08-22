@@ -81,9 +81,6 @@ fresh shell/config/\*
 fresh jasoncodes/dotfiles shell/config/keybindings.sh
 fresh rupa/z z.sh
 
-fresh bitbar/semaphore.rb --file=~/.bitbar/.semaphore.rb
-fresh bitbar/ruby-shim.sh --bin=~/.bitbar/semaphore.30s.sh
-
 fresh_after_build() {
   tmux_remove_utf8_option
   gsed -i 's/Bundle/Plug/' ~/.fresh/build/vimrc # For external dependencies still using Vundle.
