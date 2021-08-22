@@ -28,22 +28,12 @@ fresh freshshell/fresh contrib/completion/fresh-completion.bash
 fresh bobthecow/git-flow-completion git-flow-completion.bash
 
 # scripts
-fresh twe4ked/dotfiles bin/heroku-remote-add --bin
-fresh twe4ked/catacomb bin/catacomb --bin
-fresh twe4ked/dotfiles bin/skype-search --bin
 fresh jasoncodes/dotfiles bin/wemux/\* --bin
-fresh jasoncodes/dotfiles bin/adduser --bin
 fresh jasoncodes/dotfiles bin/loop --bin
 fresh jasoncodes/dotfiles bin/toggl --bin
-fresh jasoncodes/dotfiles bin/chruby-exec-all --bin
 fresh jasoncodes/ctrlp-modified.vim lib/branch.sh --bin
 fresh jasoncodes/ctrlp-modified.vim lib/branch_modified.sh --bin
 fresh jasoncodes/ctrlp-modified.vim lib/modified.sh --bin
-fresh pengwynn/dotfiles bin/git-pr --bin
-fresh hackling/morse bin/morse --bin
-fresh rauchg/wifi-password wifi-password.sh --bin=~/bin/wifi-password
-fresh JohnMorales/dotfiles colors/24-bit-color.sh --bin
-fresh scalyr/scalyr-tool scalyr --bin
 fresh bin/ripper-tags-wrapper --bin
 
 # functions
@@ -99,5 +89,4 @@ fresh bitbar/ruby-shim.sh --bin=~/.bitbar/semaphore.30s.sh
 fresh_after_build() {
   tmux_remove_utf8_option
   gsed -i 's/Bundle/Plug/' ~/.fresh/build/vimrc # For external dependencies still using Vundle.
-  gsed -i 's,^#!/usr/bin/env python$,#!/usr/bin/python,' ~/.fresh/build/bin/scalyr
 }
