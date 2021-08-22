@@ -81,8 +81,6 @@ fresh shell/config/\*
 fresh jasoncodes/dotfiles shell/config/keybindings.sh
 fresh rupa/z z.sh
 
-fresh jasoncodes/dotfiles hammerspoon/\*.lua --file=~/.hammerspoon/init.lua
-
 fresh bitbar/semaphore.rb --file=~/.bitbar/.semaphore.rb
 fresh bitbar/ruby-shim.sh --bin=~/.bitbar/semaphore.30s.sh
 
