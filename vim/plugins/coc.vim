@@ -8,8 +8,11 @@ if has('nvim')
   " Don't pass messages to |ins-completion-menu|.
   set shortmess+=c
 
-  let g:coc_snippet_next = '<tab>'
-  let g:coc_snippet_prev = '<s-tab>'
+  " Snippets
+  imap <c-j> <plug>(coc-snippets-expand)
+  vmap <c-j> <plug>(coc-snippets-select)
+  let g:coc_snippet_next = '<c-j>'
+  let g:coc_snippet_prev = '<c-k>'
 
   " Use tab/shift-tab to:
   " - select next/prev completion item (if popup menu is visible), or
