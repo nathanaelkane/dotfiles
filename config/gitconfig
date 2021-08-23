@@ -51,12 +51,6 @@ autostash = true
 [tag]
 sort = version:refname
 
-[git-up "bundler"]
-check = true
-
-[git-up "rebase"]
-auto = false
-
 [gitflow "branch"]
 master = master
 develop = develop
@@ -68,5 +62,5 @@ hotfix = hotfix/
 support = support/
 versiontag =
 
-[git-up "rebase"]
-arguments = --preserve-merges
+[alias]
+up = pull --rebase --autostash
