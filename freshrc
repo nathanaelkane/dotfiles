@@ -50,7 +50,7 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh jasoncodes/dotfiles vim/plugins/tabular.vim
   fresh jasoncodes/dotfiles vim/config/tags.vim
   fresh jasoncodes/dotfiles vim/mappings/whitespace.vim
-  fresh jasoncodes/dotfiles vim/config/bubbling.vim
+  fresh jasoncodes/dotfiles vim/config/bubbling.vim --ref=1afb9ef6
   fresh vim/autocmds.vim
   fresh vim/functions.vim
   fresh vim/mappings.vim
