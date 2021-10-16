@@ -25,4 +25,6 @@ require("packer").startup(function(use)
     local plugin = string.match(plugin_file, plugin_dir .. "/([a-z-]+).lua")
     require("plugins." .. plugin)
   end
+
+  use "AndrewRadev/linediff.vim"
 end)
