@@ -100,5 +100,13 @@ use {
     map("n", "<Leader>F", ":call v:lua.telescope_live_grep_from_entered_directory()<CR>", {silent = true})
     map("n", "<Leader>H", "<Leader>h:lua require('telescope.builtin').grep_string()<CR>", {noremap = false, silent = true})
     map("v", "<Leader>H", "<Leader>h:<C-U>call v:lua.telescope_grep_selected_string()<CR>", {noremap = false, silent = true})
+
+    -- LSP
+    map("n", "gd", ":lua require('telescope.builtin').lsp_definitions()<CR>", {silent = true})
+    map("n", "gr", ":lua require('telescope.builtin').lsp_references()<CR>", {silent = true})
+    map("n", "<Leader>cd", ":lua require('telescope.builtin').lsp_document_diagnostics()<CR>", {silent = true})
+    map("n", "<Leader>cw", ":lua require('telescope.builtin').lsp_workspace_diagnostics()<CR>", {silent = true})
+    map("n", "<Leader>ca", ":lua require('telescope.builtin').lsp_code_actions()<CR>", {silent = true})
+    map("v", "<Leader>ca", ":<C-U>lua require('telescope.builtin').lsp_range_code_actions()<CR>", {silent = true})
   end,
 }
