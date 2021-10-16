@@ -68,9 +68,7 @@ fresh-options
 fresh vim/colors --file=~/.vim/colors/
 
 # neovim
-fresh vim/nvim-init.vim --file=~/.config/nvim/init.vim
-fresh vim/coc-settings.json --file=~/.config/nvim/coc-settings.json
-fresh vim/snippets --file=~/.config/coc/ultisnips/
+fresh nvim --file=~/.config/nvim/
 
 # shell
 fresh jasoncodes/dotfiles shell/aliases/\*
