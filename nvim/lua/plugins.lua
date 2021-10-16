@@ -27,4 +27,5 @@ require("packer").startup(function(use)
   end
 
   use "AndrewRadev/linediff.vim"
+  use "bogado/file-line"
 end)
