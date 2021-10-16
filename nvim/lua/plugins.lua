@@ -28,4 +28,5 @@ require("packer").startup(function(use)
 
   use "AndrewRadev/linediff.vim"
   use "bogado/file-line"
+  use "dstein64/nvim-scrollview"
 end)
