@@ -15,7 +15,7 @@ use {
 
     _G.toggle_gitsigns_mode = function()
       if vim.g.gitsigns_diff_base == nil then
-        vim.g.gitsigns_diff_base = "$(git merge-base origin/HEAD HEAD)"
+        vim.g.gitsigns_diff_base = vim.fn.trim(vim.fn.system("git merge-base origin/HEAD HEAD"))
       else
         vim.g.gitsigns_diff_base = nil
       end
