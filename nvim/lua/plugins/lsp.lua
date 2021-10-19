@@ -3,9 +3,16 @@ local use = require("packer").use
 use {
   "neovim/nvim-lspconfig",
 
-  -- diagnostic signs
-
   config = function()
+    -- diagnostic signs
+
+    vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+      virtual_text = false,
+      signs = true,
+      underline = false,
+      update_in_insert = false,
+    })
+
     vim.fn.sign_define("DiagnosticSignError", {
       text = " ",
       texthl = "LspDiagnosticsSignError",
@@ -29,6 +36,9 @@ use {
       texthl = "LspDiagnosticsSignInformation",
       numhl = "LspDiagnosticsLineNrInformation",
     })
+
+    vim.o.updatetime = 250
+    vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_line_diagnostics({focusable=false})]]
 
     -- solargraph
 
