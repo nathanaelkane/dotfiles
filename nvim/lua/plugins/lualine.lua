@@ -1,7 +1,7 @@
 local use = require("packer").use
 
 use {
-  "shadmansaleh/lualine.nvim",
+  "nvim-lualine/lualine.nvim",
   requires = "kyazdani42/nvim-web-devicons",
 
   config = function()
