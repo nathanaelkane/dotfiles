@@ -15,3 +15,4 @@ stellar.yaml
 .solargraph.yml
 .vscode/
 .tool-versions
+*.http
