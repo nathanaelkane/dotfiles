@@ -20,6 +20,9 @@ use {
         DiagnosticSignWarn = {fg = "#DBC074", bg = "#111B24"},
         DiagnosticSignHint = {fg = "#63CDCF", bg = "#111B24"},
         DiagnosticSignInfo = {fg = "#719CD6", bg = "#111B24"},
+        HopNextKey = {fg = "#D67AD2"},
+        HopNextKey1 = {fg = "#9D79D6"},
+        HopNextKey2 = {fg = "#B8A1E3"},
       }
     }
 
