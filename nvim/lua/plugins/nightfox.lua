@@ -23,6 +23,8 @@ use {
         HopNextKey = {fg = "#D67AD2"},
         HopNextKey1 = {fg = "#9D79D6"},
         HopNextKey2 = {fg = "#B8A1E3"},
+        Pmenu = {bg = "#111111"},
+        PmenuSel = {bg = "#000000"},
       }
     }
 
