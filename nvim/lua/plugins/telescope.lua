@@ -1,6 +1,11 @@
 local use = require("packer").use
 
 use {
+  "nvim-telescope/telescope-fzf-native.nvim",
+  run = "make",
+}
+
+use {
   "nvim-telescope/telescope.nvim",
   requires = "nvim-lua/plenary.nvim",
 
@@ -34,7 +39,17 @@ use {
           sort_mru = true,
         },
       },
+      extensions = {
+        fzf = {
+          fuzzy = true,
+          override_generic_sorter = true,
+          override_file_sorter = true,
+          case_mode = "smart_case",
+        },
+      },
     }
+
+    require("telescope").load_extension("fzf")
 
     function _G.telescope_find_files_from_current_file_directory()
       dir = vim.fn.expand("%:h")
