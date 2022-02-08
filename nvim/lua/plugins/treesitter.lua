@@ -3,7 +3,10 @@ local use = require("packer").use
 use {
   "nvim-treesitter/nvim-treesitter",
   run = ":TSUpdate",
-  requires = "nvim-treesitter/playground",
+  requires = {
+    "nvim-treesitter/playground",
+    "RRethy/nvim-treesitter-endwise",
+  },
 
   config = function()
     local parser_configs = require("nvim-treesitter.parsers").get_parser_configs()
@@ -54,6 +57,9 @@ use {
           goto_node = '<cr>',
           show_help = '?',
         },
+      },
+      endwise = {
+        enable = true,
       },
     }
   end,
