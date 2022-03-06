@@ -15,6 +15,7 @@ use {
     vim.cmd "set completeopt=menu,menuone,noselect"
 
     local cmp = require("cmp")
+    local cmp_buffer = require("cmp_buffer")
 
     cmp.setup({
       snippet = {
@@ -30,10 +31,25 @@ use {
         ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), {"i", "c"}),
       },
       sources = cmp.config.sources({
-        {name = "buffer"},
+        {
+          name = "buffer",
+          option = {
+            get_bufnrs = function()
+              return vim.api.nvim_list_bufs() -- all buffers
+            end,
+          },
+        },
         {name = "nvim_lsp"},
         {name = "luasnip"},
       }),
+      sorting = {
+        comparators = {
+          function(...)
+            -- sort completion results based on the distance of the word from the cursor line
+            return cmp_buffer:compare_locality(...)
+          end,
+        },
+      },
     })
   end,
 }
