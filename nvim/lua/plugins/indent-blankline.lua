@@ -10,6 +10,7 @@ use {
       show_trailing_blankline_indent = false,
       filetype_exclude = {
         "packer",
+        "neo-tree",
       },
       buftype_exclude = {
         "terminal",
