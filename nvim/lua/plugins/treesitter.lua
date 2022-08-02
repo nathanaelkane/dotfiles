@@ -5,6 +5,7 @@ use {
   run = ":TSUpdate",
   requires = {
     "nvim-treesitter/playground",
+    "nvim-treesitter/nvim-treesitter-context",
   },
 
   config = function()
@@ -55,6 +56,14 @@ use {
           update = 'R',
           goto_node = '<cr>',
           show_help = '?',
+        },
+      },
+    }
+
+    require("treesitter-context").setup {
+      patterns = {
+        yaml = {
+          "block_mapping_pair",
         },
       },
     }
