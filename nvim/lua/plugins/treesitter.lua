@@ -5,7 +5,6 @@ use {
   run = ":TSUpdate",
   requires = {
     "nvim-treesitter/playground",
-    "RRethy/nvim-treesitter-endwise",
   },
 
   config = function()
@@ -57,9 +56,6 @@ use {
           goto_node = '<cr>',
           show_help = '?',
         },
-      },
-      endwise = {
-        enable = true,
       },
     }
   end,
