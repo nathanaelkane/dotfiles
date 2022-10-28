@@ -27,11 +27,11 @@ use {
       formatting = false,
       hover = false,
       useBundler = true,
-      capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+      capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
     }
 
     require("lspconfig").yamlls.setup {
-      capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+      capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
     }
 
     require("lspsaga").init_lsp_saga()
