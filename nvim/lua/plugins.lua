@@ -27,6 +27,6 @@ require("packer").startup(function(use)
   end
 
   use "AndrewRadev/linediff.vim"
-  use "bogado/file-line"
+  use "wsdjeg/vim-fetch"
   use "dstein64/nvim-scrollview"
 end)
