@@ -12,6 +12,7 @@ fresh jasoncodes/dotfiles config/gitignore --file
 fresh jasoncodes/dotfiles config/inputrc --file
 fresh jasoncodes/dotfiles config/psqlrc --file
 fresh jasoncodes/dotfiles config/ackrc --file
+fresh jasoncodes/dotfiles config/default-gems --file
 fresh-options --file=~/.tmux.conf --marker=\#
   fresh jasoncodes/dotfiles config/tmux.conf
   fresh twe4ked/dotfiles config/tmux.conf
