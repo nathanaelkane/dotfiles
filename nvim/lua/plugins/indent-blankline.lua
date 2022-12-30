@@ -3,7 +3,7 @@ local use = require("packer").use
 use {
   "lukas-reineke/indent-blankline.nvim",
 
-  setup = function()
+  config = function()
     vim.g.indent_blankline_context_patterns = {
       "class",
       "^func",
@@ -22,6 +22,9 @@ use {
       "table",
       "tuple",
       "do_block",
+
+      -- Ruby
+      "unless",
       "when",
       "else",
       "pair",
@@ -30,15 +33,12 @@ use {
       "assignment",
       "call",
     }
-  end,
 
-  config = function()
     require("indent_blankline").setup {
       char = "│",
       show_first_indent_level = true,
       show_trailing_blankline_indent = false,
       show_current_context = true,
-      show_current_context_start = true,
       filetype_exclude = {
         "packer",
         "neo-tree",
