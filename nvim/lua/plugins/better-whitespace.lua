@@ -17,6 +17,7 @@ use {
     }
 
     vim.g.better_whitespace_enabled = 1
+    vim.g.current_line_whitespace_disabled_soft = 1
   end,
 
   config = function()
