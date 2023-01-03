@@ -29,4 +29,5 @@ require("packer").startup(function(use)
   use "AndrewRadev/linediff.vim"
   use "wsdjeg/vim-fetch"
   use "dstein64/nvim-scrollview"
+  use "godlygeek/tabular"
 end)
