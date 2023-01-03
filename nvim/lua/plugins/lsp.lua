@@ -52,7 +52,7 @@ use {
     end, {silent = true, noremap = true})
 
     -- show hover doc and press twice will jumpto hover window
-    vim.keymap.set("n", "K", require("lspsaga.hover").render_hover_doc, {silent = true})
+    vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", {silent = true})
 
     -- scroll in hover doc or definition preview
     vim.keymap.set("n", "<C-f>", function()
