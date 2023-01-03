@@ -1,5 +1,7 @@
 -- brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 -- gem install CoffeeTags
+--
+-- Note: Error 139 is a segfault, reinstalling fixes it
 
 local use = require("packer").use
 
