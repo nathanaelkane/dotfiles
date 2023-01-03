@@ -9,7 +9,6 @@ use {
 
     local map = require("utils").map
 
-    map("", "<Leader>ee", "<Cmd>HopChar2<CR>")
     map("", "<Leader>ew", "<Cmd>HopWordAC<CR>")
     map("", "<Leader>eb", "<Cmd>HopWordBC<CR>")
     map("", "<Leader>ek", "<Cmd>HopLineStartBC<CR>")
