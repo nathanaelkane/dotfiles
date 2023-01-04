@@ -1,8 +1,6 @@
-local use = require("packer").use
-
-use {
+return {
   "shortcuts/no-neck-pain.nvim",
-  tag = "*",
+  version = "*",
 
   config = function()
     require("no-neck-pain").setup {

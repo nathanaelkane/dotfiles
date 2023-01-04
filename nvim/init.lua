@@ -1,7 +1,7 @@
 vim.g.mapleader = ","
 
+require("config.lazy")
 require("settings")
 require("utils")
-require("plugins")
 require("mappings")
 require("autocommands")

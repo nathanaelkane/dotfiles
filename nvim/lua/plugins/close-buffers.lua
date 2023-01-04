@@ -1,6 +1,4 @@
-local use = require("packer").use
-
-use {
+return {
   "kazhala/close-buffers.nvim",
 
   config = function()

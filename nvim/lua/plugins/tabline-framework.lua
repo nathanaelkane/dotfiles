@@ -1,9 +1,6 @@
-local use = require("packer").use
-
-use {
+return {
   "rafcamlet/tabline-framework.nvim",
-  requires = "kyazdani42/nvim-web-devicons",
-  after = "harpoon",
+  dependencies = "kyazdani42/nvim-web-devicons",
 
   config = function()
     vim.cmd "set showtabline=2"

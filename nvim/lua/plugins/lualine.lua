@@ -1,8 +1,6 @@
-local use = require("packer").use
-
-use {
+return {
   "nvim-lualine/lualine.nvim",
-  requires = "kyazdani42/nvim-web-devicons",
+  dependencies = "kyazdani42/nvim-web-devicons",
 
   config = function()
     require("lualine").setup {

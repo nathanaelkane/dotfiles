@@ -1,6 +1,4 @@
-local use = require("packer").use
-
-use {
+return {
   "EdenEast/nightfox.nvim",
 
   config = function()

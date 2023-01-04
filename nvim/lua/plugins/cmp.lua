@@ -1,9 +1,7 @@
-local use = require("packer").use
-
-use {
+return {
   "hrsh7th/nvim-cmp",
 
-  requires = {
+  dependencies = {
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-buffer",
   },

@@ -1,6 +1,4 @@
-local use = require("packer").use
-
-use {
+return {
   "b3nj5m1n/kommentary",
 
   config = function()

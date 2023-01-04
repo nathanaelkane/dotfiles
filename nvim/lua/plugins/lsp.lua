@@ -1,15 +1,13 @@
-local use = require("packer").use
-
-use {
+return {
   "glepnir/lspsaga.nvim",
 
-  requires = {
+  dependencies = {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
   },
 
-  branch = "main",
+  version = "main",
 
   config = function()
     require("mason").setup()

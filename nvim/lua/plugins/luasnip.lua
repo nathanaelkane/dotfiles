@@ -1,5 +1,3 @@
-local use = require("packer").use
-
-use {
+return {
   "L3MON4D3/LuaSnip",
 }

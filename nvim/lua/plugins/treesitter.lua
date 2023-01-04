@@ -1,9 +1,7 @@
-local use = require("packer").use
-
-use {
+return {
   "nvim-treesitter/nvim-treesitter",
-  run = ":TSUpdate",
-  requires = {
+  build = ":TSUpdate",
+  dependencies = {
     "nvim-treesitter/playground",
     "nvim-treesitter/nvim-treesitter-context",
   },

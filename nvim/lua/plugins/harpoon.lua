@@ -1,8 +1,6 @@
-local use = require("packer").use
-
-use {
+return {
   "ThePrimeagen/harpoon",
-  requires = "nvim-lua/plenary.nvim",
+  dependencies = "nvim-lua/plenary.nvim",
 
   config = function()
     local map = require("utils").map

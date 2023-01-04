@@ -1,9 +1,7 @@
-local use = require("packer").use
-
-use {
+return {
   "ntpeters/vim-better-whitespace",
 
-  setup = function()
+  init = function()
     vim.g.better_whitespace_filetypes_blacklist = {
       "diff",
       "git",
