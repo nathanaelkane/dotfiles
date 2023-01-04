@@ -61,5 +61,3 @@ use {
 use "tpope/vim-rake"
 use "kchmck/vim-coffee-script"
 use "joker1007/vim-ruby-heredoc-syntax"
-
-vim.cmd "autocmd FileType ruby,rails,haml,hamlc,eruby,yaml,ru,cucumber set ai sw=2 sts=2 et"
