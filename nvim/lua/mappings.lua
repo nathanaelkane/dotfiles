@@ -1,7 +1,5 @@
 local map = require("utils").map
 
-vim.g.mapleader = ","
-
 -- goto previous buffer
 map("", "<Leader><Leader>", "<C-^>")
 
