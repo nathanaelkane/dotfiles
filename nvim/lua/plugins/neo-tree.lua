@@ -20,10 +20,12 @@ return {
         },
       },
     })
-
-    map("n", "<Leader>n", "<Cmd>Neotree position=left toggle=true<CR>")
-    map("n", "<Leader>N", "<Cmd>Neotree source=buffers position=left toggle=true<CR>")
-    map("n", "<Leader>.", "<Cmd>Neotree position=left reveal=true<CR>")
-    map("n", "-", "<Cmd>Neotree position=current toggle=true reveal=true<CR>")
   end,
+
+  keys = {
+    {"<Leader>n", "<Cmd>Neotree position=left toggle=true<CR>"},
+    {"<Leader>N", "<Cmd>Neotree source=buffers position=left toggle=true<CR>"},
+    {"<Leader>.", "<Cmd>Neotree position=left reveal=true<CR>"},
+    {"-", "<Cmd>Neotree position=current toggle=true reveal=true<CR>"},
+  },
 }
