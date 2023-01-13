@@ -32,35 +32,27 @@ return {
       capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
     }
 
-    require("lspsaga").init_lsp_saga()
+    require("lspsaga").setup({})
 
     -- show diagnostic
-    vim.keymap.set("n", "<Leader>cd", require("lspsaga.diagnostic").show_line_diagnostics, {silent = true, noremap = true})
+    vim.keymap.set("n", "<Leader>cd", "<cmd>Lspsaga show_line_diagnostics<CR>")
 
     -- jump to diagnostic
-    vim.keymap.set("n", "[e", require("lspsaga.diagnostic").goto_prev, {silent = true, noremap = true})
-    vim.keymap.set("n", "]e", require("lspsaga.diagnostic").goto_next, {silent = true, noremap = true})
+    vim.keymap.set("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>")
+    vim.keymap.set("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>")
 
     -- jump to error
     vim.keymap.set("n", "[E", function()
       require("lspsaga.diagnostic").goto_prev({severity = vim.diagnostic.severity.ERROR})
-    end, {silent = true, noremap = true})
+    end)
     vim.keymap.set("n", "]E", function()
       require("lspsaga.diagnostic").goto_next({severity = vim.diagnostic.severity.ERROR})
-    end, {silent = true, noremap = true})
+    end)
 
     -- show hover doc and press twice will jumpto hover window
-    vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", {silent = true})
-
-    -- scroll in hover doc or definition preview
-    vim.keymap.set("n", "<C-f>", function()
-      require("lspsaga.action").smart_scroll_with_saga(1)
-    end, {silent = true})
-    vim.keymap.set("n", "<C-b>", function()
-      require("lspsaga.action").smart_scroll_with_saga(-1)
-    end, {silent = true})
+    vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>")
 
     -- rename
-    vim.keymap.set("n", "gr", require("lspsaga.rename").lsp_rename, {silent = true})
+    vim.keymap.set("n", "gr", "<cmd>Lspsaga rename<CR>")
   end,
 }
