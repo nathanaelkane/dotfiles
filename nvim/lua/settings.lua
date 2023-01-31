@@ -1,3 +1,7 @@
+-- disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 local options = {
   cmdheight = 2, -- make the command line a little taller
   conceallevel = 0, -- turn off conceal
