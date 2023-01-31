@@ -1,6 +1,6 @@
 return {
   "rafcamlet/tabline-framework.nvim",
-  dependencies = "kyazdani42/nvim-web-devicons",
+  dependencies = "nvim-tree/nvim-web-devicons",
 
   config = function()
     vim.cmd "set showtabline=2"
