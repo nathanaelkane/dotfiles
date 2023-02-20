@@ -37,6 +37,9 @@ return {
             ignore_current_buffer = true,
             sort_mru = true,
           },
+          live_grep = {
+            previewer = false,
+          }
         },
         extensions = {
           fzf = {
