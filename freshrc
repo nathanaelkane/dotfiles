@@ -76,6 +76,9 @@ fresh-options --file=~/.config/vscode-neovim/init.vim --marker=\"
   fresh vscode-neovim/init.vim
 fresh-options
 
+# hammerspoon
+fresh hammerspoon --file=~/.hammerspoon/
+
 # shell
 fresh jasoncodes/dotfiles shell/aliases/\*
 fresh jasoncodes/dotfiles shell/\*
