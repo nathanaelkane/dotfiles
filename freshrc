@@ -35,6 +35,7 @@ fresh jasoncodes/ctrlp-modified.vim lib/branch.sh --bin
 fresh jasoncodes/ctrlp-modified.vim lib/branch_modified.sh --bin
 fresh jasoncodes/ctrlp-modified.vim lib/modified.sh --bin
 fresh bin/ripper-tags-wrapper --bin
+fresh bin/vscode-nvim --bin
 
 # functions
 fresh jasoncodes/dotfiles shell/functions/realpath.sh
