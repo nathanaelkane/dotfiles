@@ -10,7 +10,7 @@ return {
       width = 135,
       buffers = {
         colors = {
-          background = "#131a24",
+          background = "#221f22", -- monokai-pro
         },
         right = {
           enabled = false,
