@@ -4,7 +4,6 @@ return {
 
   config = function()
     require("gitsigns").setup({
-      keymaps = {},
       signs = {
         add = {hl = 'GitSignsAdd' , text = '▎', numhl='GitSignsAddNr' , linehl='GitSignsAddLn'},
         change = {hl = 'GitSignsChange', text = '▎', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
