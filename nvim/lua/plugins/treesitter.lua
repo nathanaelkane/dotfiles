@@ -27,9 +27,11 @@ return {
         "lua",
         "query",
         "rst",
+        "ruby",
         "typescript",
         "vim",
         "yaml",
+        "markdown",
       },
       highlight = {
         enable = true,
