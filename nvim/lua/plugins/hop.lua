@@ -1,6 +1,7 @@
 return {
   "phaazon/hop.nvim",
   version = "v1",
+  enabled = false,
 
   config = function()
     require("hop").setup()
