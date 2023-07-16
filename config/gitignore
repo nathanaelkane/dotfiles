@@ -16,3 +16,4 @@ stellar.yaml
 .vscode/
 .tool-versions
 *.http
+.projections.json
