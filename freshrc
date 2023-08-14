@@ -72,8 +72,8 @@ fresh vim/colors --file=~/.vim/colors/
 fresh nvim --file=~/.config/nvim/
 
 # vscode-neovim
-fresh-options --file=~/.config/vscode-neovim/init.vim --marker=\"
-  fresh vscode-neovim/init.vim
+fresh-options --file=~/.config/vscode-neovim/init.lua
+  fresh vscode-neovim/init.lua
 fresh-options
 
 # hammerspoon
