@@ -18,6 +18,7 @@ modalMenu:setMenu({
   addMenuEntry("Mimestream", "e"),
   addMenuEntry("Music", "M"),
   -- addMenuEntry("Outlook", "e"),
+  addMenuEntry("Visual Studio Code", "v"),
 })
 
 hs.hotkey.bind({"cmd", "shift"}, "j", function()
