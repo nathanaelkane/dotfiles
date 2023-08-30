@@ -5,7 +5,7 @@ return {
   config = function()
     require("lualine").setup {
       options = {
-        theme = "monokai-pro",
+        theme = "nightfox",
         section_separators = "",
         component_separators = "",
       },

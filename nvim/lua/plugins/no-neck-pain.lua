@@ -10,7 +10,7 @@ return {
       width = 135,
       buffers = {
         colors = {
-          background = "#221f22", -- monokai-pro
+          background = "#131a24", -- nightfox
         },
         right = {
           enabled = false,
