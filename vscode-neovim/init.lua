@@ -91,6 +91,9 @@ vim.keymap.set("n", "zo", "<Cmd>call VSCodeNotify('editor.unfold')<CR>")
 vim.keymap.set("n", "zO", "<Cmd>call VSCodeNotify('editor.unfoldRecursively')<CR>")
 vim.keymap.set("n", "za", "<Cmd>call VSCodeNotify('editor.toggleFold')<CR>")
 
+-- open file at cursor
+vim.keymap.set("n", "gf", "<Cmd>call VSCodeCall('seito-openfile.openFileFromText')<CR>")
+
 vim.cmd [[
 " Search for selected text, forwards or backwards.
 " http://vim.wikia.com/wiki/Search_for_visually_selected_text
