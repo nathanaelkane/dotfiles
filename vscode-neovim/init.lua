@@ -64,6 +64,24 @@ vim.keymap.set("n", "<Leader><Leader>", "<Cmd>call VSCodeCall('extension.goto-pr
 vim.keymap.set("n", "<Leader>cf", "<Cmd>call VSCodeCall('copy-relative-path-and-line-numbers.path-only')<CR>")
 vim.keymap.set("n", "<Leader>cl", "<Cmd>call VSCodeCall('copy-relative-path-and-line-numbers.both')<CR>")
 
+-- fix j/k with folds
+-- fixes issue: https://github.com/vscode-neovim/vscode-neovim/issues/58
+-- solution: https://github.com/vscode-neovim/vscode-neovim/issues/58#issuecomment-1229279216
+local function moveCursor(direction)
+  if (vim.fn.reg_recording() == "" and vim.fn.reg_executing() == "") then
+    return ("g" .. direction)
+  else
+    return direction
+  end
+end
+
+vim.keymap.set({"n", "v"}, "k", function()
+  return moveCursor("k")
+end, {expr = true, remap = true})
+vim.keymap.set({"n", "v"}, "j", function()
+  return moveCursor("j")
+end, {expr = true, remap = true})
+
 vim.cmd [[
 " Search for selected text, forwards or backwards.
 " http://vim.wikia.com/wiki/Search_for_visually_selected_text
