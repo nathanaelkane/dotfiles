@@ -57,6 +57,9 @@ vim.keymap.set("n", "[q", "<Cmd>call VSCodeCall('search.action.focusPreviousSear
 -- clear search
 vim.keymap.set("", "<Leader>/", "<Cmd>nohls<CR>", {silent = true})
 
+-- jump between current and previous buffers (equivalent to CTRL-^)
+vim.keymap.set("n", "<Leader><Leader>", "<Cmd>call VSCodeCall('extension.goto-previous-buffer')<CR>")
+
 -- copy file path
 vim.keymap.set("n", "<Leader>cf", "<Cmd>call VSCodeCall('copy-relative-path-and-line-numbers.path-only')<CR>")
 vim.keymap.set("n", "<Leader>cl", "<Cmd>call VSCodeCall('copy-relative-path-and-line-numbers.both')<CR>")
