@@ -142,6 +142,9 @@ vim.keymap.set("n", "<Leader>yy", '"*yy')
 vim.keymap.set("", "<Leader>p", '"*p')
 vim.keymap.set("", "<Leader>P", '"*P')
 
+-- toggles
+vim.keymap.set("n", "yow", "<Cmd>call VSCodeCall('editor.action.toggleWordWrap')<CR>")
+
 -- bubble line up/down
 vim.keymap.set("n", "<A-j>", "<Cmd>call VSCodeNotify('editor.action.moveLinesDownAction')<CR>")
 vim.keymap.set("n", "<A-k>", "<Cmd>call VSCodeNotify('editor.action.moveLinesUpAction')<CR>")
