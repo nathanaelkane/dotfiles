@@ -141,9 +141,9 @@ let g:WhichKeyDesc_prev_method = "[m Prev method"
 nmap ]m <Action>(MethodDown)
 let g:WhichKeyDesc_next_method = "]m Next method"
 
-nmap [d <Action>(VcsShowPrevChangeMarker)
+nmap [d <Action>(VcsShowPrevChangeMarker)<Esc>
 let g:WhichKeyDesc_prev_change = "[d Prev change"
-nmap ]d <Action>(VcsShowNextChangeMarker)
+nmap ]d <Action>(VcsShowNextChangeMarker)<Esc>
 let g:WhichKeyDesc_next_change = "]d Next change"
 
 nmap [q <Action>(PreviousOccurence)
