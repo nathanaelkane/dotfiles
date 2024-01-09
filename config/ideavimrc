@@ -44,7 +44,7 @@ let g:WhichKeyDesc_easymotion = "<leader>e EasyMotion prefix"
 
 " Find/highlight
 
-nmap <Leader>h *<C-o>
+nmap <Leader>h viwy/\V<C-R>"<CR><C-o>
 vmap <Leader>h y/\V<C-R>"<CR><C-o>
 let g:WhichKeyDesc_highlight_word_or_selection = "<leader>h Highlight word/selection"
 
