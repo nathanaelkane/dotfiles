@@ -1,5 +1,6 @@
 return {
   "nvim-neotest/neotest",
+  lazy = true,
 
   dependencies = {
     "nvim-lua/plenary.nvim",
@@ -13,9 +14,7 @@ return {
 
     require("neotest").setup({
       adapters = {
-        require("neotest-rspec")({
-          runner = "rspec",
-        }),
+        require("neotest-rspec")
       },
     })
 
