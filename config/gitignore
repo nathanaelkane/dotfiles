@@ -18,3 +18,4 @@ stellar.yaml
 *.http
 .projections.json
 collections/
+scratch-*.md

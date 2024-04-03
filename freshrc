@@ -69,11 +69,8 @@ fresh-options --file=~/.vimrc --marker=\"
 fresh-options
 fresh vim/colors --file=~/.vim/colors/
 
-# neovim
-fresh nvim --file=~/.config/nvim/
-
 # LazyVim
-fresh lazy-vim --file=~/.config/lazy-vim/
+fresh lazy-vim --file=~/.config/nvim/
 
 # vscode-neovim
 fresh-options --file=~/.config/vscode-neovim/init.lua
