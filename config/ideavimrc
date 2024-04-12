@@ -165,6 +165,8 @@ let g:WhichKeyDesc_toggle_soft_wrap = "yow Toggle soft wrap"
 
 " Misc mappings
 
+map Y y$
+
 " Copy/paste
 noremap <Leader>y "*y
 nnoremap <Leader>yy "*yy
