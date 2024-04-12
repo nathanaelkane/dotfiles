@@ -17,6 +17,7 @@ set commentary
 set highlightedyank
 set NERDTree
 set which-key
+set textobj-indent
 
 " Actions
 
