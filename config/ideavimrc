@@ -40,8 +40,16 @@ let g:WhichKeyDesc_refactor_menu = "<leader>cr Refactor menu…"
 
 " EasyMotion
 
-map <Leader>e <Plug>(easymotion-prefix)
-let g:WhichKeyDesc_easymotion = "<leader>e EasyMotion prefix"
+let g:EasyMotion_do_mapping = 0
+
+map <Leader>s <Plug>(easymotion-s)
+let g:WhichKeyDesc_easymotion_s = "<leader>s EasyMotion search {char} forward and backward"
+
+map <Leader>j <Plug>(easymotion-j)
+let g:WhichKeyDesc_easymotion_j = "<leader>j EasyMotion line downward"
+
+map <Leader>k <Plug>(easymotion-k)
+let g:WhichKeyDesc_easymotion_k = "<leader>k EasyMotion line upward"
 
 " Find/highlight
 
