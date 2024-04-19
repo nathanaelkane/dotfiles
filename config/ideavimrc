@@ -167,6 +167,10 @@ let g:WhichKeyDesc_toggle_soft_wrap = "yow Toggle soft wrap"
 
 map Y y$
 
+" Use "very magic" search mode
+nnoremap / /\v
+vnoremap / /\v
+
 " Copy/paste
 noremap <Leader>y "*y
 nnoremap <Leader>yy "*yy
