@@ -209,3 +209,7 @@ nmap <Leader>a <Action>($SelectAll)
 
 " Hide active tool window
 nmap <Leader>` <Action>(HideActiveWindow)
+
+" Find file under cursor
+vmap gf <Action>(GotoFile)
+let g:WhichKeyDesc_goto_file_under_cursor = "gf 'Go to File' using selected text"
