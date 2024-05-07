@@ -17,3 +17,4 @@ stellar.yaml
 .tool-versions
 *.http
 .projections.json
+collections/
