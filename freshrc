@@ -6,6 +6,7 @@ fresh freshshell/fresh contrib/source-build.sh --file=~/.bash_profile
 fresh freshshell/fresh contrib/source-build.sh --file=~/.bashrc
 
 # config
+fresh jasoncodes/dotfiles config/irbrc --file
 fresh jasoncodes/dotfiles config/pryrc --file
 fresh jasoncodes/dotfiles config/gemrc --file
 fresh jasoncodes/dotfiles config/gitignore --file
