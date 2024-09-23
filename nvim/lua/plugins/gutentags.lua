@@ -1,12 +1,12 @@
 -- brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 -- gem install CoffeeTags
+--
+-- Note: Error 139 is a segfault, reinstalling fixes it
 
-local use = require("packer").use
-
-use {
+return {
   "ludovicchabant/vim-gutentags",
 
-  setup = function()
+  init = function()
     vim.g.gutentags_cache_dir = "/tmp"
     vim.g.gutentags_generate_on_empty_buffer = 1
     vim.g.gutentags_define_advanced_commands = 1

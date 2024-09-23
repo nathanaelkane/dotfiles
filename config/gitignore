@@ -5,6 +5,7 @@ notes/
 nate_development.rb
 .DS_Store
 TODO.txt
+TODO.markdown
 .ruby-version
 db/structure.sql
 /.envrc
@@ -14,3 +15,9 @@ stellar.yaml
 .solargraph.yml
 .vscode/
 .tool-versions
+*.http
+.projections.json
+collections/
+scratch-*.md
+threagile.yaml.backup
+run-pty.json

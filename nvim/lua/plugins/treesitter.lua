@@ -1,9 +1,10 @@
-local use = require("packer").use
-
-use {
+return {
   "nvim-treesitter/nvim-treesitter",
-  run = ":TSUpdate",
-  requires = "nvim-treesitter/playground",
+  build = ":TSUpdate",
+  dependencies = {
+    "nvim-treesitter/playground",
+    "nvim-treesitter/nvim-treesitter-context",
+  },
 
   config = function()
     local parser_configs = require("nvim-treesitter.parsers").get_parser_configs()
@@ -30,12 +31,13 @@ use {
         "typescript",
         "vim",
         "yaml",
+        "markdown",
       },
       highlight = {
         enable = true,
       },
       indent = {
-        enable = false,
+        enable = true,
       },
       playground = {
         enable = true,
@@ -53,6 +55,14 @@ use {
           update = 'R',
           goto_node = '<cr>',
           show_help = '?',
+        },
+      },
+    }
+
+    require("treesitter-context").setup {
+      patterns = {
+        yaml = {
+          "block_mapping_pair",
         },
       },
     }

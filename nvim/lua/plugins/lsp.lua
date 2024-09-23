@@ -1,67 +1,20 @@
-local use = require("packer").use
-
-use {
+return {
   "neovim/nvim-lspconfig",
 
+  dependencies = {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "nvimdev/lspsaga.nvim",
+  },
+
   config = function()
-    -- diagnostic signs
+    require("mason").setup()
 
-    vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-      virtual_text = false,
-      signs = true,
-      underline = false,
-      update_in_insert = false,
-    })
-
-    vim.fn.sign_define("DiagnosticSignError", {
-      text = " ",
-      texthl = "LspDiagnosticsSignError",
-      numhl = "LspDiagnosticsLineNrError",
-    })
-
-    vim.fn.sign_define("DiagnosticSignWarn", {
-      text = " ",
-      texthl = "LspDiagnosticsSignWarning",
-      numhl = "LspDiagnosticsLineNrWarning",
-    })
-
-    vim.fn.sign_define("DiagnosticSignHint", {
-      text = " ",
-      texthl = "LspDiagnosticsSignHint",
-      numhl = "LspDiagnosticsLineNrHint",
-    })
-
-    vim.fn.sign_define("DiagnosticSignInfo", {
-      text = " ",
-      texthl = "LspDiagnosticsSignInformation",
-      numhl = "LspDiagnosticsLineNrInformation",
-    })
-
-    -- Source: https://github.com/neovim/nvim-lspconfig/wiki/UI-customization#print-diagnostics-in-status-line
-    function PrintDiagnostics(opts, bufnr, line_nr, client_id)
-      opts = opts or {}
-
-      bufnr = bufnr or 0
-      line_nr = line_nr or (vim.api.nvim_win_get_cursor(0)[1] - 1)
-
-      local line_diagnostics = vim.lsp.diagnostic.get_line_diagnostics(bufnr, line_nr, opts, client_id)
-      if vim.tbl_isempty(line_diagnostics) then return end
-
-      local diagnostic_message = ""
-      for i, diagnostic in ipairs(line_diagnostics) do
-        diagnostic_message = diagnostic_message .. string.format("%d: %s", i, diagnostic.message or "")
-        print(diagnostic_message)
-        if i ~= #line_diagnostics then
-          diagnostic_message = diagnostic_message .. "\n"
-        end
-      end
-      vim.api.nvim_echo({{diagnostic_message, "Normal"}}, false, {})
-    end
-
-    vim.o.updatetime = 250
-    vim.cmd [[autocmd CursorHold * lua PrintDiagnostics()]]
-
-    -- solargraph
+    require("mason-lspconfig").setup {
+      ensure_installed = {
+        "yamlls",
+      }
+    }
 
     require("lspconfig").solargraph.setup {
       autoformat = false,
@@ -70,28 +23,34 @@ use {
       formatting = false,
       hover = false,
       useBundler = true,
-      capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+      capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
     }
-  end,
-}
 
-use {
-  "williamboman/nvim-lsp-installer",
+    require("lspconfig").yamlls.setup {
+      capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
+    }
 
-  config = function()
-    local lsp_installer = require("nvim-lsp-installer")
+    require("lspsaga").setup({})
 
-    lsp_installer.on_server_ready(function(server)
-      local opts = {}
+    -- show diagnostic
+    vim.keymap.set("n", "<Leader>cd", "<cmd>Lspsaga show_line_diagnostics<CR>")
 
-      -- (optional) Customize the options passed to the server
-      -- if server.name == "tsserver" then
-      --   opts.root_dir = function() ... end
-      -- end
+    -- jump to diagnostic
+    vim.keymap.set("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>")
+    vim.keymap.set("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>")
 
-      -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
-      server:setup(opts)
-      vim.cmd [[do User LspAttachBuffers]]
+    -- jump to error
+    vim.keymap.set("n", "[E", function()
+      require("lspsaga.diagnostic").goto_prev({severity = vim.diagnostic.severity.ERROR})
     end)
+    vim.keymap.set("n", "]E", function()
+      require("lspsaga.diagnostic").goto_next({severity = vim.diagnostic.severity.ERROR})
+    end)
+
+    -- show hover doc and press twice will jumpto hover window
+    vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>")
+
+    -- rename
+    vim.keymap.set("n", "gr", "<cmd>Lspsaga rename<CR>")
   end,
 }

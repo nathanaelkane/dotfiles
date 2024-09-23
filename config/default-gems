@@ -1,0 +1,6 @@
+bundler
+pry
+awesome_print
+gem-browse
+gem-ctags
+# gem install readline-ext -- --with-readline-dir="$(brew --prefix readline)"

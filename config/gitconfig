@@ -19,10 +19,10 @@ defaultBranch = main
 
 [core]
 excludesfile = ~/.gitignore
-pager = (which delta &> /dev/null && delta --color-only --theme=none --24-bit-color=never --max-line-distance 1.0 || cat) | ${PAGER:-less}
+pager = (which delta &> /dev/null && delta --color-only --syntax-theme=none --24-bit-color=never --max-line-distance 1.0 || cat) | ${PAGER:-less}
 
 [interactive]
-diffFilter=(which delta &> /dev/null && delta --color-only --theme=none --24-bit-color=never --max-line-distance 1.0 || cat)
+diffFilter=(which delta &> /dev/null && delta --color-only --syntax-theme=none --24-bit-color=never --max-line-distance 1.0 || cat)
 
 [push]
 default = tracking
@@ -51,12 +51,6 @@ autostash = true
 [tag]
 sort = version:refname
 
-[git-up "bundler"]
-check = true
-
-[git-up "rebase"]
-auto = false
-
 [gitflow "branch"]
 master = master
 develop = develop
@@ -68,5 +62,5 @@ hotfix = hotfix/
 support = support/
 versiontag =
 
-[git-up "rebase"]
-arguments = --preserve-merges
+[alias]
+ub = pull --rebase --autostash

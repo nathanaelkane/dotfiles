@@ -1,3 +1,7 @@
+-- disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 local options = {
   cmdheight = 2, -- make the command line a little taller
   conceallevel = 0, -- turn off conceal
@@ -43,6 +47,3 @@ local options = {
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
-
--- highlight on yank
-vim.cmd "au TextYankPost * silent! lua vim.highlight.on_yank {higroup='IncSearch', timeout=250}"

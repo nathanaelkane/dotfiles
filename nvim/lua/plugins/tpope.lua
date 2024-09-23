@@ -1,7 +1,8 @@
-local use = require("packer").use
-
-use "tpope/vim-eunuch"
-use "tpope/vim-fugitive"
-use "tpope/vim-repeat"
-use "tpope/vim-surround"
-use "tpope/vim-unimpaired"
+return {
+  "tpope/vim-eunuch",
+  "tpope/vim-fugitive",
+  "tpope/vim-repeat",
+  "tpope/vim-surround",
+  "tpope/vim-unimpaired",
+  "tpope/vim-rsi",
+}

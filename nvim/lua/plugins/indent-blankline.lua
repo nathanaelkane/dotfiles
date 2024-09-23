@@ -1,20 +1,28 @@
-local use = require("packer").use
-
-use {
+return {
   "lukas-reineke/indent-blankline.nvim",
-
-  config = function()
-    require("indent_blankline").setup {
+  main = "ibl",
+  opts = {
+    indent = {
       char = "│",
-      show_first_indent_level = true,
-      show_trailing_blankline_indent = false,
-      filetype_exclude = {
-        "vimwiki",
-        "packer",
+      tab_char = "│",
+    },
+    scope = {
+      enabled = false
+    },
+    exclude = {
+      filetypes = {
+        "help",
+        "alpha",
+        "dashboard",
+        "neo-tree",
+        "Trouble",
+        "trouble",
+        "lazy",
+        "mason",
+        "notify",
+        "toggleterm",
+        "lazyterm",
       },
-      buftype_exclude = {
-        "terminal",
-      },
-    }
-  end,
+    },
+  },
 }

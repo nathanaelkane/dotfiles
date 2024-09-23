@@ -6,6 +6,7 @@ fresh freshshell/fresh contrib/source-build.sh --file=~/.bash_profile
 fresh freshshell/fresh contrib/source-build.sh --file=~/.bashrc
 
 # config
+fresh jasoncodes/dotfiles config/irbrc --file
 fresh jasoncodes/dotfiles config/pryrc --file
 fresh jasoncodes/dotfiles config/gemrc --file
 fresh jasoncodes/dotfiles config/gitignore --file
@@ -35,6 +36,7 @@ fresh jasoncodes/ctrlp-modified.vim lib/branch.sh --bin
 fresh jasoncodes/ctrlp-modified.vim lib/branch_modified.sh --bin
 fresh jasoncodes/ctrlp-modified.vim lib/modified.sh --bin
 fresh bin/ripper-tags-wrapper --bin
+fresh bin/vscode-nvim --bin
 
 # functions
 fresh jasoncodes/dotfiles shell/functions/realpath.sh
@@ -67,8 +69,16 @@ fresh-options --file=~/.vimrc --marker=\"
 fresh-options
 fresh vim/colors --file=~/.vim/colors/
 
-# neovim
-fresh nvim --file=~/.config/nvim/
+# LazyVim
+fresh lazy-vim --file=~/.config/nvim/
+
+# vscode-neovim
+fresh-options --file=~/.config/vscode-neovim/init.lua
+  fresh vscode-neovim/init.lua
+fresh-options
+
+# hammerspoon
+fresh hammerspoon --file=~/.hammerspoon/
 
 # shell
 fresh jasoncodes/dotfiles shell/aliases/\*

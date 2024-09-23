@@ -1,11 +1,14 @@
-local use = require("packer").use
-
-use {
-  "Pocco81/AutoSave.nvim",
+return {
+  "Pocco81/auto-save.nvim",
 
   config = function()
-    require("autosave").setup {
+    require("auto-save").setup {
       enabled = true,
+      execution_message = {
+        message = function()
+          return ""
+        end,
+      },
     }
   end,
 }
