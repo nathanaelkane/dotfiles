@@ -20,3 +20,4 @@ stellar.yaml
 collections/
 scratch-*.md
 threagile.yaml.backup
+run-pty.json
