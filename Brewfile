@@ -4,7 +4,6 @@ tap "heroku/brew"
 tap "universal-ctags/universal-ctags"
 
 brew "bash"
-brew "direnv"
 brew "fzf"
 brew "gh"
 brew "git"
