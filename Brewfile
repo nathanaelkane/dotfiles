@@ -3,7 +3,6 @@
 tap "heroku/brew"
 tap "universal-ctags/universal-ctags"
 
-brew "asdf"
 brew "bash"
 brew "direnv"
 brew "fzf"
