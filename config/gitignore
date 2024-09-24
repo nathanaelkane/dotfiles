@@ -9,6 +9,7 @@ TODO.markdown
 .ruby-version
 db/structure.sql
 /.envrc
+/.mise.local.toml
 notes.markdown
 stellar.yaml
 .idea/
