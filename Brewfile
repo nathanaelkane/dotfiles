@@ -25,6 +25,7 @@ brew "docker-credential-helper"
 brew "docker-compose"
 brew "docker-buildx"
 
+cask "alfred"
 cask "firefox"
 cask "hammerspoon"
 cask "linearmouse"
