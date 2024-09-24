@@ -12,13 +12,14 @@ addMenuEntry = function(appName, shortcut)
 end
 
 modalMenu:setMenu({
+  addMenuEntry("Firefox", "f"),
   addMenuEntry("Google Chrome", "c"),
-  addMenuEntry("iTerm", "i"),
   addMenuEntry("Messages", "m"),
-  addMenuEntry("Mimestream", "e"),
+  addMenuEntry("Microsoft Teams", "t"),
   addMenuEntry("Music", "M"),
-  -- addMenuEntry("Outlook", "e"),
-  addMenuEntry("Visual Studio Code", "v"),
+  addMenuEntry("Outlook", "e"),
+  addMenuEntry("Slack", "s"),
+  addMenuEntry("WezTerm", "w"),
 })
 
 hs.hotkey.bind({"cmd", "shift"}, "j", function()
