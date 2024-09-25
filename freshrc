@@ -90,18 +90,7 @@ fresh shell/config/\*
 fresh jasoncodes/dotfiles shell/config/keybindings.sh
 fresh rupa/z z.sh
 
-if command -v podman &> /dev/null; then
-  fresh jasoncodes/dotfiles LaunchAgents/podman-machine.plist --file=~/Library/LaunchAgents/podman-machine.plist
-fi
-
-start_podman() {
-  if [ -f ~/Library/LaunchAgents/podman-machine.plist ] && ! launchctl list podman-machine &> /dev/null; then
-    launchctl load ~/Library/LaunchAgents/podman-machine.plist
-  fi
-}
-
 fresh_after_build() {
   tmux_remove_utf8_option
   gsed -i 's/Bundle/Plug/' ~/.fresh/build/vimrc # For external dependencies still using Vundle.
-  start_podman
 }
