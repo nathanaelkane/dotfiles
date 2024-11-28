@@ -54,16 +54,5 @@ autostash = true
 [tag]
 sort = version:refname
 
-[gitflow "branch"]
-master = master
-develop = develop
-
-[gitflow "prefix"]
-feature = feature/
-release = release/
-hotfix = hotfix/
-support = support/
-versiontag =
-
 [alias]
 ub = pull --rebase --autostash
