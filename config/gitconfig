@@ -19,18 +19,21 @@ defaultBranch = main
 
 [core]
 excludesfile = ~/.gitignore
-pager = (which delta &> /dev/null && delta --color-only --syntax-theme=none --24-bit-color=never --max-line-distance 1.0 || cat) | ${PAGER:-less}
+pager = delta
 
 [interactive]
-diffFilter=(which delta &> /dev/null && delta --color-only --syntax-theme=none --24-bit-color=never --max-line-distance 1.0 || cat)
+diffFilter = delta --color-only
+
+[delta]
+navigate = true # use n and N to move between diff sections
+dark = true
+line-numbers = true
+
+[merge]
+conflictstyle = zdiff3
 
 [push]
 default = tracking
-
-[merge]
-log = true
-conflictstyle = diff3
-tool = vimdiff
 
 [rerere]
 enabled = 1
