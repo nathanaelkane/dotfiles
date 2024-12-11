@@ -28,6 +28,7 @@ diffFilter = delta --color-only
 navigate = true # use n and N to move between diff sections
 dark = true
 line-numbers = true
+hunk-header-style = omit
 
 [merge]
 conflictstyle = zdiff3
