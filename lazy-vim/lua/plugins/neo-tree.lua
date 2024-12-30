@@ -1,6 +1,7 @@
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
+    lazy = false,
     opts = {
       window = {
         mappings = {
