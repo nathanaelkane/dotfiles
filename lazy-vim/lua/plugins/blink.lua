@@ -10,7 +10,7 @@ return {
       opts.completion.trigger.show_in_snippet = false
 
       opts.completion.list = opts.completion.list or {}
-      opts.completion.list.selection = "auto_insert"
+      opts.completion.list.selection = { preselect = false, auto_insert = true }
 
       opts.keymap = {
         preset = "super-tab",
