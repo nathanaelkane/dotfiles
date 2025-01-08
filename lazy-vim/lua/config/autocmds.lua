@@ -11,18 +11,3 @@ vim.api.nvim_create_autocmd("LspAttach", {
     client.server_capabilities.semanticTokensProvider = nil
   end,
 })
-
-vim.api.nvim_create_autocmd("BufEnter", {
-  desc = "Open Neo-tree on first buffer open",
-  once = true,
-  callback = function()
-    if not string.match(vim.bo.filetype, "^git") then
-      vim.defer_fn(
-        function()
-          vim.cmd("Neotree show left")
-        end,
-        10
-      )
-    end
-  end,
-})
