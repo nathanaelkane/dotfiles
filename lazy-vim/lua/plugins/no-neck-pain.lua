@@ -5,7 +5,7 @@ return {
     opts = {
       width = 150,
       autocmds = {
-        enableOnVimEnter = true,
+        enableOnVimEnter = false, -- see custom NoNeckPainVimEnterAutocmd autocmd instead
       },
       buffers = {
         right = {
