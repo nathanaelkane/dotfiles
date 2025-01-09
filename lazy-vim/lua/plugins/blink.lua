@@ -17,6 +17,15 @@ return {
         ["<C-y>"] = { "select_and_accept" },
         ["<Tab>"] = { "select_next", "snippet_forward", "fallback" },
         ["<S-Tab>"] = { "select_prev", "snippet_backward", "fallback" },
+        ["<CR>"] = {
+          function(cmp)
+            local selected_item = cmp.get_selected_item()
+            if type(selected_item) == "table" and selected_item.source_id == "snippets" then
+              return cmp.select_and_accept()
+            end
+          end,
+          "fallback",
+        },
       }
     end,
   },
