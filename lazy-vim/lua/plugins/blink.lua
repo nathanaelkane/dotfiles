@@ -57,6 +57,11 @@ return {
           end,
           "fallback",
         },
+        ["<C-l>"] = {
+          function()
+            require("blink-cmp").show({ providers = { "lsp" } })
+          end,
+        },
         ["<C-r>"] = {
           function()
             require("blink-cmp").show({ providers = { "ripgrep" } })
