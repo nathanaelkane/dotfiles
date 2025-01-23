@@ -5,15 +5,15 @@ return {
     opts = {
       width = 150,
       autocmds = {
-        enableOnVimEnter = true,
+        enableOnVimEnter = false, -- see custom NoNeckPainVimEnterAutocmd autocmd instead
+        skipEnteringNoNeckPainBuffer = true,
       },
       buffers = {
         right = {
           enabled = false,
         },
         scratchPad = {
-          enabled = true,
-          fileName = "scratch",
+          enabled = false,
         },
         bo = {
           filetype = "md",

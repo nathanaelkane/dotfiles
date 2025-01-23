@@ -4,6 +4,8 @@ tap "heroku/brew"
 tap "universal-ctags/universal-ctags"
 
 brew "bash"
+brew "docker"
+brew "docker-compose"
 brew "fzf"
 brew "gh"
 brew "git"
@@ -18,15 +20,9 @@ brew "ruby-install"
 brew "tmux"
 brew "universal-ctags", args: ["HEAD"]
 
-# podman
-brew "podman"
-brew "docker"
-brew "docker-credential-helper"
-brew "docker-compose"
-brew "docker-buildx"
-
 cask "alfred"
 cask "firefox"
 cask "hammerspoon"
 cask "linearmouse"
+cask "podman-desktop"
 cask "wezterm"

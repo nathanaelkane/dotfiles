@@ -25,8 +25,8 @@ vim.keymap.set("", "L", "$")
 vim.keymap.set("n", "<tab>", "za")
 
 -- copy file path
-vim.keymap.set("n", "<leader>cf", ":let @*=expand('%')<CR>", { silent = true, desc = "Copy file path" })
-vim.keymap.set("n", "<leader>cl", ":let @*=expand('%').':'.line('.')<cr>", { silent = true, desc = "Copy file path with line number" })
+vim.keymap.set("n", "<leader>fy", ":let @*=expand('%')<CR>", { silent = true, desc = "Copy file path" })
+vim.keymap.set("n", "<leader>fY", ":let @*=expand('%').':'.line('.')<cr>", { silent = true, desc = "Copy file path with line number" })
 
 -- highlight word/selection without changing position
 vim.keymap.set("n", "<leader>h", ":let view=winsaveview()<CR>*:call winrestview(view)<CR>", { remap = true, silent = true })

@@ -22,3 +22,4 @@ collections/
 scratch-*.md
 threagile.yaml.backup
 run-pty.json
+/components/*/tags

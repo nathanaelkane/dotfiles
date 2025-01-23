@@ -14,10 +14,11 @@ end
 modalMenu:setMenu({
   addMenuEntry("Firefox", "f"),
   addMenuEntry("Google Chrome", "c"),
+  addMenuEntry("Logseq", "l"),
   addMenuEntry("Messages", "m"),
+  addMenuEntry("Microsoft Outlook", "e"),
   addMenuEntry("Microsoft Teams", "t"),
   addMenuEntry("Music", "M"),
-  addMenuEntry("Outlook", "e"),
   addMenuEntry("Slack", "s"),
   addMenuEntry("WezTerm", "w"),
 })
