@@ -109,6 +109,8 @@
 
 (element_binding_expression "[" @indent.branch) ; added by me
 
+(method_declaration body: (block "{" @indent.branch)) ; added by me
+
 ["}" ")" "]" ] @indent.end
 
 (expression_statement ";" @indent.end)
