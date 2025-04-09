@@ -16,6 +16,9 @@ return {
       words = {
         enabled = false,
       },
+      explorer = {
+        enabled = false,
+      },
     },
   },
 }
