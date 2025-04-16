@@ -1,6 +1,7 @@
 " IdeaVim actions: https://gist.github.com/zchee/9c78f91cc5ad771c1f5d
 
-let mapleader = ","
+nnoremap <Space> <Nop>
+let mapleader = " "
 
 set hlsearch
 set ignorecase
@@ -19,6 +20,9 @@ set NERDTree
 set which-key
 set textobj-indent
 
+let g:WhichKeyDesc_goto_file = "<leader><leader> Go to file"
+nmap <Leader><Leader> <Action>(GotoFile)
+
 " Actions
 
 let g:WhichKeyDesc_actions = "<leader>c Actions"
@@ -35,21 +39,28 @@ let g:WhichKeyDesc_show_error = "<leader>cd Show error description"
 map <Leader>ca <Action>(ShowIntentionActions)
 let g:WhichKeyDesc_code_actions = "<leader>ca Code actions…"
 
-map <Leader>cr <Action>(RefactoringMenu)
-let g:WhichKeyDesc_refactor_menu = "<leader>cr Refactor menu…"
+map <Leader>cr <Action>(RenameElement)
+let g:WhichKeyDesc_refactor_menu = "<leader>cr Rename element…"
 
 " EasyMotion
 
 let g:EasyMotion_do_mapping = 0
+let g:WhichKeyDesc_easymotion_e = "<leader>e EasyMotion…"
 
-map <Leader>s <Plug>(easymotion-s)
-let g:WhichKeyDesc_easymotion_s = "<leader>s EasyMotion search {char} forward and backward"
+map <Leader>ee <Plug>(easymotion-s)
+let g:WhichKeyDesc_easymotion_ee = "<leader>ee EasyMotion search {char} forward and backward"
 
-map <Leader>j <Plug>(easymotion-j)
-let g:WhichKeyDesc_easymotion_j = "<leader>j EasyMotion line downward"
+map <Leader>ew <Plug>(easymotion-w)
+let g:WhichKeyDesc_easymotion_ew = "<leader>ew EasyMotion word forward"
 
-map <Leader>k <Plug>(easymotion-k)
-let g:WhichKeyDesc_easymotion_k = "<leader>k EasyMotion line upward"
+map <Leader>eb <Plug>(easymotion-b)
+let g:WhichKeyDesc_easymotion_eb = "<leader>eb EasyMotion word backward"
+
+map <Leader>ej <Plug>(easymotion-j)
+let g:WhichKeyDesc_easymotion_ej = "<leader>ej EasyMotion line downward"
+
+map <Leader>ek <Plug>(easymotion-k)
+let g:WhichKeyDesc_easymotion_ek = "<leader>ek EasyMotion line upward"
 
 " Find/highlight
 
@@ -59,50 +70,58 @@ let g:WhichKeyDesc_highlight_word_or_selection = "<leader>h Highlight word/selec
 
 nmap <Leader>H viw<Action>(FindInPath)
 vmap <Leader>H <Action>(FindInPath)
-let g:WhichKeyDesc_find_word_or_selection = "<leader>H Find word/selection"
+let g:WhichKeyDesc_find_word_or_selection1 = "<leader>H Find word/selection"
+
+nmap <Leader>sw viw<Action>(FindInPath)
+vmap <Leader>sw <Action>(FindInPath)
+let g:WhichKeyDesc_find_word_or_selection2 = "<leader>sw Find word/selection"
 
 nmap <Leader>/ :nohl<CR>
 let g:WhichKeyDesc_clear_highlight = "<leader>/ Clear highlight"
 
-" Go to
-
-map gr <Action>(GotoRelated)
-let g:WhichKeyDesc_goto_related = "gr Go to related target…"
-
-map gt <Action>(GotoTest)
-let g:WhichKeyDesc_goto_test = "gt Go to test"
-
 " Project/NERDTree
 
+nmap - :NERDTreeToggle<CR>
 nmap <Leader>n :NERDTreeToggle<CR>
 let g:WhichKeyDesc_toggle_explorer = "<leader>n Toggle Project/Explorer"
 
 nmap <Leader>. :NERDTreeFind<CR>
 let g:WhichKeyDesc_find_file_in_explorer = "<leader>. Find file in Project/Explorer"
 
-" Run/Tests
+" Tests
 
-let g:WhichKeyDesc_run = "<leader>r Run"
+let g:WhichKeyDesc_test = "<leader>t Test…"
 
-map <Leader>rc <Action>(ChooseRunConfiguration)
-let g:WhichKeyDesc_run_choose_config = "<leader>rc Choose run config"
+nmap <Leader>tt <Action>(RiderUnitTestRunContextAction)
+let g:WhichKeyDesc_test_nearest = "<leader>tt Test line/nearest"
 
-map <Leader>rr <Action>(RunClass)
-let g:WhichKeyDesc_run_line = "<leader>rr Run line"
+nmap <Leader>td <Action>(RiderUnitTestDebugContextAction)
+let g:WhichKeyDesc_debug_nearest = "<leader>td Debug line/nearest"
 
-map <Leader>rf gg<Action>(RunClass)<C-o>
-let g:WhichKeyDesc_run_file = "<leader>rf Run file"
+nmap <leader>tc gg/class<CR><Action>(RiderUnitTestRunContextAction)
+let g:WhichKeyDesc_test_class = "<leader>tc Run class"
 
-map <Leader>rl <Action>(Rerun)
-let g:WhichKeyDesc_run_rerun = "<leader>rl Re-run last"
+map <Leader>tl <Action>(RiderUnitTestRepeatPreviousRunAction)
+let g:WhichKeyDesc_rerun_last = "<leader>tl Re-run last"
 
-map <Leader>rx <Action>(RerunFailedTests)
-let g:WhichKeyDesc_run_rerun_failed = "<leader>rx Re-run failed"
+" Run
 
-map <Leader>rs <Action>(Stop)
-let g:WhichKeyDesc_run_stop = "<leader>rs Stop"
+" map <Leader>rc <Action>(ChooseRunConfiguration)
+" map <Leader>rx <Action>(RerunFailedTests)
+" map <Leader>rs <Action>(Stop)
 
-" Tabs
+" Buffers/Tabs
+
+let g:WhichKeyDesc_buffer = "<leader>b Buffers/tabs…"
+
+nmap <Leader>bd <Action>(CloseEditor)
+let g:WhichKeyDesc_close_tab = "<leader>bd Close active editor/tab"
+
+nmap <Leader>ba <Action>(CloseAllEditors)
+let g:WhichKeyDesc_close_all_editors = "<leader>ba Close all editors/tabs"
+
+nmap <Leader>bo <Action>(CloseAllEditorsButActive)
+let g:WhichKeyDesc_close_all_editors_but_active = "<leader>bo Close all editors/tabs but active"
 
 nmap <Leader>1 :tabn 1<CR>
 let g:WhichKeyDesc_tab1 = "<leader>1 Go to tab 1"
@@ -131,39 +150,41 @@ let g:WhichKeyDesc_tab8 = "<leader>8 Go to tab 8"
 nmap <Leader>9 :tabn 9<CR>
 let g:WhichKeyDesc_tab9 = "<leader>9 Go to tab 9"
 
-nmap <Leader>q <Action>(CloseEditor)
-let g:WhichKeyDesc_close_tab = "<leader>q Close active editor/tab"
-
-nmap <Leader>Q <Action>(CloseAllEditors)
-let g:WhichKeyDesc_close_all_editors = "<leader>Q Close all editors/tabs"
-
-nmap <Leader>w <Action>(CloseAllEditorsButActive)
-let g:WhichKeyDesc_close_all_editors_but_active = "<leader>w Close all editors/tabs but active"
 
 " Unimpaired
 
 let g:WhichKeyDesc_prev = "[ Prev"
 let g:WhichKeyDesc_next = "] Next"
 
-nmap [m <Action>(MethodUp)
-let g:WhichKeyDesc_prev_method = "[m Prev method"
-nmap ]m <Action>(MethodDown)
-let g:WhichKeyDesc_next_method = "]m Next method"
+nmap [b <Action>(PreviousTab)
+let g:WhichKeyDesc_prev_tab = "[b Prev tab"
+nmap ]b <Action>(NextTab)
+let g:WhichKeyDesc_next_method = "]b Next tab"
 
-nmap [d <Action>(VcsShowPrevChangeMarker)<Esc>
-let g:WhichKeyDesc_prev_change = "[d Prev change"
-nmap ]d <Action>(VcsShowNextChangeMarker)<Esc>
-let g:WhichKeyDesc_next_change = "]d Next change"
+nmap [m <Action>(MethodUp)
+let g:WhichKeyDesc_prev_method1 = "[m Prev method"
+nmap ]m <Action>(MethodDown)
+let g:WhichKeyDesc_next_method1 = "]m Next method"
+
+nmap ]f <Action>(MethodDown)
+let g:WhichKeyDesc_prev_method2 = "[f Prev method"
+nmap [f <Action>(MethodUp)
+let g:WhichKeyDesc_next_method2 = "]f Next method"
+
+nmap [h <Action>(VcsShowPrevChangeMarker)<Esc>
+let g:WhichKeyDesc_prev_change = "[h Prev change"
+nmap ]h <Action>(VcsShowNextChangeMarker)<Esc>
+let g:WhichKeyDesc_next_change = "]h Next change"
 
 nmap [q <Action>(PreviousOccurence)
 let g:WhichKeyDesc_prev_occurence = "[q Prev occurence"
 nmap ]q <Action>(NextOccurence)
 let g:WhichKeyDesc_next_occurence = "]q Next occurence"
 
-nmap [e <Action>(GotoPreviousError)
-let g:WhichKeyDesc_prev_error = "[e Prev error"
-nmap ]e <Action>(GotoNextError)
-let g:WhichKeyDesc_next_error = "]e Next error"
+nmap [d <Action>(GotoPreviousError)
+let g:WhichKeyDesc_prev_error = "[d Prev error/diagnostic"
+nmap ]d <Action>(GotoNextError)
+let g:WhichKeyDesc_next_error = "]d Next error/diagnostic"
 
 nmap yoa <Action>(Annotate)
 let g:WhichKeyDesc_toggle_annotate = "yoa Toggle annotate (with git blame)"
@@ -186,8 +207,8 @@ noremap <Leader>p "*p
 noremap <Leader>P "*P
 
 " Jump to prev file
-nnoremap <Leader><Leader> <C-6>
-let g:WhichKeyDesc_prev_file = "<leader><leader> Prev file"
+nnoremap <Leader>` <C-6>
+let g:WhichKeyDesc_prev_file = "<leader>` Prev file"
 
 " Reselect visual block after indent
 vnoremap < <gv
@@ -202,14 +223,17 @@ map <A-K> <Action>(MoveLineUp)
 map <A-J> <Action>(MoveLineDown)
 
 " Toggle fold
-nmap <Space> <Action>(ExpandCollapseToggleAction)
+nmap <Tab> <Action>(ExpandCollapseToggleAction)
 
 " Select all
 nmap <Leader>a <Action>($SelectAll)
 
 " Hide active tool window
-nmap <Leader>` <Action>(HideActiveWindow)
+" nmap <Leader>` <Action>(HideActiveWindow)
 
 " Find file under cursor
 vmap gf <Action>(GotoFile)
 let g:WhichKeyDesc_goto_file_under_cursor = "gf 'Go to File' using selected text"
+
+" Toggle debug breakpoint
+nmap <Leader>db :action ToggleLineBreakpoint<CR>
