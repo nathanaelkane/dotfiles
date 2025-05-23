@@ -124,6 +124,12 @@ let g:WhichKeyDesc_close_all_editors = "<leader>ba Close all editors/tabs"
 nmap <Leader>bo <Action>(CloseAllEditorsButActive)
 let g:WhichKeyDesc_close_all_editors_but_active = "<leader>bo Close all editors/tabs but active"
 
+nmap <Leader>br <Action>(CloseAllToTheRight)
+let g:WhichKeyDesc_close_all_to_the_right = "<leader>br Close all editors/tabs to the right"
+
+nmap <Leader>bl <Action>(CloseAllToTheLeft)
+let g:WhichKeyDesc_close_all_to_the_left = "<leader>bl Close all editors/tabs to the left"
+
 nmap <Leader>1 :tabn 1<CR>
 let g:WhichKeyDesc_tab1 = "<leader>1 Go to tab 1"
 
