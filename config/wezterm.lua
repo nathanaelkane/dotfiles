@@ -186,6 +186,42 @@ config.keys = {
       tab:set_zoomed(true)
     end),
   },
+
+  -- clear only the viewport (visible screen), not the scrollback
+  {
+    mods = "CTRL",
+    key = "L",
+    action = wezterm.action.Multiple {
+      wezterm.action.ClearScrollback "ScrollbackOnly",
+      wezterm.action.SendKey { key = "L", mods = "CTRL" },
+    },
+  },
+
+  -- scroll up one page
+  {
+    key = "PageUp",
+    action = wezterm.action.ScrollByPage(-1),
+  },
+
+  -- scroll down one page
+  {
+    key = "PageDown",
+    action = wezterm.action.ScrollByPage(1),
+  },
+
+  -- scroll to top
+  {
+    mods = "CMD",
+    key = "UpArrow",
+    action = wezterm.action.ScrollToTop,
+  },
+
+  -- scroll to bottom
+  {
+    mods = "CMD",
+    key = "DownArrow",
+    action = wezterm.action.ScrollToBottom,
+  },
 }
 
 -- LEADER + number to activate that tab
