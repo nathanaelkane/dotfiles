@@ -244,3 +244,6 @@ let g:WhichKeyDesc_goto_file_under_cursor = "gf 'Go to File' using selected text
 
 " Toggle debug breakpoint
 nmap <Leader>db :action ToggleLineBreakpoint<CR>
+
+" rails.vim commands
+command! A :action GotoTest
