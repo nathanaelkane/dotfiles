@@ -76,6 +76,7 @@ nmap <Leader>sw viw<Action>(FindInPath)
 vmap <Leader>sw <Action>(FindInPath)
 let g:WhichKeyDesc_find_word_or_selection2 = "<leader>sw Find word/selection"
 
+nmap <Esc> :nohl<CR>
 nmap <Leader>/ :nohl<CR>
 let g:WhichKeyDesc_clear_highlight = "<leader>/ Clear highlight"
 
