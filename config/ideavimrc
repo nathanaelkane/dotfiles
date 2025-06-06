@@ -259,5 +259,8 @@ nmap <Leader>db :action ToggleLineBreakpoint<CR>
 nmap <Leader>rr <Action>(RestoreDefaultLayout)
 let g:WhichKeyDesc_restore_default_layout = "<Leader>rr Restore default layout"
 
+nmap <Leader>rv :source ~/.ideavimrc<CR>
+let g:WhichKeyDesc_reload_ideavimrc = "<Leader>rv Reload IdeaVim config"
+
 " rails.vim commands
 command! A :action GotoTest
