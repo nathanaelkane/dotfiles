@@ -93,14 +93,25 @@ let g:WhichKeyDesc_find_file_in_explorer = "<leader>. Find file in Project/Explo
 
 let g:WhichKeyDesc_test = "<leader>t Test…"
 
-nmap <Leader>tt <Action>(RiderUnitTestRunContextAction)
-let g:WhichKeyDesc_test_nearest = "<leader>tt Test line/nearest"
+if &ide =~? "rider"
+  nmap <Leader>tt <Action>(RiderUnitTestRunContextAction)
+  let g:WhichKeyDesc_test_nearest = "<leader>tt Test line/nearest"
 
-nmap <Leader>td <Action>(RiderUnitTestDebugContextAction)
-let g:WhichKeyDesc_debug_nearest = "<leader>td Debug line/nearest"
+  nmap <Leader>td <Action>(RiderUnitTestDebugContextAction)
+  let g:WhichKeyDesc_debug_nearest = "<leader>td Debug line/nearest"
 
-nmap <leader>tc gg/class<CR><Action>(RiderUnitTestRunContextAction)
-let g:WhichKeyDesc_test_class = "<leader>tc Run class"
+  nmap <leader>tc gg<CR><Action>(RiderUnitTestRunContextAction)
+  let g:WhichKeyDesc_test_class = "<leader>tc Test entire file"
+elseif &ide =~? "rubymine"
+  nmap <Leader>tt <Action>(RunClass)
+  let g:WhichKeyDesc_test_nearest = "<leader>tt Test line/nearest"
+
+  nmap <Leader>td <Action>(DebugClass)
+  let g:WhichKeyDesc_debug_nearest = "<leader>td Debug line/nearest"
+
+  nmap <leader>tc gg<CR><Action>(RunClass)
+  let g:WhichKeyDesc_test_class = "<leader>tc Test entire file"
+endif
 
 map <Leader>tl <Action>(RiderUnitTestRepeatPreviousRunAction)
 let g:WhichKeyDesc_rerun_last = "<leader>tl Re-run last"
