@@ -256,5 +256,8 @@ let g:WhichKeyDesc_goto_file_under_cursor = "gf 'Go to File' using selected text
 " Toggle debug breakpoint
 nmap <Leader>db :action ToggleLineBreakpoint<CR>
 
+nmap <Leader>rr <Action>(RestoreDefaultLayout)
+let g:WhichKeyDesc_restore_default_layout = "<Leader>rr Restore default layout"
+
 " rails.vim commands
 command! A :action GotoTest
