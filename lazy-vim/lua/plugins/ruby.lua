@@ -14,7 +14,6 @@ return {
       vim.list_extend(opts.ensure_installed, {
         "ruby-lsp",
         "solargraph",
-        -- "standardrb",
       })
     end,
   },
@@ -23,28 +22,14 @@ return {
     opts = {
       servers = {
         ruby_lsp = {
-          cmd = { "bundle", "exec", "ruby-lsp" },
+          cmd = { os.getenv("HOME") .. "/.local/share/mise/shims/ruby-lsp" },
         },
-        solargraph = {
-          cmd = { "bundle", "exec", "solargraph", "stdio" },
-        },
-        -- standardrb = {},
       },
       document_highlight = {
         enabled = false,
       },
     },
   },
-  -- {
-  --   "mfussenegger/nvim-dap",
-  --   optional = true,
-  --   dependencies = {
-  --     "suketa/nvim-dap-ruby",
-  --     config = function()
-  --       require("dap-ruby").setup()
-  --     end,
-  --   },
-  -- },
   {
     "nvim-neotest/neotest",
     optional = true,
@@ -55,7 +40,7 @@ return {
       adapters = {
         ["neotest-rspec"] = {
           rspec_cmd = function()
-            return vim.tbl_flatten({ "bin/rspec" })
+            return { "bin/rspec" }
           end,
         },
       },
