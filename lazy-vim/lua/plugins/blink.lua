@@ -2,6 +2,11 @@ return  {
   {
     "saghen/blink.cmp",
     opts = {
+      completion = {
+        ghost_text = {
+          enabled = false,
+        },
+      },
       sources = {
         providers = {
           lsp = {
