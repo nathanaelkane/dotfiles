@@ -9,7 +9,7 @@ path = .gitconfig.local
 ui = auto
 
 [diff]
-colorMoved = default
+colorMoved = no
 
 [color "diff"]
 commit = yellow reverse
