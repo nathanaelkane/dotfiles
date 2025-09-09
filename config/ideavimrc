@@ -27,8 +27,12 @@ nmap <Leader><Leader> <Action>(GotoFile)
 
 let g:WhichKeyDesc_actions = "<leader>c Actions"
 
-nmap <Leader>cf <Action>(CopyContentRootPath)
 let g:WhichKeyDesc_copy_path = "<leader>cf Copy path"
+if &ide =~? "rider"
+  nmap <Leader>cf <Action>(RiderCopyRootPath)
+else
+  nmap <Leader>cf <Action>(CopyContentRootPath)
+endif
 
 nmap <Leader>cl <Action>(CopyPathWithLineNumber)
 let g:WhichKeyDesc_copy_path_with_line_number = "<leader>cl Copy path with line number"
