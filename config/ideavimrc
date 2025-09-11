@@ -247,8 +247,15 @@ map <A-J> <Action>(MoveLineDown)
 " Toggle fold
 nmap <Tab> <Action>(ExpandCollapseToggleAction)
 
+" Collapse definitions
+if &ide =~? "rider"
+  nmap <Leader>z <Action>(RiderCollapseToDefinitions)
+  let g:WhichKeyDesc_collapse_definitions = "<Leader>z Collapse definitions"
+endif
+
 " Select all
 nmap <Leader>a <Action>($SelectAll)
+let g:WhichKeyDesc_collapse_definitions = "<Leader>a Select all"
 
 " Hide active tool window
 " nmap <Leader>` <Action>(HideActiveWindow)
@@ -260,7 +267,12 @@ let g:WhichKeyDesc_goto_file_under_cursor = "gf 'Go to File' using selected text
 " Toggle debug breakpoint
 nmap <Leader>db :action ToggleLineBreakpoint<CR>
 
-nmap <Leader>rr <Action>(RestoreDefaultLayout)
+" Restore default layout
+if &ide =~? "rider"
+  nmap <Leader>rr <Action>(RiderRestoreDefaultLayout)
+else
+  nmap <Leader>rr <Action>(RestoreDefaultLayout)
+endif
 let g:WhichKeyDesc_restore_default_layout = "<Leader>rr Restore default layout"
 
 nmap <Leader>rv :source ~/.ideavimrc<CR>
