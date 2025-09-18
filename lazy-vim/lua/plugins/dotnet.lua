@@ -1,6 +1,6 @@
 return {
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = function(_, opts)
       -- netcoredbg has no native macOS arm64 build, have to compile manually
       for i, v in ipairs(opts.ensure_installed) do
