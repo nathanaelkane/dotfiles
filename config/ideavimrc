@@ -19,6 +19,7 @@ set highlightedyank
 set NERDTree
 set which-key
 set textobj-indent
+set anyobject
 
 let g:WhichKeyDesc_goto_file = "<leader><leader> Go to file"
 nmap <Leader><Leader> <Action>(GotoFile)
@@ -277,6 +278,12 @@ let g:WhichKeyDesc_restore_default_layout = "<Leader>rr Restore default layout"
 
 nmap <Leader>rv :source ~/.ideavimrc<CR>
 let g:WhichKeyDesc_reload_ideavimrc = "<Leader>rv Reload IdeaVim config"
+
+" Use 'b' instead of 'o' for any bracket text object
+omap ib <Plug>InnerAnyBracket
+omap ab <Plug>OuterAnyBracket
+vmap ib <Plug>InnerAnyBracket
+vmap ab <Plug>OuterAnyBracket
 
 " rails.vim commands
 command! A :action GotoTest
