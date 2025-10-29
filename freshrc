@@ -33,6 +33,7 @@ fresh jasoncodes/dotfiles bin/wemux/\* --bin
 fresh jasoncodes/dotfiles bin/loop --bin
 fresh jasoncodes/dotfiles bin/toggl --bin
 fresh jasoncodes/dotfiles bin/podman-machine-run --bin
+fresh jasoncodes/dotfiles bin/git-pr --bin
 fresh jasoncodes/ctrlp-modified.vim lib/branch.sh --bin
 fresh jasoncodes/ctrlp-modified.vim lib/branch_modified.sh --bin
 fresh jasoncodes/ctrlp-modified.vim lib/modified.sh --bin
