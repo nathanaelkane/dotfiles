@@ -25,3 +25,4 @@ threagile.yaml.backup
 run-pty.json
 /components/*/tags
 http-client*.env.json
+.claude/settings.local.json
