@@ -285,5 +285,11 @@ omap ab <Plug>OuterAnyBracket
 vmap ib <Plug>InnerAnyBracket
 vmap ab <Plug>OuterAnyBracket
 
+" Focused files
+nmap <Leader>m <Action>(FocusedFiles.ShowGitModifiedFiles)
+nmap <Leader>M <Action>(FocusedFiles.ShowGitBranchAndModifiedFiles)
+nmap <Leader>B <Action>(FocusedFiles.ShowGitBranchFiles)
+nmap <Leader>, <Action>(FocusedFiles.ShowOpenTabs)
+
 " rails.vim commands
 command! A :action GotoTest
