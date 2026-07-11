@@ -67,6 +67,10 @@ fresh rupa/z z.sh
 # zk
 fresh zk --file=~/.config/zk/
 
+# zed
+fresh zed/keymap.json --file=~/.config/zed/keymap.json
+fresh zed/settings.json --file=~/.config/zed/settings.json
+
 fresh_after_build() {
   tmux_remove_utf8_option
 }

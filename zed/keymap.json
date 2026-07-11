@@ -1,0 +1,179 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+//
+// Cheat sheet: https://gist.github.com/therealparmesh/f6d404a25591325cc9d8598f815cd265
+[
+  {
+    "bindings": {
+      "ctrl-j": ["workspace::SendKeystrokes", "down"],
+      "ctrl-k": ["workspace::SendKeystrokes", "up"],
+
+      "cmd-1": ["pane::ActivateItem", 0],
+      "cmd-2": ["pane::ActivateItem", 1],
+      "cmd-3": ["pane::ActivateItem", 2],
+      "cmd-4": ["pane::ActivateItem", 3],
+      "cmd-5": ["pane::ActivateItem", 4],
+      "cmd-6": ["pane::ActivateItem", 5],
+      "cmd-7": ["pane::ActivateItem", 6],
+      "cmd-8": ["pane::ActivateItem", 7],
+      "cmd-9": ["pane::ActivateItem", 8],
+    },
+  },
+
+  {
+    "context": "!(vim_mode == insert) && !BufferSearchBar && !ProjectSearchBar && !Picker && !PopupMenu && !ContextMenu && !Terminal && !menu",
+    "bindings": {
+      "space space": "file_finder::Toggle",
+      "space l": "tab_switcher::Toggle",
+      "space /": "pane::DeploySearch",
+      "space c f": "workspace::CopyPath",
+      "space c l": "workspace::CopyRelativePath",
+
+      // pane management
+      "space b d": ["pane::CloseActiveItem", { "close_pinned": false }],
+      "space b o": ["pane::CloseOtherItems", { "close_pinned": false }],
+      "space b r": ["pane::CloseItemsToTheRight", { "close_pinned": false }],
+      "space b l": ["pane::CloseItemsToTheLeft", { "close_pinned": false }],
+
+      "space m": [
+        "task::Spawn",
+        { "task_name": "git: show changed files" },
+      ],
+
+      "space M": [
+        "task::Spawn",
+        { "task_name": "git: show changed branch files" },
+      ],
+    },
+  },
+
+
+  // {
+  //   "context": "FileFinder || (FileFinder > Picker > Editor) || (FileFinder > Picker > menu)",
+  //   "bindings": {
+  //     "ctrl-j": ["workspace::SendKeystrokes", "down"],
+  //     "ctrl-k": ["workspace::SendKeystrokes", "up"],
+  //   },
+  // },
+
+  // {
+  //   "context": "Editor && (showing_completions || showing_code_actions)",
+  //   "bindings": {
+  //     "ctrl-j": ["workspace::SendKeystrokes", "down"],
+  //     "ctrl-k": ["workspace::SendKeystrokes", "up"],
+  //   },
+  // },
+
+  // {
+  //   "context": "TabSwitcher",
+  //   "bindings": {
+  //     "ctrl-j": ["workspace::SendKeystrokes", "down"],
+  //     "ctrl-k": ["workspace::SendKeystrokes", "up"],
+  //   },
+  // },
+
+  // vim - normal mode
+  {
+    "context": "Editor && vim_mode == normal && !menu",
+    "bindings": {
+      "tab": "editor::ToggleFold",
+
+      "space `": "pane::AlternateFile",
+      "space h": ["workspace::SendKeystrokes", "v i w *"], // TODO: don't jump to next match
+      "space .": "pane::RevealInProjectPanel",
+
+      "space c a": "editor::ToggleCodeActions",
+      "space c r": "editor::Rename",
+
+      "shift-y": ["workspace::SendKeystrokes", "y $"], // remap shift-y to yank to end of line
+
+      "space y y": ["workspace::SendKeystrokes", "\" * y y"], // yank line to system clipboard
+
+      "space c c": ["task::Spawn", { "task_name": "Copy details for Copilot" }],
+    },
+  },
+
+  // vim - visual mode
+  {
+    "context": "Editor && vim_mode == visual && !menu",
+    "bindings": {
+      "space h": ["workspace::SendKeystrokes", "*"], // TODO: don't jump to next match
+
+      // reselect visual block after indent
+      ">": ["workspace::SendKeystrokes", "cmd-] gv"],
+      "<": ["workspace::SendKeystrokes", "cmd-[ gv"],
+
+      "space c c": ["task::Spawn", { "task_name": "Copy selection for Copilot" }],
+    },
+  },
+
+  // vim - normal, visual, or operator modes
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual || vim_mode == operator) && !menu",
+    "bindings": {
+      // jump to start or end of line
+      "shift-h": "vim::FirstNonWhitespace",
+      "shift-l": "vim::EndOfLine",
+
+      // bubble lines up or down
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp",
+
+      "space e w": "vim::HelixJumpToWord", // easymotion jump to word
+      "space r r": "workspace::ToggleBottomDock",
+
+      "] h": "editor::GoToHunk",
+      "[ h": "editor::GoToPreviousHunk",
+
+      "] d": "editor::GoToDiagnostic",
+      "[ d": "editor::GoToPreviousDiagnostic",
+
+      // TODO: These mess up the yy mapping, i.e. makes it delay after pressing yy as it waits for a 3rd key for some reason.
+      // "y o b": "git::Blame",
+      // "y o w": "editor::ToggleSoftWrap",
+
+      // yank and put to/from system clipboard
+      "space y": ["workspace::SendKeystrokes", "\" * y"],
+      "space p": ["workspace::SendKeystrokes", "\" * p"],
+      "space shift-p": ["workspace::SendKeystrokes", "\" * shift-p"],
+
+      // "space c c": ["task::Spawn", { "task_name": "Copy details for Copilot" }]
+    },
+  },
+
+  {
+    "context": "Editor && extension == cs && !(vim_mode == insert)",
+    "bindings": {
+      "space t t": [
+        "task::Spawn",
+        { "task_name": "xunit: run test at cursor" }, // TODO: make this work on classes
+        // TODO: space t c - run current test class in terminal
+      ],
+    },
+  },
+
+  {
+    "context": "Terminal",
+    "bindings": {
+      "escape": "editor::ToggleFocus",
+      "ctrl-w k": "workspace::ActivatePaneUp",
+    },
+  },
+
+  // TODO: space y - copy
+  // TODO: space p - paste
+  // TODO: space b d - close pane
+  // TODO: space b o - close other tabs
+  // TODO: space b a - close all tabs
+  // TODO: yog - toggle git blame column
+  // TODO: yow - toggle wrapping
+  // TODO: space n - show nerdtree
+  // TODO: z 1 - fold level 1
+  // TODO: z 2 - fold level 2, etc
+  // TODO: jump between implementation and test file
+]

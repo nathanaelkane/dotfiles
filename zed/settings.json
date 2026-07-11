@@ -1,0 +1,96 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "redact_private_values": false,
+  "when_closing_with_no_tabs": "platform_default",
+  "on_last_window_closed": "platform_default",
+  "git_panel": {
+    "tree_view": false
+  },
+  "git": {
+    "blame": {
+      "show_avatar": true
+    },
+    "inline_blame": {
+      "show_commit_summary": false
+    }
+  },
+  "diff_view_style": "unified",
+  "agent": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-5.3-codex",
+      "enable_thinking": true,
+      "effort": "high"
+    },
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "buffer_font_features": {
+    "calt": false
+  },
+  "vim": {
+    "use_system_clipboard": "never"
+  },
+  "format_on_save": "off",
+  "autosave": "off",
+  "helix_mode": false,
+  "which_key": {
+    "enabled": true,
+  },
+  "project_panel": {
+    "dock": "left",
+  },
+  "cli_default_open_behavior": "new_window",
+  "icon_theme": "Catppuccin Frappé",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "vim_mode": true,
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry",
+    },
+    "github-copilot-cli": {
+      "type": "registry",
+    },
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 16.0,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Catppuccin Frappé - No Italics",
+  },
+  "languages": {
+    "CSharp": {
+      "language_servers": ["csharp-ls", "!omnisharp", "!roslyn"],
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "/Users/nate.kane/.dotnet/tools/csharpier", // dotnet tool install -g csharpier
+          "arguments": ["format"],
+        },
+      },
+    },
+    "Ruby": {
+      "language_servers": ["ruby-lsp", "rubocop", "!solargraph"]
+    },
+  },
+  "dap": {
+    "netcoredbg": {
+      "binary": "/Users/nate.kane/bin/netcoredbg"
+    }
+  },
+  // "file_scan_exclusions": [
+  //   "**/.git",
+  //   "**/node_modules"
+  // ]
+}
