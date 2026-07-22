@@ -27,3 +27,4 @@ run-pty.json
 http-client*.env.json
 .claude/settings.local.json
 .zed/
+.overitall.toml
