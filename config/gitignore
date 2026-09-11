@@ -7,6 +7,7 @@ nate_development.rb
 TODO.txt
 TODO.md
 TODO.markdown
+global.todo
 .ruby-version
 db/structure.sql
 /.envrc
