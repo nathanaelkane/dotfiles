@@ -52,6 +52,7 @@ fresh lazy-vim --file=~/.config/nvim/
 fresh-options --file=~/.config/vscode-neovim/init.lua
   fresh vscode-neovim/init.lua
 fresh-options
+fresh vscode-neovim/lua/vscode-fold-motions.lua --file=~/.config/vscode-neovim/lua/vscode-fold-motions.lua
 
 # hammerspoon
 fresh hammerspoon --file=~/.hammerspoon/

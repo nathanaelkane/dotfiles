@@ -127,4 +127,6 @@ if vim.g.vscode then
   })
 end
 
+require("vscode-fold-motions")
+
 require("vscode").notify("neovim config loaded…")
