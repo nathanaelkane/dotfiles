@@ -19,6 +19,7 @@ fresh-options --file=~/.tmux.conf --marker=\#
   fresh config/tmux/\*
 fresh-options
 fresh config/\* --file
+fresh config/tuicr --file=~/.config/tuicr/
 
 tmux_remove_utf8_option() {
   gsed -i '/set-option -g status-utf8 on/d' ~/.fresh/build/tmux.conf
@@ -66,6 +67,10 @@ fresh rupa/z z.sh
 
 # zk
 fresh zk --file=~/.config/zk/
+
+# zed
+fresh zed/keymap.json --file=~/.config/zed/keymap.json
+fresh zed/settings.json --file=~/.config/zed/settings.json
 
 fresh_after_build() {
   tmux_remove_utf8_option

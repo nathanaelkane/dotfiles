@@ -8,7 +8,7 @@ config.tab_bar_at_bottom = true
 config.window_decorations = "RESIZE"
 
 config.font = wezterm.font {
-  family = 'JetBrains Mono',
+  family = 'Lilex',
   italic = false,
   harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }, -- disable ligatures
 }

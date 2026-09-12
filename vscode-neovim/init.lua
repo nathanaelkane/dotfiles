@@ -1,153 +1,130 @@
--- bootstrap lazy.nvim
+-- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+  if vim.v.shell_error ~= 0 then
+    vim.api.nvim_echo({
+      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+      { out, "WarningMsg" },
+      { "\nPress any key to exit..." },
+    }, true, {})
+    vim.fn.getchar()
+    os.exit(1)
+  end
 end
 vim.opt.rtp:prepend(lazypath)
 
-vim.g.mapleader = ","
+-- Make sure to setup `mapleader` and `maplocalleader` before
+-- loading lazy.nvim so that mappings are correct.
+-- This is also a good place to setup other settings (vim.opt)
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
 vim.opt.ignorecase = true -- ignore case by default when searching
 vim.opt.smartcase = true -- switch to case sensitive mode if needle contains uppercase characters
 
--- plugins
+-- Setup lazy.nvim
 require("lazy").setup({
   {
-    "phaazon/hop.nvim",
-    version = "v1",
-    opts = {},
-    keys = {
-      {"<Leader>ew", mode = "", "<Cmd>HopWordAC<CR>"},
-      {"<Leader>eb", mode = "", "<Cmd>HopWordBC<CR>"},
-      {"<Leader>ek", mode = "", "<Cmd>HopLineStartBC<CR>"},
-      {"<Leader>ej", mode = "", "<Cmd>HopLineStartAC<CR>"},
+
+    "smoka7/hop.nvim",
+    version = "*",
+    opts = {
+      keys = "fjdksleirughtyvncmxzwaqpob",
     },
-  },
-  {
-    "tpope/vim-surround",
-  },
-  {
-    "tpope/vim-repeat",
+    keys = {
+      { "<Leader>ew", [[<Cmd>HopWordAC<CR>]], desc = "Jump forwards to word" },
+      { "<Leader>eb", [[<Cmd>HopWordBC<CR>]], desc = "Jump backwards to word" },
+      { "<Leader>ej", [[<Cmd>HopLineStartAC<CR>]], desc = "Jump forwards to line start" },
+      { "<Leader>ek", [[<Cmd>HopLineStartBC<CR>]], desc = "Jump backwards to line start" },
+    },
   },
 })
 
--- jump to start/end of line
-vim.keymap.set("", "H", "^")
-vim.keymap.set("", "L", "$")
+if vim.g.vscode then
+  -- code actions
+  vim.keymap.set("n", "<Leader>ca", [[<Cmd>lua require('vscode').action('editor.action.quickFix')<CR>]]) -- gra
+  vim.keymap.set("n", "<Leader>cr", [[<Cmd>lua require('vscode').action('editor.action.rename')<CR>]]) -- grn
 
--- toggle comments
-vim.keymap.set("x", "gc", "<Plug>VSCodeCommentary")
-vim.keymap.set("n", "gcc", "<Plug>VSCodeCommentaryLine")
+  -- jump to start/end of line
+  vim.keymap.set("", "H", "^")
+  vim.keymap.set("", "L", "$")
 
--- next/prev change
-vim.keymap.set("n", "]d", "<Cmd>call VSCodeCall('workbench.action.editor.nextChange')<CR>")
-vim.keymap.set("n", "[d", "<Cmd>call VSCodeCall('workbench.action.editor.previousChange')<CR>")
+  -- next/prev change
+  vim.keymap.set("n", "[h", [[<Cmd>lua require('vscode').action('workbench.action.editor.previousChange')<CR>]])
+  vim.keymap.set("n", "]h", [[<Cmd>lua require('vscode').action('workbench.action.editor.nextChange')<CR>]])
 
--- next/prev search result
-vim.keymap.set("n", "]q", "<Cmd>call VSCodeCall('search.action.focusNextSearchResult')<CR>")
-vim.keymap.set("n", "[q", "<Cmd>call VSCodeCall('search.action.focusPreviousSearchResult')<CR>")
+  -- next/prev error
+  vim.keymap.set("n", "[d", [[<Cmd>lua require('vscode').action('editor.action.marker.next')<CR>]])
+  vim.keymap.set("n", "]d", [[<Cmd>lua require('vscode').action('editor.action.marker.prev')<CR>]])
 
--- clear search
-vim.keymap.set("", "<Leader>/", "<Cmd>nohls<CR>", {silent = true})
+  -- next/prev search result
+  -- vim.keymap.set("n", "]q", "<Cmd>call VSCodeCall('search.action.focusNextSearchResult')<CR>")
+  -- vim.keymap.set("n", "[q", "<Cmd>call VSCodeCall('search.action.focusPreviousSearchResult')<CR>")
 
--- jump between current and previous buffers (equivalent to CTRL-^)
-vim.keymap.set("n", "<Leader><Leader>", "<Cmd>call VSCodeCall('extension.goto-previous-buffer')<CR>")
+  -- clear search
+  vim.keymap.set("n", "<Esc>", "<Cmd>nohls<CR>", { silent = true })
 
--- copy file path
-vim.keymap.set("n", "<Leader>cf", "<Cmd>call VSCodeCall('copy-relative-path-and-line-numbers.path-only')<CR>")
-vim.keymap.set("n", "<Leader>cl", "<Cmd>call VSCodeCall('copy-relative-path-and-line-numbers.both')<CR>")
+  -- jump between current and previous buffers (equivalent to CTRL-^)
+  -- vim.keymap.set("n", "<Leader>`", [[<Cmd>lua require('vscode').action('extension.goto-previous-buffer')<CR>]])
 
--- fix j/k with folds
--- fixes issue: https://github.com/vscode-neovim/vscode-neovim/issues/58
--- solution: https://github.com/vscode-neovim/vscode-neovim/issues/58#issuecomment-1229279216
-local function moveCursor(direction)
-  if (vim.fn.reg_recording() == "" and vim.fn.reg_executing() == "") then
-    return ("g" .. direction)
-  else
-    return direction
-  end
+  -- copy file path
+  -- vim.keymap.set("n", "<Leader>cf", [[<Cmd>lua require('vscode').action('copy-relative-path-and-line-numbers.path-only')<CR>]])
+  -- vim.keymap.set("n", "<Leader>cl", [[<Cmd>lua require('vscode').action('copy-relative-path-and-line-numbers.both')<CR>]])
+
+  -- folds
+  vim.keymap.set("n", "<Tab>", [[<Cmd>lua require('vscode').action('editor.toggleFold')<CR>]])
+  vim.keymap.set("n", "zR", [[<Cmd>lua require('vscode').action('editor.unfoldAll')<CR>]])
+
+  -- -- open file at cursor
+  -- vim.keymap.set("n", "gf", "<Cmd>call VSCodeCall('seito-openfile.openFileFromText')<CR>")
+
+  -- vim.keymap.set("n", "<Leader>H", "<Cmd>call VSCodeNotify('workbench.action.findInFiles', {'query': expand('<cword>')})<CR>")
+  -- vim.keymap.set("v", "<Leader>H", "<Cmd>call VSCodeNotifyVisual('workbench.action.findInFiles', 0)<CR>")
+
+  -- vim.keymap.set("n", "<Leader>H", "<Cmd>call VSCodeNotify('search.action.openNewEditor')<CR>")
+  -- vim.keymap.set("v", "<Leader>H", "<Cmd>call VSCodeNotify('search.action.openNewEditor', 0)<CR>")
+
+  -- explorer
+  vim.keymap.set("n", "<Leader>n", [[<Cmd>lua require('vscode').action('workbench.view.explorer')<CR>]])
+  vim.keymap.set(
+    "n",
+    "<Leader>.",
+    [[<Cmd>lua require('vscode').action('workbench.files.action.showActiveFileInExplorer')<CR>]]
+  )
+
+  -- reselect visual block after indent or outdent
+  vim.keymap.set("v", "<", "<gv")
+  vim.keymap.set("v", ">", ">gv")
+
+  -- show all editors
+  vim.keymap.set("n", "<Leader>l", [[<Cmd>lua require('vscode').action('workbench.action.showAllEditors')<CR>]])
+
+  -- select all
+  vim.keymap.set("n", "<Leader>a", [[<Cmd>lua require('vscode').action('editor.action.selectAll')<CR>]])
+
+  -- yank and put to/from system pasteboard
+  vim.keymap.set("", "<Leader>y", '"*y')
+  vim.keymap.set("n", "<Leader>yy", '"*yy')
+  vim.keymap.set("", "<Leader>p", '"*p')
+  vim.keymap.set("", "<Leader>P", '"*P')
+
+  -- toggles
+  vim.keymap.set("n", "yow", [[<Cmd>lua require('vscode').action('editor.action.toggleWordWrap')<CR>]])
+
+  -- testing
+  vim.keymap.set("n", "<Leader>tt", [[<Cmd>lua require('vscode').action('testing.runAtCursor')<CR>]])
+  vim.keymap.set("n", "<Leader>tc", [[<Cmd>lua require('vscode').action('testing.runAll')<CR>]])
+  vim.keymap.set("n", "<Leader>tc", [[<Cmd>lua require('vscode').action('testing.debugAtCursor')<CR>]])
+
+  vim.api.nvim_create_autocmd("TextYankPost", {
+    desc = "Highlight yanked text",
+    group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
+    callback = function()
+      vim.highlight.on_yank({ higroup = "IncSearch", timeout = 200 })
+    end,
+  })
 end
 
-vim.keymap.set({"n", "v"}, "k", function()
-  return moveCursor("k")
-end, {expr = true, remap = true})
-vim.keymap.set({"n", "v"}, "j", function()
-  return moveCursor("j")
-end, {expr = true, remap = true})
-
--- folds
-vim.keymap.set("n", "zM", "<Cmd>call VSCodeNotify('editor.foldAll')<CR>")
-vim.keymap.set("n", "zR", "<Cmd>call VSCodeNotify('editor.unfoldAll')<CR>")
-vim.keymap.set("n", "zc", "<Cmd>call VSCodeNotify('editor.fold')<CR>")
-vim.keymap.set("n", "zC", "<Cmd>call VSCodeNotify('editor.foldRecursively')<CR>")
-vim.keymap.set("n", "zo", "<Cmd>call VSCodeNotify('editor.unfold')<CR>")
-vim.keymap.set("n", "zO", "<Cmd>call VSCodeNotify('editor.unfoldRecursively')<CR>")
-vim.keymap.set("n", "za", "<Cmd>call VSCodeNotify('editor.toggleFold')<CR>")
-
--- open file at cursor
-vim.keymap.set("n", "gf", "<Cmd>call VSCodeCall('seito-openfile.openFileFromText')<CR>")
-
-vim.cmd [[
-" Search for selected text, forwards or backwards.
-" http://vim.wikia.com/wiki/Search_for_visually_selected_text
-vnoremap <silent> * :<C-U>
-  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
-  \gvy/<C-R><C-R>=substitute(
-  \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-  \gV:call setreg('"', old_reg, old_regtype)<CR>
-vnoremap <silent> # :<C-U>
-  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
-  \gvy?<C-R><C-R>=substitute(
-  \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-  \gV:call setreg('"', old_reg, old_regtype)<CR>
-
-" Highlight word/selection at cursor without changing position
-map <silent> <Leader>h :
-  \:let view=winsaveview()<CR>
-  \*
-  \:call winrestview(view)<CR>
-vmap <silent> <Leader>h :
-  \:<C-U>let view=winsaveview()<CR>
-  \gv*
-  \:<C-U>call winrestview(view)<CR>
-]]
-
-vim.keymap.set("n", "<Leader>H", "<Cmd>call VSCodeNotify('workbench.action.findInFiles', {'query': expand('<cword>')})<CR>")
-vim.keymap.set("v", "<Leader>H", "<Cmd>call VSCodeNotifyVisual('workbench.action.findInFiles', 0)<CR>")
-
--- explorer
-vim.keymap.set("n", "<Leader>n", "<Cmd>call VSCodeCall('workbench.view.explorer')<CR>")
-vim.keymap.set("n", "<Leader>.", "<Cmd>call VSCodeCall('workbench.files.action.showActiveFileInExplorer')<CR>")
-
--- reselect visual block after indent or outdent
-vim.keymap.set("v", "<", "<gv")
-vim.keymap.set("v", ">", ">gv")
-
--- show all editors
-vim.keymap.set("n", "<Leader>l", "<Cmd>call VSCodeNotify('workbench.action.showAllEditors')<CR>")
-
--- yank from cursor to end of line
-vim.keymap.set("", "Y", "y$")
-
--- yank and put to/from system pasteboard
-vim.keymap.set("", "<Leader>y", '"*y')
-vim.keymap.set("n", "<Leader>yy", '"*yy')
-vim.keymap.set("", "<Leader>p", '"*p')
-vim.keymap.set("", "<Leader>P", '"*P')
-
--- toggles
-vim.keymap.set("n", "yow", "<Cmd>call VSCodeCall('editor.action.toggleWordWrap')<CR>")
-
--- bubble line up/down
-vim.keymap.set("n", "<A-j>", "<Cmd>call VSCodeNotify('editor.action.moveLinesDownAction')<CR>")
-vim.keymap.set("n", "<A-k>", "<Cmd>call VSCodeNotify('editor.action.moveLinesUpAction')<CR>")
-
--- commands
-vim.api.nvim_create_user_command("A", "call VSCodeCall('alternateFile.alternateFile')", {})
+require("vscode").notify("neovim config loaded…")
